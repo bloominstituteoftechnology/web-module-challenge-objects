@@ -13,7 +13,7 @@ You've been contracted by a restaurant to start building out their website. Befo
 
 ## Instructions
 
-### Task 1 - Set up Project
+### Task 1: Set up Project
 
 - [ ] Create a forked copy of this project
 - [ ] Add your team lead as collaborator on Github
@@ -22,11 +22,17 @@ You've been contracted by a restaurant to start building out their website. Befo
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
 - [ ] Push commits: git push origin `<firstName-lastName>`
 
-### Task 2 - MVP
+### Task 2: MVP
 
 Find the file `index.js` and complete the tasks until your returns look like the expected returns. Do not use any of the forbidden methods!
 
-### Task 3 - Stretch
+### Task 2b: Exit Tickets
+
+Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/8fQpHe8YNqWDDdcw9/PS9Tnd4MRQre5h).
+
+The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
+
+### Task 3: Stretch
 
 There are several stretch goals inside `index.js`. You may work on these once you have finished MVP requirements for the day!
 
