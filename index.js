@@ -129,8 +129,13 @@ and should return an array of objects.
 */
   function getLongReviews(arr) {
     /* code here */
-
-}
+    for (let i = 0; i < arr.length; i++ ){
+      let newArr = [Object.values(arr[i])]
+      if(newArr.join().split(" ").length > 15){
+        console.log(arr[i]);
+      }
+    }
+  }
 
   getLongReviews(reviews)
   
