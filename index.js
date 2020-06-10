@@ -74,7 +74,6 @@ function getReviewByIndex(reviews, index) {
     console.log(`${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review and their feedback was: ${reviews[index].feedback}`)
   }
   
-  getReviewByIndex(reviews, 0)
 
 /* Task 8: Write a function to get information about the most recent review called `getLastReview`
 
@@ -90,7 +89,6 @@ function getLastReview(arr) {
     /* code here */
   } 
 
-  getLastReview(reviews)
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -107,10 +105,14 @@ function getLastReview(arr) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
+ function getReviewByRating(arr) {
     /* code here */
+    for(let i = 0; i < arr.length; i++){
+      if (arr[i].rating >= 4 && arr[i].rating < 5){
+        return arr[i].feedback
+      }
+    }
   }
-
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
