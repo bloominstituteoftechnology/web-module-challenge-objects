@@ -29,9 +29,9 @@ and should return a number.
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 burger.discount = function(str){
   if (str === "teacher" || str === "student"){
-    return burger.price * 0.25;
+    return this.price * 0.25;
   }
-  return burger.price * 0.10;}
+  return this.price * 0.10;}
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -101,7 +101,7 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
 function getLastReview(arr){
-  retur `${arr[arr.length - 1].name} gave the restaurant a ${arr[arr.length - 1].rating} star rating and their feedback was ${arr[arr.length - 1].feedback}`;
+  return `${arr[arr.length - 1].name} gave the restaurant a ${arr[arr.length - 1].rating} star rating and their feedback was ${arr[arr.length - 1].feedback}`;
     /* code here */
   } 
 
