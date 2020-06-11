@@ -54,6 +54,7 @@ for(let i = 0; i < reviews.length; i++){
   if (reviews[i].name === 'Julius'){
     return console.log(arr[i].feedback)
   }
+}
 
 /* Task 5: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 reviews.push( {name: "Ava", rating: 2, feedback: "There was a roach in my food. At least it was cooked?"})
@@ -61,6 +62,14 @@ reviews.push( {name: "Ava", rating: 2, feedback: "There was a roach in my food. 
 
 /* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
 reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
+
+//OR
+
+for(let i = 0; i < reviews.length; i++){
+  if (reviews[i].name === 'Reyna'){
+    reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
+  }
+}
 
 
 /*  Task 7: Write a function to return a review based on the index of the review in the array.
@@ -163,12 +172,12 @@ The returned object should have the following characteristics:
          (1) causes the odometer in the object to be increased by the distance,
          (2) returns the updated value of the `odometer`.
 */
-
-let car = {}
+//factoryFunction
 function carMaker(num) {
     /* code here */
-    car.odometer = num;
-    car.drive(distance)=function(){
-      car.odometer += distance;
+    return {odometer: num,
+     drive(distance){
+    this.odometer += distance
+    }
     }
 }
