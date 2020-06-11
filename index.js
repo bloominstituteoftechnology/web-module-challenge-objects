@@ -29,9 +29,9 @@ and should return a number.
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 burger.discount = function(str){
   if (str === "teacher" || str === "student"){
-    return this.price * 0.25;
+    return this.price * 0.75;
   }
-  return this.price * 0.10;}
+  return this.price * 0.90;}
 
 ///////////////Reviews (MVP)///////////////////
 
