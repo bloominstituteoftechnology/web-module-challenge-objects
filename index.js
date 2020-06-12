@@ -8,6 +8,7 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 function createMenuItem(name, cost, category){
   return {name, cost, category};
+}
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
@@ -21,21 +22,21 @@ Your method should accept:
 
 (1) A string (teacher, student, or public)
 
-and should return az= number. 
+and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
-
-burger.discount = function(custumer){
-  if (customer=== "teacher"||customer === "student"){
-    return burger.price = burger.price *0.25;
+burger.discount = function(customer){
+  if (customer === 'teacher'||customer==='student'){
+    return burger.price = burger.price * 0.25;
   }else{
     return burger.price - burger.price * 0.1;
+    }
   }
-  }
+console.log(burger.discount('public'));
+console.log(burger.discount('teacher'));
 
-  console.log(burger.discount("public"));
-  console.log(burger.discount("teacher"));
 
+///////////////Reviews (MVP)///////////////////
 
 const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
@@ -48,20 +49,20 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 4: Console.log just Julius' feedback */
-console.log(reviews[5]);
 
+console.log(reviews[5]);
 /* Task 5: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 function addReview(array, name, rating, feedback){
-  array.push({name, rating, feeback});
+  array.push({name, rating, feedback});
   return array;
 }
-console.log(reviews,'Shanna',5, 'So chill.');
+console.log(reviews, 'Shanna',1,'Kinda sucks.');
 /* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
-function changeReview(arr,index, feedback){
+function changeReview(arr, index, feedback){
   arr[index].feedback = feedback;
   return arr;
 }
-console.log(changeReview(reviews, 7,"this place is chill with really cool people, great for getting work done on weekdays" ))
+console.log(changeReview(reviews, 7, "this place is chill with really cool people, great for getting work done on weekdays"));
 /*  Task 7: Write a function to return a review based on the index of the review in the array.
 
  Your function should take two arguments:
@@ -74,13 +75,11 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(reviews, index) {
-  
-   const review = array [index]
-   return `{name} gave the restaurant a {rating}, and their feedback was: {feedback}`
-   
+function getReviewByIndex(array, index) {
+   const review = array[index]
+   return `${review.name}gave the restaurant a ${review.rating}, and their feedback was:${review.feedback}`;
   }
-  
+  console.log(getReviewByIndex(reviews,0));
 
 /* Task 8: Write a function to get information about the most recent review called `getLastReview`
 
@@ -91,9 +90,11 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
+function getLastReview(arr) {
+    const review = arr [arr.length-1]
+    return `${review.name} gave the restaurant a ${review.rating}, and their feedback was: ${review.feedback}.`;
   } 
+  console.log(getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -151,7 +152,7 @@ The returned object should have the following characteristics:
 */
 
 
-// function carMaker(/* code here */) {
-//     /* code here */
+function carMaker(/* code here */) {
+    /* code here */
     
-// }
+}
