@@ -2,19 +2,19 @@
 
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
 const burger = {name: "Burger", price: 18, category: "Lunch",
-                   lunchSpecial: function(str){
+                    discount: function(str){
                       if(str === 'student' || str === 'teacher'){
                         let dis = this.price/4;
                         this.price = this.price - dis;
                         console.log('student and teacher price  '+ this.price);
                       }else{
-                        this.price = 16.88;
+                        this.price = 16.2;
                         console.log('public price  '+ this.price);
                       }
                   },};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
-let mrMight = burger.lunchSpecial('public');
-console.log(burger.price);
+let mrMight = burger.discount('teacher');
+console.log('$'+burger.price);
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category){
@@ -60,7 +60,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-
+console.log(reviews.name);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
