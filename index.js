@@ -13,7 +13,7 @@ const burger = {name: "Burger", price: 18, category: "Lunch",
                       }
                   },};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
-let mrMight = burger.discount('teacher');
+ burger.discount('teacher');
 console.log('$'+burger.price);
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
@@ -49,7 +49,7 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 
 ///////////////Reviews (MVP)///////////////////
 
-const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
+let reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
     {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
@@ -60,7 +60,13 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-console.log(reviews.name);
+
+for( let f = 0; f <  reviews.length;  f++){
+  if(reviews[f].name === 'Julius'){
+    console.log(reviews[f].name + '\'s feedback ' +reviews[f].feedback);
+  }
+}
+
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
@@ -79,6 +85,26 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
+reviews.push({
+  name: 'Fryan ', rating: 1.2, feedback: "I absoulty hated eating at the Fryans French Fry resturnat. They only have frys to eet and I dont like only potatos with my meal. Also the price was outrageous, over $200 for one plate of frys!",
+});
+for(let f = 0; f < reviews.length; f++){
+if(reviews[f].name === 'Fryan '){
+console.log(reviews[f].name +' rating '+ reviews[f].rating + ' ' + reviews[f].feedback);
+}
+}
+
+//reviews['Reyna'] = "this place is chill with really cool people, great for getting work done on weekdays";
+
+for(let f = 0; f < reviews.length; f++){
+  if(reviews[f].name === "Reyna"){
+    console.log("here");
+    reviews[f].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+    console.log(reviews[f].name + reviews[f].rating+ reviews[f].feedback);
+  }
+}
+//console.log('revieww'+reviews["Reyna".rating]);
+
 function getReviewByIndex(reviews, index) {
     
   }
