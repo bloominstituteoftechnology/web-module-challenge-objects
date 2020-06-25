@@ -121,9 +121,9 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(findArr) {
+function getLastReview(lastArr) {
 
-  return `${findArr[findArr.length - 1].name} gave the restaurant a ${findArr[findArr.length - 1].rating}, and their feedback was: ${findArr[findArr.length - 1].feedback}`;
+  return `${lastArr[lastArr.length - 1].name} gave the restaurant a ${lastArr[lastArr.length - 1].rating}, and their feedback was: ${lastArr[lastArr.length - 1].feedback}`;
 
 }
 console.log(getLastReview(reviews));
