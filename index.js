@@ -106,9 +106,16 @@ for(let f = 0; f < reviews.length; f++){
 //console.log('revieww'+reviews["Reyna".rating]);
 
 function getReviewByIndex(reviews, index) {
-    
+  for(let f = 0; f < reviews.length; f++){
+    if(f === index){
+      console.log("review by index function");
+      console.log(reviews[f].name +' gave the restaurant a ' + reviews[f].rating+ ' and their feedback was: ' + reviews[f].feedback);
+    } else if(index >= reviews.length){
+      console.log("INdex is not in the array");
+    }
   }
-  
+  }
+  getReviewByIndex(reviews,1);
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -120,10 +127,14 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
 function getLastReview() {
-    
+  for(let f = 0; f < reviews.length; f++){
+    if ( f === reviews.length - 1){
+      console.log(reviews[f].name +' gave the restaurant a ' + reviews[f].rating+ ' and their feedback was: ' + reviews[f].feedback);
+    }
+  }
   } 
 
-
+getLastReview();
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
 /** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
