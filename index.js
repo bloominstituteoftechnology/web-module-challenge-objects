@@ -1,26 +1,26 @@
 ///////////////Menu Items (MVP)///////////////////
 
-const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const burger = {name: "Burger", price: 18, category: "Lunch"};
-const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
+// const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
+// // const burger = {name: "Burger", price: 18, category: "Lunch"};
+// const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, cost, category){
-    const newItem = {
-      name: name,
-      cost: cost,
-      category: category,
-    }
+// function createMenuItem(name, cost, category){
+//     const newItem = {
+//       name: name,
+//       cost: cost,
+//       category: category,
+//     }
 
-    console.log(newItem);
-}
-createMenuItem("French Fries", 3, "Fries");
+//     console.log(newItem);
+// }
+// createMenuItem("French Fries", 3, "Fries");
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
-createMenuItem("Seasoned Fries", 4, "Fries");
-createMenuItem("Strawberry Shake", 5, "Milkshakes");
-createMenuItem("Mushroom Swiss Burger", 6, "Lunch");
+// createMenuItem("Seasoned Fries", 4, "Fries");
+// createMenuItem("Strawberry Shake", 5, "Milkshakes");
+// createMenuItem("Mushroom Swiss Burger", 6, "Lunch");
 
 
 
@@ -35,8 +35,18 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+// const burger = {name: "Burger", price: 18, category: "Lunch", 
+//   discount: function(string) {
+//     if(string === "teacher" || string === "student") {
+//       console.log(this.price * .75);
+//     } else {
+//       console.log(this.price * .9);
+//     }
+//   }
+// };
 
-
+// burger.discount("teacher");
+// burger.discount("public");
 ///////////////Reviews (MVP)///////////////////
 
 const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -50,7 +60,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-
+console.log(this.feedback("Julius"));
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
