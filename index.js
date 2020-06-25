@@ -60,10 +60,23 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-console.log(this.feedback("Julius"));
+for(let i = 0; i < reviews.length; i++) {
+  if (reviews[i].name === "Julius") {
+    console.log(reviews[i].feedback);
+  }
+}
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+function newReview(name, rating, feedback) {
+  const anotherReview = {
+    name: name,
+    rating: rating,
+    feedback: feedback
+  }
+  console.log(anotherReview);
+}
 
+newReview("Angie", 3.2, "This wasn't the worst thing, but it wasn't the best.");
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
