@@ -78,7 +78,17 @@ function newReview(name, rating, feedback) {
 
 newReview("Angie", 3.2, "This wasn't the worst thing, but it wasn't the best.");
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+
+function addFeedback(arr, name, feedback){
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].name === "Reyna"){
+      arr[i].feedback = feedback;
+    }
+  }
+}
+addFeedback(reviews, "Reyna", "This place is chill with really cool people, great for getting work done on weekdays");
+console.log(reviews);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -92,9 +102,14 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(reviews, index) {
-    /* code here */
-  }
+function getReviewByIndex(findArr, index){
+  
+  return `${findArr[index].name} gave the restaurant a ${findArr[index].rating}, and their feedback was: ${findArr[index].feedback}`;
+
+}	
+
+console.log(getReviewByIndex(reviews, 0)); 
+
   
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
@@ -106,11 +121,12 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
-  } 
+function getLastReview(findArr) {
 
+  return `${findArr[findArr.length - 1].name} gave the restaurant a ${findArr[findArr.length - 1].rating}, and their feedback was: ${findArr[findArr.length - 1].feedback}`;
 
+}
+console.log(getLastReview(reviews));
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
 /** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
