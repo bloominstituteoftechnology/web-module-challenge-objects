@@ -15,6 +15,8 @@ const lasagna = createMenuItem("Lasagna", 17, "Dinner");
 const steak = createMenuItem("New York Strip", 24, "Dinner");
 const enchiladas = createMenuItem("Famous Sweet Potato Enchiladas", 14, "Dinner");
 
+console.log(lasagna);
+
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
 Your method should accept: 
@@ -32,6 +34,7 @@ burger.discount = function (status) {
 }
 
 console.log(burger.discount('teacher'));
+console.log(burger.discount('parent'));
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -134,9 +137,30 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
-    /* code here */
+
+//I'll copy/paste my function from yesterdays assignment, for counting words, and use it again :D
+
+function numberOfWords(word) {
+    if (word == '') return 0; //no characters, means no words
+    let result = 1;  //first word is implicit
+    for (let i = 0; i < word.length; i++) {
+          if (word[i] === ' ')
+              result += 1;
+        }
+          return result;
+}
+
+function getLongReviews(reviews) {
+  const result = [];
+  for(let i = 0; i < reviews.length; i++) {
+    if (numberOfWords(reviews[i].feedback) > 15) {
+      result.push(reviews[i]);
+    }
   }
+    return result;
+}
+
+console.log(getLongReviews(reviews));
   
 
 /* STRETCH 3:  This challenge is not related to the data above! 
@@ -157,7 +181,15 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odometer){
+  return {odometer,
+          drive: function (distance) {
+            return this.odometer += distance;
+          },
+  }
 }
+const newCar = carMaker(0);
+
+console.log(newCar.drive(15));
+//but does it stick?
+console.log(newCar.odometer);
