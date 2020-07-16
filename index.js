@@ -99,7 +99,7 @@ function getReviewByIndex(reviews, index) {
     /* code here */
     console.log(reviews[index])
     if (index < reviews.length){
-      return `${reviews[index].name} gave the restaurant a 5 star review and their feedback was: ${reviews[index].feedback}`
+      return `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review and their feedback was: ${reviews[index].feedback}`
     } else {
       return "The index that you selected does not exist"
     }
@@ -115,9 +115,13 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
+function getLastReview(reviews) {
     /* code here */
+    const lastReviewIndex = reviews.length - 1
+    return `${reviews[lastReviewIndex].name} gave the restaurant a ${reviews[lastReviewIndex].rating} star review and their feedback was: ${reviews[lastReviewIndex].feedback}`
   } 
+
+  console.log(getLastReview(reviews))
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
