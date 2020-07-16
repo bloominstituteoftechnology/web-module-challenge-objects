@@ -66,8 +66,8 @@ console.log(feedback(reviews, "Julius"))
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-function addRating(reviews, name, rating, feeback){
-  reviews.push({name, rating, feeback});
+function addRating(reviews, name, rating, feedback){
+  reviews.push({name, rating, feedback});
   return reviews
 }
 console.log(addRating(reviews, "kalvin", 1, "this place stinks"))
@@ -97,8 +97,15 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
     /* code here */
+    console.log(reviews[index])
+    if (index < reviews.length){
+      return reviews[index].feedback
+    } else {
+      console.log("hi")
+      return "The index that you selected does not exist"
+    }
   }
-  
+  console.log(getReviewByIndex(reviews, 8))
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
