@@ -99,7 +99,7 @@ function getReviewByIndex(reviews, index) {
     /* code here */
     console.log(reviews[index])
     if (index < reviews.length){
-      return reviews[index].feedback
+      return `${reviews[index].name} gave the restaurant a 5 star review and their feedback was: ${reviews[index].feedback}`
     } else {
       return "The index that you selected does not exist"
     }
