@@ -1,31 +1,44 @@
 ///////////////Menu Items (MVP)///////////////////
 
 const latte = { name: "Cafe Latte", price: 4, category: "Drinks" };
-const burger = { name: "Burger", price: 18, category: "Lunch" };
+const burger = {
+  name: "Burger",
+  price: 18,
+  category: "Lunch",
+  discount: function (str) {
+    // creating discount function
+    if (str === "student" || str === "teacher") {
+      // is my parameter is 'student' or 'teacher' we'll return 25%
+      return this.price * 0.75;
+    } else {
+      return this.price * 0.9; // else if it's empty, or anything else we'll return 10% off (10% off 1)
+    }
+  },
+};
 const breakfastBurrito = {
   name: "Breakfast Burrito",
   price: 16,
   category: "Breakfast",
 };
+// console.log(burger.discount('teacher'));
+// console.log(burger.discount(''));
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, cost, category) {
-  this.name = name;
-  this.cost = cost;
-  this.category = category;
+function createMenuItem(name, price, category) {
+  menuItem = { name, price, category }; //passing into the array
+  return menuItem; // returning item to access outside the function
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
-const doubleCheeseBurger = new createMenuItem(
-  "Double Cheese Burger",
-  20,
-  "Lunch"
-);
-const nachosWithCheese = new createMenuItem("Nachos with cheese", 12, "Lunch");
-const coffee = new createMenuItem("8 oz Black coffee", 6, "Morning");
+console.log(createMenuItem("Nachos", 15, "All day")); //console.log is just there for visual
+console.log(createMenuItem("Sandwich", 10, "All day"));
+console.log(createMenuItem("Pasta", 8, "Lunch"));
 
-/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
+/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. 
+Add a method to your burger object that automatically calculates price given a string as a parameter. 
+
+
 
 Your method should accept: 
 
@@ -78,9 +91,18 @@ const reviews = [
 ];
 
 /* Task 3: Console.log just Julius' feedback */
-
+let juliusReview = "";
+for (let i = 0; i < reviews.length; i++) {
+  if (reviews[i].name === "Julius") {
+    juliusReview.push(reviews[i].feedback);
+  }
+}
+console.log(juliusReview);
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-
+function addRevier(arr, name, rating, feedback) {
+  arr.push({ name, rating, feedback });
+}
+console.log(reviews, "Matthew", 4.3, "It was food. Cannot deny that");
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
