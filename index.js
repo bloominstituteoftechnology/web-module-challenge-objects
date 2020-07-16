@@ -66,10 +66,23 @@ console.log(feedback(reviews, "Julius"))
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-
+function addRating(reviews, name, rating, feeback){
+  reviews.push({name, rating, feeback});
+  return reviews
+}
+console.log(addRating(reviews, "kalvin", 1, "this place stinks"))
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
-
+*/
+function changeReview(reviews, person, newReview){
+  for (x in reviews){
+    if (reviews[x].name === person){
+      reviews[x].feedback = newReview
+      return reviews[x]
+    }
+  }
+}
+console.log(changeReview(reviews, "Reyna", "this place is chill with really cool people, great for getting work done on weekdays"))
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
  Your function should take two arguments:
