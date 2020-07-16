@@ -5,29 +5,26 @@ const burger = {
   name: "Burger",
   price: 18,
   category: "Lunch",
-  discount: function (str) {
-    // creating discount function
-    if (str === "student" || str === "teacher") {
-      // is my parameter is 'student' or 'teacher' we'll return 25%
-      return this.price * 0.75;
-    } else {
-      return this.price * 0.9; // else if it's empty, or anything else we'll return 10% off (10% off 1)
-    }
   },
-};
 const breakfastBurrito = {
   name: "Breakfast Burrito",
   price: 16,
   category: "Breakfast",
 };
-// console.log(burger.discount('teacher'));
-// console.log(burger.discount(''));
+
+function discount (str) { 
+  if (str === "student" || str === "teacher") { 
+    return this.price * 0.75; 
+  } else {
+    return this.price * 0.9; 
+  }
+}
+
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, price, category) {
-  menuItem = { name, price, category }; //passing into the array
-  return menuItem; // returning item to access outside the function
+ return menuItem = { name, price, category }; //passing into the array
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
@@ -49,7 +46,6 @@ and should return a number.
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
 ///////////////Reviews (MVP)///////////////////
-
 const reviews = [
   {
     name: "Daniela",
@@ -148,9 +144,10 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-  /* code here */
+function getLastReview(arr) {
+ return `${arr[arr.length - 1].name} gave the restaurant a ${arr[arr.length - 1].rating}, and their feedback was: ${arr[arr.length - 1].feedback}`
 }
+
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -166,7 +163,7 @@ function getLastReview(/* code here */) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
-function getReviewByRating(/* code here */) {
+function getReviewByRating() {
   /* code here */
 }
 
