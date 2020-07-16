@@ -101,7 +101,6 @@ function getReviewByIndex(reviews, index) {
     if (index < reviews.length){
       return reviews[index].feedback
     } else {
-      console.log("hi")
       return "The index that you selected does not exist"
     }
   }
