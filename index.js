@@ -193,7 +193,16 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
+function carMaker(odometer) {
     /* code here */
-    
+    let car = {
+      odometer: odometer,
+      drive: function(distance){
+        this.odometer+= distance
+        return this.odometer
+      }
+    }
+    return car
 }
+console.log(carMaker(7))
+console.log(carMaker(7).drive(3))
