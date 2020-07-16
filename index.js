@@ -37,7 +37,7 @@ burger.discount = function (string){
   }else{
     return this.price * .9;
   }
-
+  
   }
 
 console.log (burger.discount("teacher"));
