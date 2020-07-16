@@ -5,26 +5,27 @@ const burger = {
   name: "Burger",
   price: 18,
   category: "Lunch",
-  },
+};
 const breakfastBurrito = {
   name: "Breakfast Burrito",
   price: 16,
   category: "Breakfast",
 };
 
-function discount (str) { 
-  if (str === "student" || str === "teacher") { 
-    return this.price * 0.75; 
+function discount(str) {
+  //our function for task 2. We can apply this function as a key to an object by assigning it like
+  if (str === "student" || str === "teacher") {
+    // latte.newPrice = discount or burger.greatPrice = discount then we can call that by going
+    return this.price * 0.75; // console.log(lattee.newPrice('teacher')) or simply burger.greatPrice('student')
   } else {
-    return this.price * 0.9; 
+    return this.price * 0.9;
   }
 }
-
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, price, category) {
- return menuItem = { name, price, category }; //passing into the array
+  return (menuItem = { name, price, category }); //passing into the array
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
@@ -96,7 +97,7 @@ for (let i = 0; i < reviews.length; i++) {
 console.log(juliusReview);
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 function addReview(arr, name, rating, feedback) {
-  arr.push({ name, rating, feedback });
+  arr.push({ name, rating, feedback }); //we're pushing to our array of objects.
   return arr;
 }
 console.log(
@@ -106,7 +107,7 @@ console.log(
 great for getting work done on weekdays"*/
 
 function changeReview(arr, i, feedback) {
-  arr[i].feedback = feedback;
+  arr[i].feedback = feedback; //i = index.
   return arr;
 }
 console.log(
@@ -145,9 +146,11 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
 function getLastReview(arr) {
- return `${arr[arr.length - 1].name} gave the restaurant a ${arr[arr.length - 1].rating}, and their feedback was: ${arr[arr.length - 1].feedback}`
+  return `${arr[arr.length - 1].name} gave the restaurant a ${
+    // arr is taking the last index by applying arr.length - 1 and using dot notiation to call .rating, and feedback along with name.
+    arr[arr.length - 1].rating
+  }, and their feedback was: ${arr[arr.length - 1].feedback}`;
 }
-
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
