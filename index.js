@@ -49,17 +49,18 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 
 
 const burger = {name: "Burger", 
-price: function(a) {
+price: 18,
+category: "Lunch",
+discount: function(a) {
 if (a === "teacher")
-return 18*.75;
+return this.price*.75;
 else if (a === "student")
-return 18 *.75;
+return this.price *.75;
 else if (a === "public")
-return 18 * .9;}, 
-category: "Lunch",};
+return this.price * .9;},  };
 
 
-console.log(burger.price("teacher"));
+console.log(burger.discount("teacher"));
 
 ///////////////Reviews (MVP)///////////////////
 
