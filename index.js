@@ -35,6 +35,8 @@ console.log(newItem);
 console.log(newItem2);
 console.log(newItem3);
 
+//need to review
+
 
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
@@ -86,6 +88,10 @@ reviews.name = "Austin"; reviews.rating = 5; reviews.feedback = "Best in town!";
 
 console.log(reviews);
 
+//need to review
+
+
+
 //* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
 reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
@@ -106,7 +112,9 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
-    /* code here */
+  let newArray = [];
+ `${name} gave the restaurant a ${rating} star review and their feedback was: ${feedback}`
+  newArray.push()
   }
   
 
