@@ -48,6 +48,18 @@ and should return a number.
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
 
+const burger = {name: "Burger", 
+price: function(a) {
+if (a === "teacher")
+return 18*.75;
+else if (a === "student")
+return 18 *.75;
+else if (a === "public")
+return 18 * .9;}, 
+category: "Lunch",};
+
+
+console.log(burger.price("teacher"));
 
 ///////////////Reviews (MVP)///////////////////
 
