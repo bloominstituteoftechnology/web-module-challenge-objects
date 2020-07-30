@@ -11,9 +11,29 @@ function createMenuItem(name, cost, category){
   const newItem = {"name": name, "cost": cost, "category": category };
   return newItem;
 }
-console.log(createMenuItem("fries",5,"side"))
+console.log(createMenuItem("fries",5,"side"));
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+function createMenuItem(name, cost, category,name2, cost2, category2,name3, cost3, category3){
+  {
+  let newItem = {"name": name, "cost": cost, "category": category };
+
+  }
+{
+  let newItem2 = {"name": name2, "cost": cost2, "category": category2 };
+
+}
+{
+  let newItem3 = {"name": name3, "cost": cost3, "category": category3 };
+
+}
+}
+
+createMenuItem("fries",5,"side","hotdog",10,"entree","soda",3,"drinks");
+console.log(newItem);
+console.log(newItem2);
+console.log(newItem3);
 
 
 
