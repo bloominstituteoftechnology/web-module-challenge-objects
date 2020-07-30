@@ -78,7 +78,7 @@ const reviews =
 
 /* Task 3: Console.log just Julius' feedback */
 
-console.log(Object.values(reviews[5].feedback));
+console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
@@ -86,7 +86,12 @@ reviews.name = "Austin"; reviews.rating = 5; reviews.feedback = "Best in town!";
 
 console.log(reviews);
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+//* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
+console.log(reviews);
+
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
