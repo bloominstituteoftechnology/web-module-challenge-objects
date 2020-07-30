@@ -1,20 +1,42 @@
 ///////////////Menu Items (MVP)///////////////////
 
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const burger = {name: "Burger", price: 18, category: "Lunch"};
+const burger = {name: "Burger", price: 18, category: "Lunch",
+                    discount: function(str){
+                      if(str === 'student' || str === 'teacher'){
+                        let dis = this.price/4;
+                        this.price = this.price - dis;
+                        console.log('student and teacher price  '+ this.price);
+                      }else{
+                        this.price = 16.2;
+                        console.log('public price  '+ this.price);
+                      }
+                  },};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
-
+ burger.discount('teacher');
+console.log('$'+burger.price);
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category){
-    /* Code here */
+    let n = { name: name,
+                price: cost,
+                category: category,
+              };
+              return n;
 }
 
+let moreMenu = createMenuItem("thename",55,"No free Lunch");
+console.log('moremenue '+ moreMenu.name + ' with a cost at $'+ moreMenu.price + " Is considered " + moreMenu.category);
+
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+let shrimpTails = createMenuItem("shrimp Tails",102,"No free Lunch");
+let fishBurger = createMenuItem("Fish Burger",545,"No free Lunch");
+let clamChowder = createMenuItem("Clam Chowder",155,"No free Lunch");
 
 
 
-/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
+/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your 
+burger object that automatically calculates price given a string as a parameter. 
 
 Your method should accept: 
 
@@ -28,7 +50,7 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 
 ///////////////Reviews (MVP)///////////////////
 
-const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
+let reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
     {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
@@ -38,7 +60,17 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
     {name:"Reyna", rating: 3.5, feedback: ""},
 ]
 
+
+
+let revi = [...reviews];
 /* Task 3: Console.log just Julius' feedback */
+
+for( let f = 0; f <  reviews.length;  f++){
+  if(reviews[f].name === 'Julius'){
+    console.log(reviews[f].name + '\'s feedback ' +reviews[f].feedback);
+  }
+}
+
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
@@ -58,10 +90,37 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(reviews, index) {
-    /* code here */
+reviews.push({
+  name: 'Fryan ', rating: 1.2, feedback: "I absoulty hated eating at the Fryans French Fry resturnat. They only have frys to eet and I dont like only potatos with my meal. Also the price was outrageous, over $200 for one plate of frys!",
+});
+for(let f = 0; f < reviews.length; f++){
+if(reviews[f].name === 'Fryan '){
+console.log(reviews[f].name +' rating '+ reviews[f].rating + ' ' + reviews[f].feedback);
+}
+}
+
+//reviews['Reyna'] = "this place is chill with really cool people, great for getting work done on weekdays";
+
+for(let f = 0; f < reviews.length; f++){
+  if(reviews[f].name === "Reyna"){
+    console.log("here");
+    reviews[f].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+    console.log(reviews[f].name + reviews[f].rating+ reviews[f].feedback);
   }
-  
+}
+//console.log('revieww'+reviews["Reyna".rating]);
+
+function getReviewByIndex(reviews, index) {
+  for(let f = 0; f < reviews.length; f++){
+    if(f === index){
+      console.log("review by index function");
+      console.log(reviews[f].name +' gave the restaurant a ' + reviews[f].rating+ ' and their feedback was: ' + reviews[f].feedback);
+    } else if(index >= reviews.length){
+      console.log("INdex is not in the array");
+    }
+  }
+  }
+  getReviewByIndex(reviews,1);
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -72,14 +131,23 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
+function getLastReview() {
+  for(let f = 0; f < reviews.length; f++){
+    if ( f === reviews.length - 1){
+      console.log(reviews[f].name +' gave the restaurant a ' + reviews[f].rating+ ' and their feedback was: ' + reviews[f].feedback);
+    }
+  }
   } 
+
+getLastReview();
+
+
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
-/** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
+/** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain 
+ * range. Your function should accept: 
 
   (1) An array of objects
   (2) A rating
@@ -91,11 +159,22 @@ function getLastReview(/* code here */) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(review, rating) {
+
+
+  let ar = [];
+
+  for(let n = 0; n < review.length; n++){
+    ar[n] = review[n].rating;
   }
 
+return ar;
+  }
+//revi = getReviewByRating(reviews,3);
+console.log(revi.rating);
+  for(let i = 0; i < reviews.length; i++){
   
+  }
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
 Your function should accept: 
