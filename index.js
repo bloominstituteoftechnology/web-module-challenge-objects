@@ -36,7 +36,7 @@ function createMenuItem(name, price, category){
   }
   console.log(drink)
 }
-
+console.log(createMenuItem());
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
@@ -70,7 +70,7 @@ function createMenuItem(name, price, category){
   }
   console.log(drink)
 }
-
+console.log(createMenuItem());
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
@@ -90,7 +90,7 @@ function burgerDiscount(message){
   if (message === "public")
   console.log(`public price = ${burger.price - burger.price * .10}`)
 }
-
+console.log(burgerDiscount("teacher"));
 ///////////////Reviews (MVP)///////////////////
 
 const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -132,22 +132,24 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
     if (index === 0)
-    return `The customer, ${reviews[0].name}, gave this restaurant a rating of ${reviews[0].rating}. Their review is: ${reviews[0].feedback}`
+    return ` ${reviews[0].name}, gave this restaurant a rating of ${reviews[0].rating}. Their review is: ${reviews[0].feedback}`
     if (index === 1)
-    return `The customer, ${reviews[1].name}, gave this restaurant a rating of ${reviews[1].rating}. Their review is: ${reviews[1].feedback}`    
+    return ` ${reviews[1].name}, gave this restaurant a rating of ${reviews[1].rating}. Their review is: ${reviews[1].feedback}`    
     if (index === 2)
-    return `The customer, ${reviews[2].name}, gave this restaurant a rating of ${reviews[2].rating}. Their review is: ${reviews[2].feedback}`
+    return ` ${reviews[2].name}, gave this restaurant a rating of ${reviews[2].rating}. Their review is: ${reviews[2].feedback}`
     if (index === 3)
-    return `The customer, ${reviews[3].name}, gave this restaurant a rating of ${reviews[3].rating}. Their review is: ${reviews[3].feedback}`
+    return ` ${reviews[3].name}, gave this restaurant a rating of ${reviews[3].rating}. Their review is: ${reviews[3].feedback}`
     if (index === 4)
-    return `The customer, ${reviews[4].name}, gave this restaurant a rating of ${reviews[4].rating}. Their review is: ${reviews[4].feedback}`
+    return ` ${reviews[4].name}, gave this restaurant a rating of ${reviews[4].rating}. Their review is: ${reviews[4].feedback}`
     if (index === 5)
-    return `The customer, ${reviews[5].name}, gave this restaurant a rating of ${reviews[5].rating}. Their review is: ${reviews[5].feedback}`   
+    return ` ${reviews[5].name}, gave this restaurant a rating of ${reviews[5].rating}. Their review is: ${reviews[5].feedback}`   
     if (index === 6)
-    return `The customer, ${reviews[6].name}, gave this restaurant a rating of ${reviews[6].rating}. Their review is: ${reviews[6].feedback}`
+    return ` ${reviews[6].name}, gave this restaurant a rating of ${reviews[6].rating}. Their review is: ${reviews[6].feedback}`
     if (index === 7)
-    return `The customer, ${reviews[7].name}, gave this restaurant a rating of ${reviews[7].rating}. Their review is: ${reviews[7].feedback}`
+    return ` ${reviews[7].name}, gave this restaurant a rating of ${reviews[7].rating}. Their review is: ${reviews[7].feedback}`
     }
+    console.log(getReviewByIndex(reviews, 0));
+
   // `The patron, ${reviews[input].name}, gave this restaurant a rating of ${reviews[input].rating}. Their review is: ${reviews[input].feedback}`
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
