@@ -57,12 +57,13 @@ let reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and w
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name:"Reyna", rating: 3.5, feedback: ""},
-]
+    {name:"Reyna", rating: 3.5, feedback: ""}
+];
 
 
 
-let revi = [...reviews];
+
+
 /* Task 3: Console.log just Julius' feedback */
 
 for( let f = 0; f <  reviews.length;  f++){
@@ -159,22 +160,24 @@ getLastReview();
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(review, rating) {
+let revi = {};
+ function getReviewByRating(review, r) {
 
 
   let ar = [];
 
   for(let n = 0; n < review.length; n++){
-    ar[n] = review[n].rating;
+   if(review[n].rating === r){
+    ar.push( review[n]);
+   }
   }
 
 return ar;
   }
-//revi = getReviewByRating(reviews,3);
-console.log(revi.rating);
-  for(let i = 0; i < reviews.length; i++){
-  
-  }
+ revi = getReviewByRating(reviews,3);
+
+console.log(revi[0].rating);
+
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
 Your function should accept: 
