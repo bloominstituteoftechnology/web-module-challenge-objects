@@ -57,7 +57,7 @@ let reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and w
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name:"Reyna", rating: 3.5, feedback: ""}
+    {name:"Reyna", rating: 3.5, feedback: "NA"}
 ];
 
 
@@ -178,7 +178,8 @@ return ar;
 
 console.log(revi[0].rating);
 
-/** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
+/** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all 
+ * reviews longer than 15 words. 
   
 Your function should accept: 
 
@@ -191,11 +192,41 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
-    /* code here */
+  function getLongReviews(rev) {
+let result = [];
+let string = '';
+let nam = '';
+let rate = 0;
+let longThan15Words = [{name:"",rating:0,str:"", numberOfWords:0}];
+let l = 0;
+let ll = 0;
+    for(let i = 0; i< rev.length; i++){
+       string  = rev[i].feedback ;
+       nam = rev[i].name;
+       rate = rev[i].rating; 
+    result = string.split(/\s+/).map(({length}) => length);
+    ll = result.length ;
+    if(ll > 15){
+      console.log('string ' + string);
+    console.log('num of words '+ll);
+    longThan15Words[l] = {name:nam,rating:rate,str:string,numberOfWords:ll};
+    //longThan15Words.numberOfWords.push(string);
+    l++;
+    //longThan15Words[0].numberOfWords.push(ll);
+    }
+    result = [];
+    ll = 0;
+    }
+    for(let i=0; i<longThan15Words.length; i++){
+      console.log('reviews longer than 15 words '+longThan15Words[i].name+ ' '+longThan15Words[i].rating+ 
+      ' '+longThan15Words[i].str+ ' '+ longThan15Words[i].numberOfWords);
+    }
+
+
+    
   }
   
-
+getLongReviews(reviews);
 /* STRETCH 3:  This challenge is not related to the data above! 
 
 Write a function called carMarker 
