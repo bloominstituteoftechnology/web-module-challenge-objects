@@ -15,22 +15,15 @@ console.log(createMenuItem("fries",5,"side"));
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
-function createMenuItem(name, cost, category,name2, cost2, category2,name3, cost3, category3){
-  {
+function createMenuItem(name, cost, category){
+
   const newItem = {"name": name, "cost": cost, "category": category };
-    console.log(newItem);
-  }
-{
-  const newItem2 = {"name": name2, "cost": cost2, "category": category2 };
-  console.log(newItem2);
-}
-{
-  const newItem3 = {"name": name3, "cost": cost3, "category": category3 };
-  console.log(newItem3);
-}
+  console.log(newItem);
 }
 
-createMenuItem("fries",5,"side","hotdog",10,"entree","soda",3,"drinks");
+createMenuItem("fries",5,"side");
+createMenuItem("hotdog",10,"entree");
+createMenuItem("soda",3,"drinks");
 
 
 //need to review
@@ -88,7 +81,6 @@ console.log(reviews);
 
 
 
-
 //* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
 reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
@@ -110,8 +102,7 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
 
-  if (index = 0);
-  return  `${reviews[0].name} gave the restaurant a ${reviews[0].rating} star review and their feedback was: ${reviews[0].feedback}`
+  return  `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review and their feedback was: ${reviews[index].feedback}`
  
 }
 
@@ -132,7 +123,6 @@ function getLastReview(array) {
   let phrase =  `${reviews[lastItem].name} gave the restaurant a ${reviews[lastItem].rating} star review and their feedback was: ${reviews[lastItem].feedback}`
   return phrase;
   } 
-
   console.log(getLastReview(reviews));
 
 
