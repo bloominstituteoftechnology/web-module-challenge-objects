@@ -192,7 +192,7 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(rev) {
+  function getLongReviews1(rev) {
 let result = [];
 let string = '';
 let nam = '';
@@ -225,6 +225,20 @@ let ll = 0;
 
     
   }
+
+
+  function getLongReviews(array) {
+    let filteredArray = array.filter((i) => {
+        if (i.feedback.split(' ').length > 15) {
+            return i;
+        }
+    });
+    return filteredArray;
+}
+console.log(getLongReviews(reviews));
+
+
+
   
 getLongReviews(reviews);
 /* STRETCH 3:  This challenge is not related to the data above! 
@@ -245,7 +259,7 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
+function carMaker() {
+    
     
 }
