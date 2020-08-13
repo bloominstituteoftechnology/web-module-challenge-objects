@@ -64,16 +64,16 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 /* function addReview(reviews, name, rating, feedback){
   reviews.push({Simone, 4, Amazing!});
   return reviews;
-} */
+} 
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
 
-/* function changeReview(reviews, name, rating, feedback){
+  function changeReview(reviews, name, rating, feedback){
   reviews[3.5].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
   return reviews;
 }
 
-changeReview(reviews, "Reyna", 3.5, feedback) */
+changeReview(reviews, "Reyna", 3.5, feedback);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -87,13 +87,15 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
- function = getReviewByIndex (reviews, rating) {
-    if(rating === 0 || rating === 1);
-    ReviewByIndex = this.name + 'gave the restaurant a' + this.rating + 'and their feedback was' + this.feedback; 
+
+let ReviewByIndex = []
+
+function getReviewByIndex (reviews, index) {
+    ReviewByIndex = ' ${reviews[index].name} gave the restaurant a ${reviews[index].rating}, and their feedback was: ${reviews[index].feedback}';
     return(ReviewByIndex);
   }
 
-  getReviewbyIndex(reviews, 0)
+  console.log(getReviewbyIndex(reviews, 0))
   
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
@@ -105,13 +107,13 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(reviews) {
+/* function getLastReview(reviews) {
     var LastReview = reviews[reviews.length - 1];
     LastReview = this.name + 'gave the restaurant a' + this.rating + 'review and their feedback was' + this.feedback; 
     return LastReview;
   } 
 
-  reviews.getLastReview(reviews)
+  reviews.getLastReview(reviews) */
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -128,8 +130,13 @@ function getLastReview(reviews) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(reviews, rating) {
+    for(let i = 0; i < reviews.length; i++){
+      if(reviews[i].rating === rating){
+        zeroreviews.push(reviews[i].name.rating.feedback);
+      }
+    }
+    console.log(zeroreviews);
   }
 
   
@@ -146,9 +153,19 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
-    /* code here */
+let longReviews = []
+  function getLongReviews(reviews) {
+    for(let i = 0; i < reviews.length; i++){
+      let wordCount = reviews[i].feedback.split("").length;
+      if(wordCount > 14){
+        longReviews.unshift(reviews[i]);
+
+      }
+    }
+    console.log(longReviews);
   }
+
+  getLongReviews(reviews);
   
 
 /* STRETCH 3:  This challenge is not related to the data above! 
