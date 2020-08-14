@@ -112,8 +112,14 @@ console.log(getLastReview(reviews));
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(arr, rating) {
+    let newArr = [];
+    for (let i = 0; i< arr.length; i++){
+      if (arr[i].includes(rating)){
+        newArr.push(arr[i])
+      }
+    }
+    return newArr;
   }
 
   
