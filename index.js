@@ -1,4 +1,4 @@
-///////////////Menu Items (MVP)///////////////////
+//////THIS IS HARD DONT BE DISCOURAGED/////////Menu Items (MVP)///////////////////
 
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
 const burger = {name: "Burger", price: 18, category: "Lunch"};
@@ -6,7 +6,9 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, cost, category){
+function createMenuItem(name, cost, category)
+{  let baconAndAvocado, 15, burger
+  document.createMenuItem("baconAndAvocado");
     /* Code here */
 }
 
