@@ -7,10 +7,14 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category){
-    /* Code here */
+    return {name, cost, category}
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+console.log(createMenuItem("Veggie Plate", 10, "Lunch"))
+console.log(createMenuItem("Potato Scramble", 15, "Breakfast"))
+console.log(createMenuItem("Iced Tea Lemonade", 3, "Drinks"))
 
 
 
@@ -24,7 +28,7 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
-
+if (burger.discount)
 
 ///////////////Reviews (MVP)///////////////////
 
