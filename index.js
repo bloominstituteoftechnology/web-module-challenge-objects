@@ -1,7 +1,18 @@
 ///////////////Menu Items (MVP)///////////////////
 
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const burger = {name: "Burger", price: 18, category: "Lunch"};
+const burger = {name: "Burger", price: 18, category: "Lunch",
+
+discount:function(guest){
+
+  if (guest === "teacher"||guest === "student"){
+    let reducedPrice = this.price - (this.price *.25);
+    return  reducedPrice;
+} else{
+   let = reducedPrice = this.price  - (this.price * .10);
+    return reducedPrice;
+}
+}};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
@@ -27,8 +38,10 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+console.log(burger.discount("teacher"));
+console.log(burger.discount("student"));
+console.log(burger.discount("public"));
 
-if (burger.discount)
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -43,12 +56,16 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-
+console.log(`${reviews[5].name}:  ${reviews[5].feedback}`);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+  reviews.push({name: "Rex", rating: 1, feedback:"The food was mediocre and overpriced. The dining area was noisy and filthy."})
+  console.log(reviews);
 
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+      reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+console.log(reviews);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -63,9 +80,10 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
-    /* code here */
+    return `${reviews[index].name} gave the restaurant a ${reviews[index].rating}, and their feedback was: ${reviews[index].feedback}`
+
   }
-  
+  console.log(getReviewByIndex(reviews, 0));
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -76,10 +94,12 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
+function getLastReview(arr) {
+     this[this.length -1];
+    return `${reviews[reviews.length -1].name} gave the restaurant a ${reviews[reviews.length -1].rating}, and their feedback was: ${reviews[reviews.length -1].feedback}`
   } 
 
+  console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -95,10 +115,16 @@ function getLastReview(/* code here */) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(arr, arrRating) {
+    ratingArr = [];
+    for(let i = 0; i < arr.length; i++){
+      if (Math.floor(reviews[i].rating) === arrRating){
+         ratingArr.push(reviews[i]);
+      }
+    }
+    return ratingArr;
   }
-
+console.log(getReviewByRating(reviews, 4));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
