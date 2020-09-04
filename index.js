@@ -8,9 +8,26 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 function createMenuItem(name, cost, category){
     /* Code here */
+    const menuItem = new Object(); // use new Object() to create object
+    menuItem.name = name; // use var name with dot notation and key name , assign it value
+    menuItem.price = cost;
+    menuItem.category = category;
+    return menuItem; // return var name to complete function
 }
 
+const pizza = createMenuItem("Pizza", 6, "Lunch")
+
+console.log(pizza)
+
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+const fries = createMenuItem("Fries", 3, "Lunch")
+const orangejuice = createMenuItem("Orange Juice", 2.5, "Breakfast")
+const ribs = createMenuItem("Ribs", 10, "Dinner")
+
+console.log(fries)
+console.log(orangejuice)
+console.log(ribs)
 
 
 
@@ -23,6 +40,14 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+
+function discountMethod(str) {
+  if (str == 'teacher' || str == 'student') {
+    this.price = this.price - (price * .25)
+  } else 
+}
+
+
 
 
 
