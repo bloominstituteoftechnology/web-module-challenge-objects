@@ -74,6 +74,11 @@ console.log(Object.values(reviews)[5].feedback)
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
+reviews[8] = {name: "Johnathan", rating: 5, feedback: "The food here is so good."}
+
+console.log(reviews)
+console.log(reviews.length)
+
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
