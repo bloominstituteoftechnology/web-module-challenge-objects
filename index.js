@@ -41,14 +41,17 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
-function discountMethod(str) {
-  if (str == 'teacher' || str == 'student') {
-    this.price = this.price - (price * .25)
-  } else 
+burger.discount = function(str){
+  if (str === "teacher" || str === "student") {
+    this.price = this.price - (this.price * .25); 
+    return this.price;
+  } else {
+    this.price = this.price - (this.price * .1);
+    return this.price;
+  }
 }
 
-
-
+console.log(burger.discount("public"))
 
 
 ///////////////Reviews (MVP)///////////////////
