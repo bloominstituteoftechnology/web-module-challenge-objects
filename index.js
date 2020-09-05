@@ -68,6 +68,9 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+//To access a specific value in an array full of multiple objects, find the index number and use dot notation to call key to get its value
+console.log(Object.values(reviews)[5].feedback)
+
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
