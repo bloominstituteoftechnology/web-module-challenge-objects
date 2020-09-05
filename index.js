@@ -80,7 +80,13 @@ console.log(reviews)
 console.log(reviews.length)
 
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+//call the 7th element in the array and with dot notation changed the feedback key for that location to desired string.
+
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
+console.log(reviews)
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
