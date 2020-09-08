@@ -72,7 +72,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-console.log(reviews[5].feedback);
+// console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 function addReview(name, rating, feedback) {
@@ -85,9 +85,21 @@ function addReview(name, rating, feedback) {
 
 addReview('Orlando', 4, 'It was pretty phenomenal, the director really caught the vision that the writer put down and the actors really danced to the rhythm of the beat. Only complaint was that the ending was ambiguous and though it may work for some films, it certainly did not work for this one.  All in all, it was one of the best films, I\'ve seen in a while.');
 
-console.log(reviews[8].feedback);
+// console.log(reviews[8].feedback);
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+function raynorFeedback(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].feedback === '') {
+      arr[i].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
+    }
+  }
+  return arr;
+};
+
+raynorFeedback(reviews);
+
+console.log(reviews[7].feedback);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
