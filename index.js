@@ -99,7 +99,7 @@ function raynorFeedback(arr) {
 
 raynorFeedback(reviews);
 
-console.log(reviews[7].feedback);
+// console.log(reviews[7].feedback);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -115,7 +115,11 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
     /* code here */
-  }
+      return `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review and their feedback was: ${reviews[index].feedback}`;
+  };
+
+console.log(getReviewByIndex(reviews, 0));
+console.log(getReviewByIndex(reviews, 8));
   
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
