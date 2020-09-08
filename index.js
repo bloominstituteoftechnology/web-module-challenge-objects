@@ -6,12 +6,27 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, cost, category){
+function createMenuItem(name, price, category){
     /* Code here */
+    return {
+      name: name,
+      price: price,
+      category: category
+    }
 }
 
-/* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+const whopper = createMenuItem('Double Whopper', 8.99, 'Lunch');
+// console.log(whopper);
 
+
+/* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+const milkshake = createMenuItem('Milkshake', 4.19, 'Lunch');
+const tacos = createMenuItem('3 Tacos', 4.99, 'Lunch');
+const breakfastBaconator = createMenuItem('Breakfast Baconator', 6.99, 'Breakfast');
+
+console.log(milkshake);
+console.log(tacos);
+console.log(breakfastBaconator);
 
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
