@@ -86,8 +86,13 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 // /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 // console.log(reviews.push({name: 'Sam', rating: 5, feedback:"taste of cardboard, quite delicious cardboard"}))
 // console.log(reviews)
-// /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
-// reviews[8].feedback.push("Much too rubbery for my pallette")
+  //  Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+  function changeReview (arr){
+index = [arr.length - 1]
+  return arr[index].feedback = "Much too rubbery for my pallette";
+  }
+  changeReview(reviews)
+  console.log(reviews)
 // /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
 //  Your function should take two arguments:
@@ -117,11 +122,11 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 // For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 // */
-function getLastReview(array1) {
-    let lastReview = array1[array1.length -1];
-    return '${name} gave the restaurant a ${rating}, and their feedback was: ${feedback}';
-  } 
-  console.log(getLastReview(reviews))
+// function getLastReview(array1) {
+//     let lastReview = array1[array1.length -1];
+//     return lastReview '${array1[lastReview].name} gave the restaurant a ${array1[lastReview].rating}, and their feedback was: ${feedback}';
+// //   } 
+// console.log(getLastReview(reviews))
 
 
 // ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
