@@ -6,14 +6,20 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, price, category){
-    /* Code here */
-}
+const menu = [latte, burger, breakfastBurrito];
+
+console.log(menu);
+
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
+menu.push(sandwich = {name: "Turkey Sandwich", price: 12, category: "Lunch"});
+menu.push(chocolateMilkshake = {name: "Chocolate Milkshake", price: 6, category: "Drinks"});
+menu.push(ribeyeSteak = {name: "Ribeye Steak", price: 36, category: "Dinner"});
 
+console.log(menu);
 
+ 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
 Your method should accept: 
@@ -40,11 +46,25 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+console.log(reviews[5].name);
+
+
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
+reviews.push({name: "Justin", rating: 3.3, feedback: "The food here is fantastic, I only wish they delivered during these covid times."})
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+console.log(reviews);
+
+
+
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+reviews[7].key3 = ("This place rocks! I had a blast with my family, the service was fantastic, and the food was phenomenal");
+
+console.log(reviews);
+
+
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
