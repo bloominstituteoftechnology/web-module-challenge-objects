@@ -19,7 +19,7 @@ function createMenuItem(name, cost, category) {
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 //Done!
 
-const flatWhite = createmenuItem("Flat White", 5, "Drinks");
+const flatWhite = createMenuItem("Flat White", 5, "Drinks");
 
 const cheeseBurger = createMenuItem("CheeseBurger", 20, "Lunch");
 
@@ -112,7 +112,8 @@ function getReviewByIndex(reviews, index) {
   output = `${reviewerName} gives a ${reviewerRating} rating, with the following feedback ${reviewerFeedback}`;
   return output;
 }
-  console.log(getReviewsByindex(reviews, 0));
+  /* console.log(getReviewByindex(reviews, 0)); */ 
+  console.log(reviews, 0);
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -131,12 +132,11 @@ function getLastReview(arrayReviews) {
   const reviewerName = arrayReviews[latestReview].name;
   const reviewerRating = arrayReviews[latestReview].rating;
   const reviewerFeedback = arrayReviews[latestReview].feedback;
-  output = `${reviewername} gives a ${reviewerRating} rating, with the following feedback  ${reviewerFeedback}`;
+  output = `${reviewerName} gives a ${reviewerRating} rating, with the following feedback  ${reviewerFeedback}`;
   return output; 
 }
 
 console.log("Most recent review ", getLastReview(reviews));
-
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -187,7 +187,7 @@ and should return an array of objects.
   function getLongReviews(arrayReviews) {
     let longReviews;
     let allResults = [];
-    for (leti=0; i<arrayReviews.length;i++) {
+    for (let i=0; i<arrayReviews.length;i++) {
       const numOfWords=arrayReviews[i].feedback.split("").length;
       if(numOfWords>15) {
         allResults.push(arrayReviews[i]);
@@ -227,5 +227,5 @@ function carMaker(odometer) {
     return myObj;
 }
 
-const myCar - carMaker(12);
+const myCar = carMaker(12);
 console.log(myCar.drive(50));
