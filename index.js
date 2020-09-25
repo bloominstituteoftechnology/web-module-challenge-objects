@@ -98,14 +98,15 @@ reviews[7].feedback = "this place is chill with really cool people, great for ge
 
 function getReviewByIndex(arr, position) {
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[position]) {
+  // for (let i = 0; i < arr.length; i++) {
+    // if (arr[i] === arr[position])
+     if (reviews[position]) {
       return arr[position].name + ' gave the restaurant a ' + arr[position].rating + ' star review and their feedback was: ' + arr[position].feedback
     }
   }
    
-  }
-
+  // }
+  // console.log('task 6')
   // console.log(getReviewByIndex(reviews, 2));
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
@@ -123,12 +124,15 @@ console.log('task 7');
 function getLastReview(arr) {
 let lastItem = arr[arr.length - 1];
 
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === lastItem) {
-        return arr[i].name + ' gave the restaurant a ' + arr[i].rating + ' star review and their feedback was: ' + arr[i].feedback
-      }
-      }
-    }
+return `${lastItem.name} gave the restaurant a ${lastItem.rating}, and their feedback was: ${lastItem.feedback}`;
+
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i] === lastItem) {
+    //     return arr[i].name + ' gave the restaurant a ' + arr[i].rating + ' star review and their feedback was: ' + arr[i].feedback
+    //   }
+    //   }
+    // }
+}
 console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
