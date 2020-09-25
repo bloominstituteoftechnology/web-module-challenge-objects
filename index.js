@@ -19,9 +19,9 @@ function createMenuItem(name, price, category){
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
-createMenuItem('Veggie Burger', 10, 'American');
-createMenuItem('Churros', 3, 'Mexican');
-createMenuItem('Ice Cream', 5, 'American')
+let veganSpot = createMenuItem('Veggie Burger', 10, 'American');
+let mexSpot = createMenuItem('Churros', 3, 'Mexican');
+let sugarSpot = createMenuItem('Ice Cream', 5, 'American')
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. 
 Add a method to your burger object that automatically calculates price given a string as a parameter. 
