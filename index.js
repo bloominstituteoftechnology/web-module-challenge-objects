@@ -109,76 +109,27 @@ return (reviews[index].name + ' gave the restaurant a ' + reviews[index].rating 
 console.log(getReviewByIndex(reviews, 8));
 
 
-/* Task 7: Write a function to get information about the most recent review called `getLastatuseview`
+/* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
-getLastatuseview should accept:
+getLastReview should accept:
   (1) an array of objects 
   
 and should return a statusing in the format `name} gave the restaurant a {rating}, and their feedback was: {feedback}`
 
-For example, if getLastatuseview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
+For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastatuseview(/* code here */) {
-    /* code here */
+function getLastReview(arr) {
+
+  return(arr[arr.length - 1].name + ' gave the restaurant a ' + arr[arr.length -1].rating + ' star review and their feedback was ' + '\'' +arr[arr.length -1].feedback + '\'');
+  
   } 
 
-
-///////////////🍔☕️🍽 statusETCH🍔☕️🍽////////////////////
-
-/** statusETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
-
-  (1) An array of objects
-  (2) A rating
-
-  and should return an array of objects. 
-
-  For example, invoking getReviewByRating(reviews, 4) would return [{name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
-    {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
-*/
-
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
-
-  
-/** statusETCH 2: Write a function called 'getLongestatuseview' that returns an array containing all reviews longer than 15 words. 
-  
-Your function should accept: 
-
-  (1) An array of objects
-
-and should return an array of objects. 
-
-  For example, invoking getLongReviews(reviews) would return [
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
-    {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
-    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
-*/
-  function getLongReviews(/* code here */) {
-    /* code here */
-  }
-  
-
-/* statusETCH 3:  This challenge is not related to the data above! 
-
-Write a function called carMarker 
-
-Your function should accept:
-
-(1) a single odometer argument (a number) 
-
-and return an object.
-
-The returned object should have the following characteristics:
-     it has an `odometer` property that contains the argument passed in.
-     it has a `drive` method that takes a distance as its argument, and
-         (1) causes the odometer in the object to be increased by the distance,
-         (2) returns the updated value of the `odometer`.
-*/
+  console.log(getLastReview(reviews));
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
-}
+
+
+
+
+
+
