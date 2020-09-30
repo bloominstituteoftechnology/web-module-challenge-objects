@@ -7,22 +7,50 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, price, category){
-    /* Code here */
+
+    return{
+      name: name,
+      price: price,
+      category: category,
+    };
+
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
+const icecream = createMenuItem('IceCream', 3, "Dessert");
+const tacos = createMenuItem('Tacos', 7, "Lunch");
+const fries = createMenuItem('Fries', 2, "Side");
 
+console.log(icecream);
 
-/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
+/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. 
+Add a method to your burger object that 
+automatically calculates price given a statusing as a parameter. 
 
 Your method should accept: 
 
-(1) A string (teacher, student, or public)
+(1) A statusing (teacher, student, or public)
 
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+
+burger.discount = function(status) {
+  if ( status === 'teacher' || status === 'student') {
+    return this.price - (this.price * .25);
+  } else {
+    return this.price - (this.price * .10);
+  }
+}
+
+console.log(burger.discount('teacher'));
+console.log(burger.discount('student'));
+
+
+
+
+
 
 
 
@@ -53,7 +81,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 (1) an array which holds all of the reviews
 (2) a number which is the desired index in the array.
 
-and should return a string in the format `{name} gave the restaurant a {rating}, and their feedback was: {feedback}`
+and should return a statusing in the format `{name} gave the restaurant a {rating}, and their feedback was: {feedback}`
  * 
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
@@ -63,23 +91,23 @@ function getReviewByIndex(reviews, index) {
   }
   
 
-/* Task 7: Write a function to get information about the most recent review called `getLastReview`
+/* Task 7: Write a function to get information about the most recent review called `getLastatuseview`
 
-getLastReview should accept:
+getLastatuseview should accept:
   (1) an array of objects 
   
-and should return a string in the format `name} gave the restaurant a {rating}, and their feedback was: {feedback}`
+and should return a statusing in the format `name} gave the restaurant a {rating}, and their feedback was: {feedback}`
 
-For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
+For example, if getLastatuseview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
+function getLastatuseview(/* code here */) {
     /* code here */
   } 
 
 
-///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
+///////////////🍔☕️🍽 statusETCH🍔☕️🍽////////////////////
 
-/** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
+/** statusETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
 
   (1) An array of objects
   (2) A rating
@@ -96,7 +124,7 @@ function getLastReview(/* code here */) {
   }
 
   
-/** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
+/** statusETCH 2: Write a function called 'getLongestatuseview' that returns an array containing all reviews longer than 15 words. 
   
 Your function should accept: 
 
@@ -114,7 +142,7 @@ and should return an array of objects.
   }
   
 
-/* STRETCH 3:  This challenge is not related to the data above! 
+/* statusETCH 3:  This challenge is not related to the data above! 
 
 Write a function called carMarker 
 
