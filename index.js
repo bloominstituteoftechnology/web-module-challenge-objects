@@ -117,15 +117,17 @@ function getReviewByIndex(/*Your code here*/) {
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Write a function to get information about the most recent review called `getLastReview`
+Write a function to get information about the most recent (last) review called `getLastReview`
 
-getLastReview should accept:
-  (1) an array of objects 
-  
-and should return a string in the format `name} gave the restaurant a {rating}, and their feedback was: {feedback}`
+Use the getLastReview function below to do the following:
+  1. Receive the review array
+  2. Return the last review using the following string: "{name} gave the restaurant a {rating}, and their feedback was: {feedback}"
+  3. Console log the returned string to check work
 
-For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
+  For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review and their feedback was: this place is chill with really cool people, great for getting work done on weekdays" because Reyna's review is the most recent (last to be created).
 */
+
+
 function getLastReview(/*Your code here*/) {
   /*Your code here*/
 } 
@@ -135,16 +137,17 @@ function getLastReview(/*Your code here*/) {
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
 /** 💪💪💪💪💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪💪💪💪💪 
- Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
+Use the getReviewsByRating function below to do the following:
+  1. Receive the array that holds all the reviews
+  2. Receive a rating
+  3. Return an array with all the reviews in that range
 
-  (1) An array of objects
-  (2) A rating
-
-  and should return an array of objects. 
-
-  For example, invoking getReviewByRating(reviews, 4) would return [{name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
+  For example: getReviewByRating(reviews, 4) would return these reviews in the 4 range (4-4.9):
+  [
+    {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
-    {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
+    {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
+  ]
 */
 
  function getReviewByRating(/* code here */) {
@@ -152,41 +155,39 @@ function getLastReview(/*Your code here*/) {
   }
 
   
-/* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪 
-Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
-  
-Your function should accept: 
+/* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
+Use the getLongReviews function below to do the following:
+  1. Receive the array that holds all the reviews
+  2. Return an array with all the reviews that have more than 15 words in their feedback
 
-  (1) An array of objects
-
-and should return an array of objects. 
-
-  For example, invoking getLongReviews(reviews) would return [
+  For example: getLongReviews(reviews) would return:
+  [
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
-    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
+    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }
+  ]
 */
-  function getLongReviews(/* code here */) {
+
+function getLongReviews(/* code here */) {
     /* code here */
   }
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
-This challenge is not related to the data above! 
+This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
 
-Write a function called carMarker 
+Use the carMaker function below to do the following:
+  1. Receive a value representing the odometer (how many miles it's been driven) and use that when creating the object
+  2. Create a drive method inside the object that increases the odometer value
+  3. Return the object
+  4. The returned object with the odometer value should have the following characteristics:
+     a. The drive method which, when called, takes a distance value as its parameter
+     b. The drive method should also cause the odometer value in the object to be increased by the distance
+     c. Then the drive method should return the updated value of the odometer
 
-Your function should accept:
-
-(1) a single odometer argument (a number) 
-
-and return an object.
-
-The returned object should have the following characteristics:
-     it has an `odometer` property that contains the argument passed in.
-     it has a `drive` method that takes a distance as its argument, and
-         (1) causes the odometer in the object to be increased by the distance,
-         (2) returns the updated value of the `odometer`.
+  For example: Let's say we created the object in the variable car1 with an odometer value of 10.
+  Then we called car1.drive(100)
+  It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
 
