@@ -90,7 +90,8 @@ Using the reviews array above do the following:
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
-  2. Return the reviews array  */
+  2. Return the reviews array  
+*/
 
 
 
@@ -99,16 +100,15 @@ Reyna's feedback is missing! Use what you know to do the following:
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
- Your function should take two arguments:
+Use the getReviewByIndex function below to do the following:
+  1. Receive two values: the array that holds all the reviews and an index position of the review to display
+  2. Using those, return the following string: "{name} gave the restaurant a {rating}, and their feedback was: {feedback}"
+  3. Console log the returned string to check your work
 
-(1) an array which holds all of the reviews
-(2) a number which is the desired index in the array.
-
-and should return a string in the format `{name} gave the restaurant a {rating}, and their feedback was: {feedback}`
- * 
- * For example, if getReviewByIndex is invoked with reviews and the number 0
- * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
+  For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
+
+
 function getReviewByIndex(/*Your code here*/) {
   /*Your code here*/
 }
