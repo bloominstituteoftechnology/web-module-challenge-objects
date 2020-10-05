@@ -1,3 +1,9 @@
+/*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+
+/*
+When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
+*/
+
 ///////////////Menu Items (MVP)///////////////////
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
@@ -50,6 +56,7 @@ export const burger = {
 
 
 ///////////////Reviews (MVP)///////////////////
+/*Use the reviews array below, that contains many objects, to do the next set of tasks*/
 
 const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -58,23 +65,32 @@ const reviews = [
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
-    {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name:"Reyna", rating: 3.5, feedback: ""},
+    {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
+    {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Console.log just Julius' feedback */
+Using the reviews array above:
+  1. Return only Julius' feedback
+  
+  HINT: Feel free to console.log as well but make sure you return it as well!
+*/
 
 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+Using the reviews array above do the following:
+  1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
+  2. Return the whole array, make sure the new review is inside of it   
+*/
 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+Reyna's feedback is missing! Use what you know to do the following:
+  1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+  2. Return the reviews array  */
 
 
 
