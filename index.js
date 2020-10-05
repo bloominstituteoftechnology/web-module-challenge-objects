@@ -2,8 +2,14 @@
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1a:🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-write a function to return more menu items with the same format as the items above. */
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1a: Make a function that builds objects (constructor function)🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+Add to the function createMenuItems below so it will create objects following the same format found above for latte and breakfastBurrito (name, price, category).  
+The function should:
+  1. Receive values for the object that will be created
+  2. Create and return an object using the received values  
+  
+  HINT - we are basically creating a constructor function here (a function that creates and returns objects) 
+*/
 
 function createMenuItem(/*Your code here*/){
     /*Your code here*/
