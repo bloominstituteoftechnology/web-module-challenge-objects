@@ -27,15 +27,17 @@ Test your createMenuItems function by doing the following:
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
+You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
+burger object below that automatically calculates price depending on the a string received as a parameter. 
 
-Your method should accept: 
+Using the burger object below do the following:
+  1. Add a method called discount to the burger object 
+  2. The discount method should accept a string that could be "teacher", "student", or "public"
+  2. Depending on the string, it will return the correct price
+  3. Log the correct returned price to the console
 
-(1) A string (teacher, student, or public)
-
-and should return a number. 
-
-For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+  For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
+*/
 
 export const burger = {
   name: "Burger", 
