@@ -11,8 +11,6 @@ Add to the function createMenuItems below so it will create objects following th
 The function should:
   1. Receive values for the object that will be created
   2. Create and return an object using the received values  
-  
-  HINT - we are basically creating a constructor function here (a function that creates and returns objects) 
 */
 
 function createMenuItem(/*Your code here*/){
@@ -37,8 +35,8 @@ burger object below that automatically calculates price depending on the a strin
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
   2. The discount method should accept a string that could be "teacher", "student", or "public"
-  2. Depending on the string, it will return the correct price
-  3. Log the correct returned price to the console
+  3. Depending on the string, it will return the correct discounted price
+  4. Log the correct returned price to the console
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
@@ -52,10 +50,7 @@ export const burger = {
 
 
 
-
 ///////////////Reviews (MVP)///////////////////
-/*Use the reviews array below, that contains many objects, to do the next set of tasks*/
-
 const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
@@ -69,9 +64,7 @@ const reviews = [
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
-  1. Return only Julius' feedback
-  
-  HINT: Feel free to console.log as well but make sure you return it as well!
+  1. log only Julius' feedback to the console
 */
 
 
@@ -80,7 +73,7 @@ Using the reviews array above:
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
-  2. Return the whole array, make sure the new review is inside of it   
+  2. log the whole array to the console, make sure the new review is inside of it   
 */
 
 
@@ -88,7 +81,7 @@ Using the reviews array above do the following:
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
-  2. Return the reviews array  
+  2. log the reviews array to the console to check your work
 */
 
 
@@ -99,10 +92,8 @@ Reyna's feedback is missing! Use what you know to do the following:
 Write a function to return a review based on the index of the review in the array.
 
 Use the getReviewByIndex function below to do the following:
-  1. Receive two values: the array that holds all the reviews and an index position of the review to display
-  2. Using those, return the following string: "{name} gave the restaurant a {rating}, and their feedback was: {feedback}"
-  3. Console log the returned string to check your work
-
+  1. Receive two arguements: the array that holds all the reviews and an index position of the review to display
+  2. The function should return the following string: "{name} gave the restaurant a {rating} star review and their feedback was: {feedback}"
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
@@ -118,11 +109,10 @@ function getReviewByIndex(/*Your code here*/) {
 Write a function to get information about the most recent (last) review called `getLastReview`
 
 Use the getLastReview function below to do the following:
-  1. Receive the review array
-  2. Return the last review using the following string: "{name} gave the restaurant a {rating}, and their feedback was: {feedback}"
-  3. Console log the returned string to check work
-
-  For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review and their feedback was: this place is chill with really cool people, great for getting work done on weekdays" because Reyna's review is the most recent (last to be created).
+  1. Receive an array of objects 
+  2. Return a string in the format: "{name} gave the restaurant a {rating} star review and their feedback was: {feedback}"
+  
+  For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
 
