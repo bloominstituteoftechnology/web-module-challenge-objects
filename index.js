@@ -75,6 +75,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
+console.log(reviews[5].feedback) 
 
 
 
@@ -84,6 +85,16 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
+
+  function addFeedBack(arr, name, rating, feedback ){
+    arr.push({name, rating, feedback});
+    return arr;
+  }
+
+  console.log(addFeedBack(reviews, 'rob', '1', 'ewh'));
+
+  
+
 
 
 
