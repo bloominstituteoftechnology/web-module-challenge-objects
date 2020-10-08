@@ -12,10 +12,13 @@ The function should:
   1. Receive values for the object that will be created
   2. Create and return an object using the received values  
 */
-
-function createMenuItem(){
-    /*Your code here*/
+const breakfastArray = [];
+function createMenuItem(breakfastArray, name, price, category){
+  
+    breakfastArray.push({name, price, category});
+    return breakfastArray;
 }
+console.log(createMenuItem(breakfastArray, "Scrambled Eggs", 10, "breakfast"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -25,8 +28,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
-
+console.log(createMenuItem(breakfastArray, "Pizza", 5, "lunch"));
+console.log(createMenuItem(breakfastArray, "Taco", 7, "lunch"));
+console.log(createMenuItem(breakfastArray, "Burrito", 10, "lunch"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -46,8 +50,22 @@ export const burger = {
   price: 18, 
   category: "Lunch", 
   /*Your code here*/
+  discount:function(title) {
+    if(title === "teacher"){
+      this.price = 13.5;
+    }
+    else if(title === "student"){
+      this.price = 13.5;
+    }
+    else if(title === "public"){
+      this.price = 16.2;
+    }
+    return this.price;
+  }
 }
-
+console.log(burger.discount("teacher"));
+console.log(burger.discount("student"));
+console.log(burger.discount("public"));
 
 
 ///////////////Reviews (MVP)///////////////////
