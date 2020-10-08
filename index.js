@@ -110,9 +110,9 @@ Write a function to get information about the most recent (last) review called `
 
 Use the getLastReview function below to do the following:
   1. Receive an array of objects 
-  2. Return a string in the format: "{name} gave the restaurant a {rating} star review and their feedback was: {feedback}"
+  2. Return a string in the format: "{name} gave the restaurant a {rating} star review and, their feedback was: {feedback}"
   
-  For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
+  For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review and, their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
 
