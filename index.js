@@ -93,10 +93,6 @@ Using the reviews array above do the following:
 
   console.log(addFeedBack(reviews, 'rob', '1', 'ewh'));
 
-  
-
-
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
@@ -104,7 +100,12 @@ Reyna's feedback is missing! Use what you know to do the following:
   2. log the reviews array to the console to check your work
 */
 
+function addReyna(arr, index, newReview){
+  arr[index].feedback = newReview
+  return arr
+}
 
+console.log(addReyna(reviews, 7, 'this place is chill with really cool people, great for getting work done on weekdays'))
 
 
 
