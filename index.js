@@ -92,6 +92,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
+console.log(review[5].feedback);
 
 
 
