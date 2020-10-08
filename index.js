@@ -55,7 +55,7 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   discount: function(person){
-    if (person === 'teacher' || person === 'student'){
+    if (person === "teacher" || person === "student"){
       this.price = (this.price * 0.75)
     } else {
       this.price = (this.price * 0.90)
@@ -82,6 +82,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
+console.log(reviews[5].feedback);
 
 
 
@@ -92,6 +93,13 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+function addSomething(array, name, rating, feedback){
+  array.push({name, rating, feedback})
+  return array;
+}
+addSomething(reviews, 'Saul', '4', 'This place was really good, but not my absolute favorite'.);
+console.log(reviews);
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -99,6 +107,8 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 
 
