@@ -33,7 +33,7 @@ console.log(createMenuItem("coroque monsieur", 18, "Lunch"));
 console.log(createMenuItem("beet salad", 14, "Lunch"));
 
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+/* // 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
 burger object below that automatically calculates price depending on the a string received as a parameter. 
 
@@ -43,15 +43,8 @@ Using the burger object below do the following:
   3. Depending on the string, it will return the correct discounted price
   4. Log the correct returned price to the console
 
-  For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
-*/
+  For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2// */
 
-export const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
-}
 
 
 
@@ -72,6 +65,10 @@ Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
+/* function logJulius (name){
+  return reviews.splice(5);
+}
+console.log(logJulius(Julius)); */
 
 
 
@@ -81,6 +78,7 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+reviews.push('feedback','amazing stuff');
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -103,11 +101,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array , index) {
+  return name + "gave the restaurant a" + rating + "star review, and their feedback was:"+ feedback ;
 }
 
-
+console.log(getReviewByIndex(array, index));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
