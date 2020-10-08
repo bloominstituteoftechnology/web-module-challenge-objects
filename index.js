@@ -13,9 +13,23 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, cost, category){
+  let result = new Object();
+  result["name"] = name;
+  result["cost"] = cost;
+  result["category"] = category;
+return result;
+
 }
+
+function createMenuItem2(name, cost, category){
+this.name = name;
+this.cost = cost;
+this.category = category;
+}
+
+var result = new createMenuItem2("mac", 15, "dinner")
+console.log(creatMneuItem ("sushi", 10, "dinner"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
