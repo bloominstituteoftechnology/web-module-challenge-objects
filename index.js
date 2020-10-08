@@ -150,9 +150,13 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(arr) {
+  let len = arr.length - 1;
+    return `${arr[len].name} gave the resturant a ${arr[len].rating} star review and their feedback was: ${arr[len].feedback}`
+  } 
+
+
+console.log(getLastReview(reviews));
 
 
 
@@ -172,9 +176,17 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+function getReviewByRating(arr, rating) {
+  let goodReviews = []
+
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i].rating >= 4) {
+      goodReviews.push(arr[i]);
+    }
   }
+  return goodReviews;
+}
+console.log(getReviewByRating(reviews, 4));
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -190,9 +202,19 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(arr) {
+  let longReviews = [];
+
+  for(let i = 0; i < arr.length; i++) {
+    let words = arr[i].feedback.split(" ");
   }
+  if(words.length >= 15) {
+    longReviews.push(arr[i])
+  }
+  return longReviews;
+}
+console.log(getLongReviews);
+
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
