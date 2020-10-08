@@ -14,14 +14,14 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
-    const omelette = {
+    const menuItem = {
       name,
       price,
       category,
     }
-    return omelette
+    return menuItem
 }
-createMenuItem('denver omelette', 8, 'Breakfast')
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -31,7 +31,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+createMenuItem('denver omelette', 8, 'Breakfast')
+createMenuItem('pizza', 5, 'lunch')
+createMenuItem('burger', 12, 'dinner')
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
