@@ -4,7 +4,7 @@
   "description": "## Objects",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "clear && jest",
     "test:watch": "jest --verbose --watchAll"
   },
   "repository": {
