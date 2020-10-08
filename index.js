@@ -84,7 +84,13 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-
+const feedback = [];
+for(let i = 0; i < reviews.length; i++){
+  if(reviews[i].name === 'Julius'){
+    feedback.push(reviews[i].feedback);
+  }
+}
+console.log(feedback);
 
 
 
