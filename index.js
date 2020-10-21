@@ -13,9 +13,17 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(nameValue, priceValue, categoryValue){
+    let newObj = {};
+    newObj.name = nameValue;
+    newObj.price = priceValue;
+    newObj.category = categoryValue;
+    return newObj;
 }
+
+// TEST CODE:
+var output = createMenuItem("Mocha", 4, "Drinks");
+console.log(output);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -26,6 +34,15 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+// TEST CODE:
+let mocha = createMenuItem("Mocha", 4, "Drinks");
+console.log(mocha);
+
+let hamburger = createMenuItem("Hamburger", 7, "Lunch");
+console.log(hamburger);
+
+let pie = createMenuItem("Pie", 6, "Dessert");
+console.log(pie);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -38,16 +55,23 @@ Using the burger object below do the following:
   3. Depending on the string, it will return the correct discounted price
   4. Log the correct returned price to the console
 
-  For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
+  For example: burger.discount(" teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
 export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function (discountType) {
+    if (discountType === "teacher") {
+      return 13.5;
+    } else if (discountType === "public") {
+      return 16.2;
+    } else if (discountType === "student") {
+      return 10.8;
+    }
+  }
 }
-
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -67,16 +91,26 @@ Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
+function getReviewFromName(reviews, name) {
 
+  let review = reviews.filter(review => review.name === name);
+  let reviewToObj = review[0]; // .filter method returns an array.  Convert to obj.
 
+  console.log(reviewToObj.feedback);
+  return reviewToObj.feedback;
+}
+
+// TEST CODE
+output = getReviewFromName(reviews, "Julius");
+console.log(output);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
-
+reviews.push({name: "Rhiannon", rating: 10, feedback: "Great job!"});
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
@@ -84,9 +118,33 @@ Reyna's feedback is missing! Use what you know to do the following:
   2. log the reviews array to the console to check your work
 */
 
+function editFeedbackByName(name) {
+  // NOTE: reviews is an array of objects
+  
+    // use method .findIndex to get the index of the object to be edited.
+    let index = reviews.findIndex((objectEntry) => objectEntry.name === name); 
+    
+    // Conditional to handle of the edge case of index could not be found aka. -1
+    if (index === -1) {
+      return "ERROR.  Could not find index.";
+    } 
+  
+    // assign objToEdit to the object to be edited
+    let objToEdit = reviews[index]; 
+  
+    // This line of code is mutable to the original array
+    objToEdit.feedback = "this place is chill with really cool people, great for getting work done on weekdays";  
+  
+  
+    console.log(reviews);
+  
+    // Tells the developer that the function completed.
+    return "Success." 
+  }
 
-
-
+  // TEST CODE
+  var output = editFeedbackByName("Reyna");
+  console.log(output);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -97,13 +155,22 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
+function getReviewByIndex(array, index) {
+  // access object from array using index
+  let objectEntry = array[index]; 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+  let name = objectEntry.name;
+
+  let rating = objectEntry.rating;
+
+  let feedback = objectEntry.feedback;
+
+  return `${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`
 }
 
-
-  
+// TEST CODE
+var output = getReviewByIndex(reviews, 2);
+console.log(output);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
@@ -115,12 +182,27 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review and, their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
+function getLastReview(arrayOfObjects) {
+  // get index of last object in array
+  let index = arrayOfObjects.length - 1;
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+  // get the last object of the array
+  let lastObjectEntry = arrayOfObjects[index]; 
+
+  // declare variables for key values in object
+  let name = lastObjectEntry.name;
+
+  let rating = lastObjectEntry.rating;
+
+  let feedback = lastObjectEntry.feedback;
+
+  //  return template literal which uses variables holding values
+  return `${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`
 } 
 
-
+// TEST CODE
+var output = getLastReview(reviews);
+console.log(output);
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -138,11 +220,18 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+function getReviewByRating(reviews, rating) {
+  let upperRange = rating + 1;
+  // will return new array to hold objects with rartings in a given range
+  let newArrayOfReviewsInRange = reviews.filter(objectEntry => objectEntry.rating >= rating && objectEntry.rating < upperRange);
 
-  
+  return newArrayOfReviewsInRange;
+}
+
+// TEST CODE
+var output = getReviewByRating(reviews, 4);
+console.log(output);
+
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
@@ -156,9 +245,28 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(reviews) {
+ 
+  let newArrayOfLongReviews = reviews.filter(objectEntry => {
+    // Assign variable to the string value at key feedback in the object.
+    let feedbackText = objectEntry.feedback;
+
+    // Use method .split to split string at " " in order to get words, returned in an array.
+    let arrayOfWords = feedbackText.split(" ");
+
+    // Count number of words in the returned array.
+    let numberOfWords = arrayOfWords.length;
+    
+    // This will return true if true, and then add the object to newArrayOfLongReviews
+    return numberOfWords > 15;
+  } );
+
+  return newArrayOfLongReviews;
   }
+
+// TEST CODE
+var output = getLongReviews(reviews);
+console.log(output);
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -178,11 +286,22 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
+function carMaker(odometerValue) {
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+  let car = { 
+    odometer: odometerValue,
+    drive: function(distance) { // this is my drive method on an object
+      car1.odometer = odometerValue + distance;
+      return car.odometer;
+    }
+  };
+  return car;
 }
+
+// TEST CODE
+var car1 = carMaker(10);
+car1.drive(100);
+console.log(car1);
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
