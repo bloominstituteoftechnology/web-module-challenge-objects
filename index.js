@@ -41,14 +41,10 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-let pizza = createMenuItem('Pizza', 5, 'Lunch');
-console.log(pizza);
 
-let brownie = createMenuItem('Brownie', 7, 'Dessert');
-console.log(brownie);
-
-let hashbrown = createMenuItem('Hashbrown', 3, 'Breakfast');
-console.log(hashbrown);
+console.log(createMenuItem("Pizza", 5, "Lunch"));
+console.log(createMenuItem("Brownie", 7, "Dessert"));
+console.log(createMenuItem("Hashbrown", 3, "Breakfast"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -131,9 +127,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex() {
-  
+function getReviewByIndex(reviews, index) {
+  let {} = reviews[0]
+  return `${reviews[0].name} gave the restaurant a ${reviews[0].rating} star review, and their feedback was: ${reviews[0].feedback}`
 }
+console.log(getReviewByIndex(reviews, 0));
 
 
   
@@ -149,9 +147,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(reviews) {
+  let {} = reviews[7]
+  return `${reviews[7].name} gave the restaurant a ${reviews[7].rating} star review, and their feedback was: ${reviews[7].feedback}`
+}
+console.log(getLastReview(reviews));
+
 
 
 
