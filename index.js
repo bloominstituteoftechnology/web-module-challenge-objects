@@ -132,12 +132,23 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+// function getReviewByIndex(array, index) {
+//   let narr = array[index];
+//   console.log(`${name} gave the restaurant a ${rating}, and their feedback was: ${feedback}`);
+// }
+
+// getReviewByIndex(reviews, 0);
+
+function temp(array, index) {
+  let narr = array[index];
+  narr.prompt = function() {
+    console.log(`${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: "${this.feedback}"`);
+  }
+  narr.prompt();
 }
 
+temp(reviews, 1);
 
-  
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
