@@ -3,8 +3,17 @@
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
 ///////////////Menu Items (MVP)///////////////////
-const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
+const latte = {
+  name: "Cafe Latte", 
+  price: 4,
+  category: "Drinks"
+};
+
+const breakfastBurrito = {
+  name: "Breakfast Burrito", 
+  price: 16, 
+  category:"Breakfast"
+};
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1a: Make a function that builds objects🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Add to the function createMenuItems below so it will create objects following the same format found above for latte and breakfastBurrito (name, price, category).  
@@ -13,9 +22,15 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(nameValue, priceValue, categoryValue){
+  const newObject = {
+    name: nameValue,
+    price: priceValue,
+    category: categoryValue,
+  }
+  return newObject;
 }
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -26,6 +41,14 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+let pizza = createMenuItem('Pizza', 5, 'Lunch');
+console.log(pizza);
+
+let brownie = createMenuItem('Brownie', 7, 'Dessert');
+console.log(brownie);
+
+let hashbrown = createMenuItem('Hashbrown', 3, 'Breakfast');
+console.log(hashbrown);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -45,7 +68,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+    discount: function (discountType){
+      if (discountType === "teacher" || discountType === "student") {
+        return 13.5;
+        
+      } else if (discountType === "public") {
+        return 16.2;
+      }
+    }
 }
 
 
@@ -66,7 +96,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-
+console.log(reviews[5].feedback);
 
 
 
@@ -76,6 +106,8 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+reviews.push( {name: "Alexandra", rating: 4, feedback: "Service was excellent, food was mediocre"} );
+console.log(reviews)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -84,7 +116,8 @@ Reyna's feedback is missing! Use what you know to do the following:
   2. log the reviews array to the console to check your work
 */
 
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 
 
@@ -98,8 +131,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex() {
+  
 }
 
 
