@@ -161,11 +161,15 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  narr = array[(array.length) - 1]
+  narr.prompt = function() {
+    console.log(`${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: "${this.feedback}"`);
+  }
+  narr.prompt();
 } 
 
-
+getLastReview(reviews);
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
