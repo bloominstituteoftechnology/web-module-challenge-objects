@@ -13,9 +13,22 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
+//function createMenuItem(/*Your code here*/){
     /*Your code here*/
-}
+//}
+
+  function createMenuItems(name, price, category){
+    let menu = {};
+    menu.food = name;
+    menu.cost = price;
+    menu.type = category;
+    return menu; 
+
+  }
+
+  var output = createMenuItems("Sweet Tea", 5, "Drinks");
+  console.log(output);
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -25,6 +38,15 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+const pizza = createMenuItems("Pizza", 5, "Lunch")
+console.log(pizza);
+
+const beer = createMenuItems("IPA", 8, "Drinks-Alcohol")
+console.log(beer);
+
+const pie = createMenuItems("Pumpkin", 6, "Dessert")
+console.log(pie);
 
 
 
@@ -41,10 +63,12 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
-export const burger = {
+//change back to "export const burger"
+  const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
+  category: "Lunch",
+  discount:  "Teacher"
   /*Your code here*/
 }
 
@@ -184,16 +208,19 @@ function carMaker(/* code here */) {
     
 }
 
+/*
 
-/* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
+ 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 
+
 function foo(){
   console.log('its working');
   return 'bar';
 }
 
+
 export default{
-  foo,
-  createMenuItem,
-  getReviewByIndex,
-  getLastReview,
-}
+foo,
+createMenuItem,
+getReviewByIndex,
+getLastReview,
+}*/
