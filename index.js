@@ -61,7 +61,7 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
-/*export*/ const burger = {
+export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
@@ -235,14 +235,14 @@ function carMaker(/* code here */) {
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
-// function foo(){
-//   console.log('its working');
-//   return 'bar';
-// }
+function foo(){
+  console.log('its working');
+  return 'bar';
+}
 
-// export default{
-//   foo,
-//   createMenuItem,
-//   getReviewByIndex,
-//   getLastReview,
-// }
+export default{
+  foo,
+  createMenuItem,
+  getReviewByIndex,
+  getLastReview,
+}
