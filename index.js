@@ -64,14 +64,28 @@ Using the burger object below do the following:
 */
 
 //change back to "export const burger"
+
   const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch",
-  discount:  "Teacher"
-  /*Your code here*/
+  discount:  function (profession)
+  {
+    if (profession === "teacher"){
+    return 13.5;
+
+    }else if (profession === "student"){
+    return 13.5;  
+
+    }else if (profession != "teacher" || "student"){
+    return 16.2;
+  } 
+    
+  }
+  
 }
 
+console.log(burger.discount("student"));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -91,7 +105,17 @@ Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
+  const reviewByName= [];
 
+  for (i = 0; i <= reviews.length-1; i++) {
+
+    if(reviews[i].name === "Julius"){
+      reviewByName.push(reviews[i].feedback);
+    }
+  }
+
+
+console.log(reviewByName);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
