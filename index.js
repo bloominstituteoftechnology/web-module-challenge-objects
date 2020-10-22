@@ -117,6 +117,8 @@ Reyna's feedback is missing! Use what you know to do the following:
 */
 
 
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 
 
