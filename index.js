@@ -3,8 +3,16 @@
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
 ///////////////Menu Items (MVP)///////////////////
-const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
+const latte = {
+  name: "Cafe Latte", 
+  price: 4, 
+  category: "Drinks"
+};
+const breakfastBurrito = {
+  name: "Breakfast Burrito", 
+  price: 16, 
+  category:"Breakfast"
+};
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1a: Make a function that builds objects🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Add to the function createMenuItems below so it will create objects following the same format found above for latte and breakfastBurrito (name, price, category).  
@@ -13,9 +21,17 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(nameValue, priceValue, categoryValue){
+    const newObject = {
+      name: nameValue,
+      price: priceValue,
+      category: categoryValue
+    }
+
+    return console.log(newObject);
 }
+
+// console.log(createMenuItem("Pancakes", 12, "Breakfast"))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -25,6 +41,10 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+createMenuItem("Pancakes", 12, "Breakfast");
+createMenuItem("Pizza", 5, "Lunch");
+createMenuItem("Shake", 2, "Drink");
 
 
 
@@ -41,12 +61,22 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
-export const burger = {
+/*export*/ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(person) {
+    if (person === "teacher") {
+      console.log(this.price*0.75);
+    } else if (person === "student") {
+      console.log(this.price*0.75);
+    } else if (person === "public") {
+      console.log(this.price*0.90);
+    }
+  }
 }
+
+burger.discount("public");
 
 
 
@@ -67,7 +97,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
-
+console.log(reviews[0].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -77,6 +107,8 @@ Using the reviews array above do the following:
 */
 
 
+reviews.push({name: "Ethan", rating: 10, feedback: "bueno"})
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
@@ -186,14 +218,14 @@ function carMaker(/* code here */) {
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
-function foo(){
-  console.log('its working');
-  return 'bar';
-}
+// function foo(){
+//   console.log('its working');
+//   return 'bar';
+// }
 
-export default{
-  foo,
-  createMenuItem,
-  getReviewByIndex,
-  getLastReview,
-}
+// export default{
+//   foo,
+//   createMenuItem,
+//   getReviewByIndex,
+//   getLastReview,
+// }
