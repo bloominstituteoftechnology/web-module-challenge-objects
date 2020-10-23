@@ -124,6 +124,9 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+reviews.push({name: "Daniel", rating: 1, feedback: "I left hungrier than before I came"});
+
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -131,6 +134,19 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+
+
+const updateReview= [];
+
+for (i = 0; i <= reviews.length-1; i++) {
+
+  if(reviews[i].name === "Reyna"){
+    updateReview.push(reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays");
+  }
+}
+
+
+console.log(reviews);
 
 
 
