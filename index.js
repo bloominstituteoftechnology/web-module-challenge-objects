@@ -13,9 +13,6 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-//function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-//}
 
   function createMenuItems(name, price, category){
     let menu = {};
@@ -65,7 +62,7 @@ Using the burger object below do the following:
 
 //change back to "export const burger"
 
-  const burger = {
+  export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch",
@@ -170,6 +167,7 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(placeholder, index) {
+  //insert object name followed by comma and index #
   let element = placeholder[index];
   element.prompt = function() {
     console.log(`${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: "${this.feedback}"`);
@@ -195,11 +193,15 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(object) {
+  element = object[(object.length) - 1]
+  element.prompt = function() {
+    console.log(`${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: "${this.feedback}"`);
+  }
+  element.prompt();
 } 
 
-
+getLastReview(reviews);
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -263,9 +265,9 @@ function carMaker(/* code here */) {
     
 }
 
-/*
 
- 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 
+/*
+ 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
 
 function foo(){
   console.log('its working');
@@ -278,4 +280,4 @@ foo,
 createMenuItem,
 getReviewByIndex,
 getLastReview,
-}*/
+}
