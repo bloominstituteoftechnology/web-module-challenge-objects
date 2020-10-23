@@ -13,9 +13,15 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-}
+function createMenuItem(name, price, category){
+   let taco = {
+     name : 'taco',
+     price : 8,
+     category : 'lunch'
+   }
+
+   return taco;
+};
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -26,6 +32,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+createMenuItem('Hummus', 4, 'Appetizer')
+createMenuItem('Falafel', 10, 'Lunch')
+createMenuItem('Scwharma', 13, 'Lunch')
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -45,7 +54,10 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(){
+    if 
+  }
+  
 }
 
 
@@ -67,6 +79,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
+console.log(reviews.)
 
 
 
