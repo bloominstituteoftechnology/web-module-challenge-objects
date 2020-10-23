@@ -138,7 +138,10 @@ Reyna's feedback is missing! Use what you know to do the following:
 
 const updateReview= [];
 
+
+
 for (i = 0; i <= reviews.length-1; i++) {
+
 
   if(reviews[i].name === "Reyna"){
     updateReview.push(reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays");
@@ -162,9 +165,21 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+//function getReviewByIndex(name, 0) {
+
+
+
+function getReviewByIndex(placeholder, index) {
+  let element = placeholder[index];
+  element.prompt = function() {
+    console.log(`${this.name} gave the restaurant a ${this.rating} star review, and their feedback was: "${this.feedback}"`);
+  }
+  element.prompt();
 }
+
+getReviewByIndex(reviews, 4);
+
+
 
 
   
