@@ -95,7 +95,7 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it
 */
 
-reviews.push(name:"nick",rating: 10, feedback: "the foods was delicious");
+reviews.push({name:"nick",rating: 10, feedback: "the foods was delicious"});
 
 console.log(reviews);
 
@@ -105,8 +105,9 @@ Reyna's feedback is missing! Use what you know to do the following:
   2. log the reviews array to the console to check your work
 */
 
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
 
-
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -119,8 +120,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviews, index) {
+  return reviews[index].name + " gave the restaurant a " + reviews[index].rating + " star review, and their feedback was: " + reviews[index].feedback;
 }
 
 
@@ -137,8 +138,9 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(reviews) {
+  let index = reviews.length - 1
+  return reviews[index].name + " gave the restaurant a " + reviews[index].rating + " star review, and their feedback was: " + reviews[index].feedback;
 }
 
 
