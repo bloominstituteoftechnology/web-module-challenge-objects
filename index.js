@@ -21,6 +21,16 @@ function createMenuItem(nameValue, priceValue, categoryValue){
     return newObj;
 }
 
+// This is the shorthand way of assigning a property.
+// function createMenuItem(nameValue, priceValue, categoryValue){
+//   let newObj = {
+//     nameValue,
+//     priceValue,
+//     categoryValue,
+//   };
+//   return newObj;
+// }
+
 // TEST CODE:
 var output = createMenuItem("Mocha", 4, "Drinks");
 console.log(output);
@@ -63,16 +73,13 @@ export const burger = {
   price: 18, 
   category: "Lunch", 
   discount: function (discountType) {
-    if (discountType === "teacher") {
-      return 13.5;
+    if (discountType === "teacher" || discountType === "student") {
+      return this.price * .75;
     } else if (discountType === "public") {
-      return 16.2;
-    } else if (discountType === "student") {
-      return 10.8;
-    }
+      return this.price * .90;
+    } 
   }
 }
-
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -100,17 +107,42 @@ function getReviewFromName(reviews, name) {
   return reviewToObj.feedback;
 }
 
+/*
+function getReviewFromName(reviews, name) {
+
+  let review = reviews.filter(review => review.name === name);
+  let reviewToObj = review[0]; // .filter method returns an array.  Convert to obj.
+
+  console.log(reviewToObj.feedback);
+  return reviewToObj.feedback;
+}
+
+*/
+
 // TEST CODE
 output = getReviewFromName(reviews, "Julius");
 console.log(output);
+
+// also could have done it like this:  console.log(reviews[5].feedback);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
+
+function addReview(array, name, rating, feedback) {
+  array.push({name, rating, feedback});
+  return array;
+}
+
+// TEST CODE
+console.log(addReview(reviews, "Rhiannon", 10, "Great job!"))
+
+/*  Alternate way to do it.  
 reviews.push({name: "Rhiannon", rating: 10, feedback: "Great job!"});
 console.log(reviews);
+*/
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
@@ -118,7 +150,7 @@ Reyna's feedback is missing! Use what you know to do the following:
   2. log the reviews array to the console to check your work
 */
 
-function editFeedbackByName(name) {
+function editFeedbackByName(array, name, passedFeedback) {
   // NOTE: reviews is an array of objects
   
     // use method .findIndex to get the index of the object to be edited.
@@ -133,7 +165,7 @@ function editFeedbackByName(name) {
     let objToEdit = reviews[index]; 
   
     // This line of code is mutable to the original array
-    objToEdit.feedback = "this place is chill with really cool people, great for getting work done on weekdays";  
+    objToEdit.feedback = passedFeedback;  
   
   
     console.log(reviews);
@@ -143,7 +175,7 @@ function editFeedbackByName(name) {
   }
 
   // TEST CODE
-  var output = editFeedbackByName("Reyna");
+  var output = editFeedbackByName(reviews, "Reyna", "this place is chill with really cool people, great for getting work done on weekdays");
   console.log(output);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
