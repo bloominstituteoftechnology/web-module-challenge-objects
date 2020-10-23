@@ -13,10 +13,14 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-}
+function createMenuItem(name, price, category){
+return {
+  name: name,
+  price: price,
+  category: category
+};
 
+}
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
   1. Pass values to createMenuItems in order to create the objects (menu items)
@@ -25,6 +29,15 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+
+let menuItem1 = createMenuItem('eggs', 5, 'breakfast');
+let menuItem2 = createMenuItem('burger', 6, 'lunch');
+let menuItem3 = createMenuItem('sandwish', 7, 'snack');
+
+console.log(menuItem1)
+console.log(menuItem2)
+console.log(menuItem3)
 
 
 
@@ -45,11 +58,16 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount(school){ 
+  if (school === 'teacher' || school === 'student') {return this.price * 0.75}
+  else {return this.price * 0.9};
+ }
+
 }
 
 
 
+    
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -62,11 +80,25 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
+function newFunction() {
+  return this;
+}
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
+// let getReviewByIndex = reviews.toString(5);
 
+// function getReviewByIndex (name){
+//   for(let i = 0; i < reviews.length; i++){
+//     if(reviews[i].name === "Julius"){
+//      return reviews[i].feedback
+
+//     }
+// }
+// }
+// return reviews;
 
 
 
