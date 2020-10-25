@@ -12,10 +12,14 @@ The function should:
   1. Receive values for the object that will be created
   2. Create and return an object using the received values  
 */
-
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-}
+function createMenuItem(name, price, category)
+  {
+    let newMenuItem = {};
+    newMenuItem.name = name;
+    newMenuItem.price = price;
+    newMenuItem.category = category;
+    return (newMenuItem);    
+  }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -23,9 +27,16 @@ Test your createMenuItems function by doing the following:
   2. Create at least 3 menu items (objects) of your choosing making sure they have name, price, and category keys
   3. Log each returned object to the console  
   
-  For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
+  For example: ("pcreateMenuItemizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+const pizza = createMenuItem('Pizza', 16, 'Lunch');
+console.log(pizza);
 
+const doubleCheeseburger = createMenuItem('Double Cheeseburger', 18, 'Dinner');
+console.log(doubleCheeseburger);
+
+const icedTea = createMenuItem('Iced Tea', 3, 'Drinks');
+console.log(icedTea);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -45,7 +56,33 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(discountString) {
+    let discountPrice;
+    if (discountString === 'teacher') 
+        {            
+          discountPrice = this.price - (this.price * .25);
+          console.log(discountPrice);
+          return(discountPrice);
+        }
+    else if  (discountString === 'student') 
+        {
+          discountPrice = this.price - (this.price * .25);
+          console.log(discountPrice);
+          return(discountPrice);
+        }  
+    else if  (discountString === 'public') 
+        {
+          discountPrice = this.price - (this.price * .10);
+          console.log(discountPrice);
+          return(discountPrice);
+        }
+    else
+        {
+          discountPrice= this.price;
+          console.log(discountPrice);
+          return(discountPrice);
+        }
+  }
 }
 
 
@@ -66,7 +103,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-
+console.log(reviews[5].feedback);
 
 
 
@@ -75,6 +112,8 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
+reviews.push({name: "Brandon", rating: 3.0, feedback: "It was a little too spicy."})
+console.log(reviews);
 
 
 
@@ -83,9 +122,8 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
-
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -98,9 +136,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviewArray, indexLoc) {
+  return(reviewArray[indexLoc].name + ' gave the restaurant a ' + reviewArray[indexLoc].rating + ' star review, and their feedback was: ' + reviewArray[indexLoc].feedback);
 }
+getReviewByIndex(reviews, 0);
 
 
   
@@ -116,9 +155,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(reviewArray) {
+  let indexLoc = (reviewArray.length -1)
+  return(reviewArray[indexLoc].name + ' gave the restaurant a ' + reviewArray[indexLoc].rating + ' star review, and their feedback was: ' + reviewArray[indexLoc].feedback);
+}
+
+
 
 
 
