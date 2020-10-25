@@ -15,15 +15,15 @@ The function should:
 
 // Added parameters to function
 
-function createMenuItem(passedName, passedPrice, passedCategory){
-    /*Your code here*/
-    let menuItem = {
-    name: passedName,
-    price: passedPrice,
-    category: passedCategory,
-    };
-    return menuItem;
-    }
+// function createMenuItem(passedName, passedPrice, passedCategory){
+//     /*Your code here*/
+//     let menuItem = {
+//     name: passedName,
+//     price: passedPrice,
+//     category: passedCategory,
+//     };
+//     return menuItem;
+//     }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -33,9 +33,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-console.log(createMenuItem('Hamburger Combo', '$12.00', 'Lunch'));
-console.log(createMenuItem('Cafe Latte', '$4.00', 'Drinks'));
-console.log(createMenuItem('Chicken Masala', '$15.00', 'Dinner'))
+// console.log(createMenuItem('Hamburger Combo', '$12.00', 'Lunch'));
+// console.log(createMenuItem('Cafe Latte', '$4.00', 'Drinks'));
+// console.log(createMenuItem('Chicken Masala', '$15.00', 'Dinner'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -50,13 +50,26 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
+  const burger = 
+  {
+  name: "Burger", 
+  price: 18, 
+  category: "Lunch", 
+  /*Your code here*/
+  discount: function (discountType) 
+  {
+    let discountPrice = burger.price;
 
-// export const burger = {
-//   name: "Burger", 
-//   price: 18, 
-//   category: "Lunch", 
-//   /*Your code here*/
-// }
+    if(discountType === 'public')
+    {
+      return discountPrice * 0.90;
+    } else {
+     return  discountPrice * 0.75;
+    } 
+  }
+};
+console.log(burger.discount('teacher'));
+  
 
 
 
