@@ -24,7 +24,6 @@ function createMenuItem(passedName, passedPrice, passedCategory){
     };
     return menuItem;
     }
-console.log(createMenuItem('Cafe Latte', '$4.00', 'Drinks'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -34,7 +33,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem('Hamburger Combo', '$12.00', 'Lunch'));
+console.log(createMenuItem('Cafe Latte', '$4.00', 'Drinks'));
+console.log(createMenuItem('Chicken Masala', '$15.00', 'Dinner'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
