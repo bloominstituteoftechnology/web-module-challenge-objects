@@ -12,10 +12,11 @@ The function should:
   1. Receive values for the object that will be created
   2. Create and return an object using the received values  
 */
+function createMenuItem (nameValue, priceValue, categoryValue) {
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-}
+     return{name: nameValue, price: priceValue, category: categoryValue}
+   }
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -25,7 +26,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem("Chicken Noodle", 5, "Soup"));
+console.log(createMenuItem("Sandwich", 7, "Entree"));
+console.log(createMenuItem("Calamari", 8, "Starter"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -45,8 +48,16 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount (percentOff) {
+    if (percentOff == "teacher"){
+      return(burger.price) - (burger.price * .25);
+      if(percentOff == "public"){
+        return(burger.price) - (burger.price * .10);
+    }
+  }
 }
+console.log(burger.discount("teacher"));
+console.log(burger.discount("public"));
 
 
 
@@ -59,13 +70,14 @@ const reviews = [
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name: "Reyna", rating: 3.5, feedback: ""},
+    {name: "Reyna", rating: 3.5, feedback: "this place is chill with really cool people, great for getting work done on weekdays"},
 ]
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
+console.log(review[5].feedback)
 
 
 
@@ -75,8 +87,11 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
-
+console.log(reviews.feedback)
+reviews.push (
+  {name: "Gail", rating: 5, feedback:"Great food, wonderful staff and beautiful atmosphere! Will definitely return!"},
+)
+console.log(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
@@ -98,9 +113,7 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewByIndex(reviews,6)
 
 
   
@@ -116,9 +129,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(reviews, 9)
 
 
 
@@ -137,10 +148,10 @@ Use the getReviewsByRating function below to do the following:
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
 */
-
- function getReviewByRating(/* code here */) {
+/*
+ function getReviewByRating(/* code here *//*) {
     /* code here */
-  }
+  /*}
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -155,10 +166,10 @@ Use the getLongReviews function below to do the following:
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }
   ]
 */
-
-function getLongReviews(/* code here */) {
+/*
+function getLongReviews(/* code here *//*) {
     /* code here */
-  }
+  /*}
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -178,19 +189,19 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
-
-function carMaker(/* code here */) {
+/*
+function carMaker(/* code here *//* {/*
     /* code here */
     
-}
+/*}
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
-function foo(){
+/*function foo(){
   console.log('its working');
   return 'bar';
-}
-
+}*/
+/*
 export default{
   foo,
   createMenuItem,
