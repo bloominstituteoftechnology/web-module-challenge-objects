@@ -50,25 +50,25 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-  const burger = 
-  {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
-  discount: function (discountType) 
-  {
-    let discountPrice = burger.price;
+//   const burger = 
+//   {
+//   name: "Burger", 
+//   price: 18, 
+//   category: "Lunch", 
+//   /*Your code here*/
+//   discount: function (discountType) 
+//   {
+//     let discountPrice = burger.price;
 
-    if(discountType === 'public')
-    {
-      return discountPrice * 0.90;
-    } else {
-     return  discountPrice * 0.75;
-    } 
-  }
-};
-console.log(burger.discount('teacher'));
+//     if(discountType === 'public')
+//     {
+//       return discountPrice * 0.90;
+//     } else {
+//      return  discountPrice * 0.75;
+//     } 
+//   }
+// };
+// console.log(burger.discount('teacher'));
   
 
 
@@ -89,7 +89,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-console.log(reviews[5].feedback);
+// console.log(reviews[5].feedback);
 
 
 
@@ -113,8 +113,8 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-  reviews[7].feedback = 'This place is chill with really cool people, great for getting work done on weekdays';
-  console.log(reviews);
+  // reviews[7].feedback = 'This place is chill with really cool people, great for getting work done on weekdays';
+  // console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -126,9 +126,17 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-// function getReviewByIndex(/*Your code here*/) {
-//   /*Your code here*/
-// }
+
+function getReviewByIndex(array, index) {
+  /*Your code here*/
+  let review = array[index];
+  let name = review.name;
+  let rating = review.rating;
+  let feedback = review.feedback;
+  return `${review.name} gave the restraurant a ${review.rating} star review, and their feedback was: ${feedback}`
+  
+}
+console.log(getReviewByIndex(reviews, 0));
 
 
   
