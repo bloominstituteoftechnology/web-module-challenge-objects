@@ -98,14 +98,14 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-  let myReview = 
-  {
-    name: 'Saeed Khan',
-    rating: 4.5,
-    feedback: 'Very welcoming atmosphere. Please try to keep the music low',
-  };
-  reviews.push(myReview);
-  console.log(reviews);
+  // let myReview = 
+  // {
+  //   name: 'Saeed Khan',
+  //   rating: 4.5,
+  //   feedback: 'Very welcoming atmosphere. Please try to keep the music low',
+  // };
+  // reviews.push(myReview);
+  // console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -113,10 +113,8 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
-
-
-
+  reviews[7].feedback = 'This place is chill with really cool people, great for getting work done on weekdays';
+  console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
