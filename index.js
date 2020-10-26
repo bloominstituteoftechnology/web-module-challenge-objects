@@ -127,16 +127,16 @@ Use the getReviewByIndex function below to do the following:
 
 
 
-function getReviewByIndex(array, index) {
-  /*Your code here*/
-  let review = array[index];
-  let name = review.name;
-  let rating = review.rating;
-  let feedback = review.feedback;
-  return `${review.name} gave the restraurant a ${review.rating} star review, and their feedback was: ${feedback}`
+// function getReviewByIndex(array, index) {
+//   /*Your code here*/
+//   let review = array[index];
+//   let name = review.name;
+//   let rating = review.rating;
+//   let feedback = review.feedback;
+//   return `${review.name} gave the restraurant a ${review.rating} star review, and their feedback was: ${feedback}`
   
-}
-console.log(getReviewByIndex(reviews, 0));
+// }
+// console.log(getReviewByIndex(reviews, 0));
 
 
   
@@ -152,10 +152,15 @@ Use the getLastReview function below to do the following:
 */
 
 
-// function getLastReview(/*Your code here*/) {
-//   /*Your code here*/
-// } 
-
+function getLastReview(lastReview, index) {
+  /*Your code here*/
+  let review = lastReview[7];
+  let name = review.name;
+  let rating = review.rating;
+  let feedback = review.feedback;
+  return `${name} gave the restaurant a ${rating} star review and, their feedback was: ${feedback}`
+} 
+console.log(getLastReview(reviews, 7));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
