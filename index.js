@@ -47,20 +47,20 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
-// export const burger = {
-//   name: "Burger", 
-//   price: 18, 
-//   category: "Lunch", 
-//   discount: function (customer) {
-//     if (customer === "teacher" || customer === "student") {
-//       this.price = this.price * .75;
-//     } else if (customer === "public") {
-//       this.price = this.price * .9;
-//     }
-//     console.log(this.price);
-//     return this.price;
-//   }
-// }
+export const burger = {
+  name: "Burger", 
+  price: 18, 
+  category: "Lunch", 
+  discount: function (customer) {
+    if (customer === "teacher" || customer === "student") {
+      this.price = this.price * .75;
+    } else if (customer === "public") {
+      this.price = this.price * .9;
+    }
+    console.log(this.price);
+    return this.price;
+  }
+}
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -204,9 +204,19 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odo) {
+  let car = {
+    make: 'Toyota',
+    model: 'Prius',
+    year: 2013,
+    color: 'Super White',
+    odometer: odo,
+    drive: function (distance) {
+      this.odometer += distance;
+      return this.odometer;
+    }
+  };
+  return car;
 }
 
 
@@ -216,9 +226,9 @@ function foo(){
   return 'bar';
 }
 
-// export default{
-//   foo,
-//   createMenuItem,
-//   getReviewByIndex,
-//   getLastReview,
-// }
+export default{
+  foo,
+  createMenuItem,
+  getReviewByIndex,
+  getLastReview,
+}
