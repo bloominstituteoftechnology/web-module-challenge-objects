@@ -3,8 +3,10 @@
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
 ///////////////Menu Items (MVP)///////////////////
-const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
+const menuItems= [
+{name: "Cafe Latte", price: 4, category: "Drinks"},
+{name: "Breakfast Burrito", price: 16, category:"Breakfast"}
+];
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1a: Make a function that builds objects🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Add to the function createMenuItems below so it will create objects following the same format found above for latte and breakfastBurrito (name, price, category).  
@@ -13,8 +15,13 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+  const newItem={
+    name: name,
+    price: price,
+    category: category,
+  };
+  return newItem;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -25,6 +32,13 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+function addMenuItem( array, name, price, category){
+  array.push({name, price, category})
+  return array
+}
+console.log(addMenuItem(menuItems, "Pizza", "10", "Lunch"));
+console.log(addMenuItem(menuItems, "HotDog", "8", "Lunch"));
+console.log(addMenuItem(menuItems, "Chips", "3", "Side"));
 
 
 
@@ -44,9 +58,17 @@ Using the burger object below do the following:
 export const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
-}
+  category: "Lunch",
+  discount: function(person) {
+    
+    if(person === "teacher" || person === "student"){
+      return price-(price*.25);
+    }
+     else{
+       return price-(price*.1);
+     }
+  } 
+  console.log(burger.discount('teacher'));
 
 
 
@@ -59,14 +81,16 @@ const reviews = [
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name: "Reyna", rating: 3.5, feedback: ""},
+    {name: "Reyna", rating: 3.5, feedback: "this place is chill with really cool people, great for getting work done on weekdays},
 ]
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-
+function pullReview(array, name, rating, feedback){
+  
+}
 
 
 
@@ -98,9 +122,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviews, num) {
+  return `${reviews[num].name} gave the resturant a ${reviews[num].rating} startreview, and their feedback was: ${reviews[num].feedback}`
 }
+console.log(getReviewByIndex(reviews, 0));
 
 
   
@@ -116,7 +141,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(reviews) {
   /*Your code here*/
 } 
 
