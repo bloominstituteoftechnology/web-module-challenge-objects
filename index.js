@@ -47,20 +47,20 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
-export const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  discount: function (customer) {
-    if (customer === "teacher" || customer === "student") {
-      this.price = this.price * .75;
-    } else if (customer === "public") {
-      this.price = this.price * .9;
-    }
-    console.log(this.price);
-    return this.price;
-  }
-}
+// export const burger = {
+//   name: "Burger", 
+//   price: 18, 
+//   category: "Lunch", 
+//   discount: function (customer) {
+//     if (customer === "teacher" || customer === "student") {
+//       this.price = this.price * .75;
+//     } else if (customer === "public") {
+//       this.price = this.price * .9;
+//     }
+//     console.log(this.price);
+//     return this.price;
+//   }
+// }
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -149,10 +149,17 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(arr, targetRating) {
+   var targetReviews = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].rating >= targetRating && arr[i].rating < targetRating + 1) {
+        targetReviews.push(arr[i]);
+      }
+    }
+    return targetReviews;
   }
 
+  console.log(getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -167,10 +174,17 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(arr) {
+  let longReviews = [];
+    for (let i = 0; i < arr.length; i++) {
+      let words = arr[i].feedback.split(" ");
+      if (words.length > 15) {
+        longReviews.push(arr[i]);
+      }
+    }
+    return longReviews;
   }
-  
+  console.log(getLongReviews(reviews));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -202,9 +216,9 @@ function foo(){
   return 'bar';
 }
 
-export default{
-  foo,
-  createMenuItem,
-  getReviewByIndex,
-  getLastReview,
-}
+// export default{
+//   foo,
+//   createMenuItem,
+//   getReviewByIndex,
+//   getLastReview,
+// }
