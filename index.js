@@ -53,12 +53,12 @@ export const burger = {
   category: "Lunch", 
   discount: function (customer) {
     if (customer === "teacher" || customer === "student") {
-      this.price = this.price * .75;
+      console.log(this.price*.75);
+      return this.price * .75;
     } else if (customer === "public") {
-      this.price = this.price * .9;
+      console.log(this.price * .9);
+      return this.price * .9;
     }
-    console.log(this.price);
-    return this.price;
   }
 }
 
@@ -95,9 +95,13 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-console.log(reviews);
 
+function addFeedback (arr, index, additionalFeedback) {
+  arr[index].feedback = additionalFeedback;
+  return arr;
+}
+
+console.log(addFeedback(reviews, 7, "this place is chill with really cool people, great for getting work done on weekdays"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -129,7 +133,7 @@ Use the getLastReview function below to do the following:
 function getLastReview(arr) {
   let lastReview = arr[arr.length-1];
   return `${lastReview.name} gave the restaurant a ${lastReview.rating} star review, and their feedback was: ${lastReview.feedback}`
-} 
+}
 
 console.log(getLastReview(reviews));
 
@@ -177,8 +181,7 @@ Use the getLongReviews function below to do the following:
 function getLongReviews(arr) {
   let longReviews = [];
     for (let i = 0; i < arr.length; i++) {
-      let words = arr[i].feedback.split(" ");
-      if (words.length > 15) {
+      if (arr[i].feedback.split(" ").length > 15) {
         longReviews.push(arr[i]);
       }
     }
@@ -216,8 +219,12 @@ function carMaker(odo) {
       return this.odometer;
     }
   };
-  return car;
+  return car
 }
+var car1 = carMaker(10);
+console.log(car1);
+console.log(car1.drive(200));
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
