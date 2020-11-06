@@ -12,10 +12,18 @@ The function should:
   1. Receive values for the object that will be created
   2. Create and return an object using the received values  
 */
+function createMenuItem(name, price, category){
+  let copyMenu =[];
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-}
+  copyMenu.name = name;
+  copyMenu.price = price;
+  copyMenu.category = category;
+  return copyMenu;
+  //array.push(name, price, category)
+  //return createMenuItem;
+}  
+console.log(createMenuItem);
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -26,6 +34,31 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+// function createMenuItem(name,price,category)// This is a repeated function //
+
+// const createMenuItems = [
+//   {name:"Cafe Latte", price:"4", category:"Drinks"},
+//   {name:"Breakfast Burrito", price:"16", category:"Breakfast"},
+//   {name:"Sweet Potato Fries", price:"6", category:"Sides"},
+//   {name:"Big Kahuna Burger", price:"14", category:"Mains"},
+//   {name:"Chocolate Dipped Soft-serve", price:"5", category:"Dessert"},
+// ]; THIS IS REPEATING CODE!!!! 
+
+// function menuItems(name, price, category){
+//   for(name){
+//     if(name.includes(price && category)){
+
+//     }
+//   }
+//   return createMenuItems;
+// }
+console.log(createMenuItem("Cafe Latte","4", "Drinks"));
+console.log(createMenuItem("Breakfast Burrito", "16", "Breakfast"));
+console.log(createMenuItem("Sweet Potato Fries", "6", "Sides"));
+console.log(createMenuItem("Big Kahuna Burger", "14", "Mains"));
+console.log(createMenuItem("Chocolate Dipped Soft-serve", "5", "dessert"));
+  
+  
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -40,17 +73,26 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-
+//teachers, students, public - people
+// method - called discount
+//
 export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount:function(people){
+    if(people === "teacher" || people === "student"){
+    return this.price *.75;
+  }else(people === "public")
+    return this.price *0.9;
+      
+  }
 }
+console.log(burger.discount("teacher"));
+console.log(burger.discount("student"));
+console.log(burger.discount("public"));
 
-
-
-///////////////Reviews (MVP)///////////////////
+/////////////Reviews (MVP)///////////////////
 const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
@@ -66,7 +108,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-
+console.log(reviews[5].feedback); 
+//console.log(array name[the 6th person].parameter);
 
 
 
@@ -75,6 +118,11 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
+function addReview(array, name, rating, feedback){
+  array.push({name,rating,feedback})
+  return array;
+}
+console.log(addReview(reviews, "Gastion", 1, "Don't eat here, it gave me fire-reah!"));
 
 
 
@@ -83,8 +131,16 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
-
+function changeFeedback(array, revName, newFeedback){
+  for(i in array){
+    if(array[i].name.includes(revName)){
+      array[i].feedback = newFeedback;
+    }
+  }
+  return array;
+}
+let newArr = changeFeedback(reviews, "Reyna", "this place is chill with really cool people, great for getting work done on weekday")
+console.log(newArr);
 
 
 
@@ -98,7 +154,7 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(/*Your code here*/){
   /*Your code here*/
 }
 
@@ -116,7 +172,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(/*Your code here*/){
   /*Your code here*/
 } 
 
