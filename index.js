@@ -50,6 +50,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch",
+
+  discount: function(type){
+    if (type === "teacher" || type === "student"){
+      this.price *- .75;
+    }else {
+        this.price *- .9;
+    } return this.price
+  }
 }
 
 
@@ -97,7 +105,16 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+function changereview(array, revname, rereview){
+  for (i in array){
+    if(array[i].name.includes(revname)){
+      array[i].review = rereview
+    }
+  }
+  return array;  
+}
 
+console.log(changereview(reviews , "Reyna","this place is chill with really cool people, great for getting work done on weekdays"));
 
 
 
@@ -112,8 +129,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviews,index) {
+  return `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review, and their feedback was${reviews[index].feedback}`;
 }
 
 
