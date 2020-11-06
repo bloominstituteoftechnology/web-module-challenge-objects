@@ -29,9 +29,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-console.log(createMenuItem('pizza', 5, 'lunch'));
-console.log(createMenuItem('crab', 10, 'dinner'));
-console.log(createMenuItem('tea', 4, 'drinks'));
+console.log(createMenuItem("pizza", 5, "lunch"));
+console.log(createMenuItem("crab", 10, "dinner"));
+console.log(createMenuItem("tea", 4, "drinks"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -42,7 +42,7 @@ Using the burger object below do the following:
   1. Add a method called discount to the burger object 
   2. The discount method should accept a string that could be "teacher", "student", or "public"
   3. Depending on the string, it will return the correct discounted price
-  4. Log the correct returned price to the console
+  4. Log the correct returned price to the console.
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
@@ -50,8 +50,16 @@ Using the burger object below do the following:
 export const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
+  category: "Lunch"
+  discount: function(customer){
+    if (customer === "teacher") || (customer === "student")
+    this.price = this.price * .75;
+  } else if (customer === "public") {
+    this.price = this.price * .9;
+  }
+  console.log(this.price);
+  return this.price;
+  }
 }
 
 
@@ -104,11 +112,10 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
-
-function getReviewByIndex(reviews, 0) {
-  return ({name} gave the restaurant) a {rating} star reviews, and their feedback was: {feedback});
+function getReviewByIndex(arr, ind) {
+  return (`${arr[ind].name} gave the restaurant a ${arr[ind].rating} star review, and their feedback was: ${arr[ind].feedback}`);
 }
-
+console.log(getReviewByIndex(reviews, 1));
 
   
 
@@ -123,8 +130,8 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(string) {
+  return ({name} gave the restaurant a {rating} star review and, their feedback was: {feedback});
 } 
 
 
