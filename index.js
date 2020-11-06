@@ -13,9 +13,13 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItems(name, price, category){
+  this.name = name;
+  this.price= price;
+  this.category= category;
 }
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -25,13 +29,14 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+const pizza = new createMenuItems("Pizza",5,"lunch");
+const cheesecake = new createMenuItems("Cheesecake",10,"dessert");
+const bubblegum = new createMenuItems("Bubble gum",1,"candy");
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
 burger object below that automatically calculates price depending on the a string received as a parameter. 
-
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
   2. The discount method should accept a string that could be "teacher", "student", or "public"
@@ -44,8 +49,7 @@ Using the burger object below do the following:
 export const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
+  category: "Lunch",
 }
 
 
@@ -62,11 +66,16 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
+function newFunction() {
+  console.log(latte.name, latte.price, latte.category);
+  console.log(breakfastBurrito.name, breakfastBurrito.price, breakfastBurrito.category);
+}
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-
+console.log(reviews[i=5])
 
 
 
@@ -75,7 +84,12 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+function newreview(array, name, rating, feedback){
+  array.push({name,rating,feedback})
+   return array;
+ }
+ 
+ console.log(newreview(reviews, "jake", 7, "Good friend"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
