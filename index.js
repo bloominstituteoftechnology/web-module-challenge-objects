@@ -13,9 +13,24 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(drink, food) {
-    /*Your code here*/
+//function- function name- parameters
+// function createMenuItem(name, price, category) {
+//   return{
+//     name: itemName,
+//     price: itemPrice,
+//     category: itemCategory,
+// }
+//   console.log createMenuItem("Iced Coffee", 3, "Drinks");
+
+  function createMenuItem(name, price, category) {
+    let menu2 =[];
+  
+    menu2 = name;
+    menu2 = price;
+    menu = category;
+  return copyMenu;
 }
+console.log(createMenuItem);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -25,8 +40,10 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
-
+  
+console.log(createMenuItem("Pizza", 5, "Lunch"));
+console.log(createMenuItem("Breakfast Sandwich", 14, "Breakfast"));
+console.log(createMenuItem("Iced Coffee", 3, "Drinks"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -42,15 +59,23 @@ Using the burger object below do the following:
 */
 
 export const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
-}
+  name: "Burger",
+  price: 18,
+  category: "Lunch",
+  discount: function (people) {
+    if (people === "teachers" || people === "students") {
+      return this.price * .75;
+    } else (people === "public")
+    return this.price * .9;
+  }
+};
+    console.log(burger.discount("teachers"));
+    console.log(burger.discount("students"));
+    console.log(burger.discount("public"));
 
 
 
-///////////////Reviews (MVP)///////////////////
+/////////////Reviews (MVP)///////////////////
 const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
@@ -67,7 +92,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
-
+console.log(reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -75,7 +100,13 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
+//keywords array-filled with objects
 
+function addedRvw(objArr, name, rating, feedback) {
+  objArr.push({ name, rating, feedback })
+  return objArr;
+  }
+console.log(addedRvw(reviews, "Jessica", 4.6, "The ambiance was great and we loved our server."));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -83,9 +114,16 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
-
-
+function addReview(arr, strName, strReview) {
+  for (i in arr) {
+    if (array[i].name.includes(strName)) {
+      array[i].feedback = strReview;
+    }
+  }
+  return arr;
+}
+let newArr = addReview(reviews, "Reyna", "this place is chill with really cool people, great for getting work done on weekdays")
+console.log(newArr);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -98,8 +136,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, index) {
+  {name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
 }
 
 
