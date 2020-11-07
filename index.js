@@ -12,10 +12,29 @@ The function should:
   1. Receive values for the object that will be created
   2. Create and return an object using the received values  
 */
-
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+const breakfastMenu = [];
+function createMenuItem(name, price, category){
+    let newMenuItem = ({
+      name: name ,
+      price: price,
+      category: category,
+    });
+    return newMenuItem;
 }
+
+createMenuItem("Cafe Latte",4,"Drinks")
+
+
+
+function addMenuItem(newMenuItem, menu){
+  menu.push(newMenuItem);
+  return newMenuItem
+}
+
+
+addMenuItem(latte, breakfastMenu)
+addMenuItem(breakfastBurrito, breakfastMenu)
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -25,6 +44,15 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+const muffins = {name: "Muffins", price: 2.50, category: "Breakfast"};
+const water = {name: "Water", price: 1, category:"drinks"};
+const coffee = {name: "Coffee", price: 2, category: "Drinks"};
+
+
+console.log(createMenuItem("Muffins",2.50,"Breakfast"));
+console.log(createMenuItem("Water",1,"Drinks"));
+console.log(createMenuItem('Coffee',2,"Drinks"));
+
 
 
 
@@ -45,8 +73,16 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
-}
+  };
+    burger.discount = function() {
+      if ('teacher'){return 13.5};
+      if ('student'){return 13.5};
+      if ('public'){return 16.20};
+    };
+
+
+console.log(burger.discount('teacher'))
+
 
 
 
