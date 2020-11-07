@@ -69,7 +69,7 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
-export const burger = {
+const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
@@ -98,12 +98,17 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
+
+
+console.log(reviews)
+
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
-
+console.log(reviews[5]['feedback'])
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -111,6 +116,10 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
+
+reviews.push({name: "Billie", rating: 1, feedback: "Hate it... just awful. It's a shame."})
+
+console.log(reviews)
 
 
 
@@ -120,8 +129,12 @@ Reyna's feedback is missing! Use what you know to do the following:
   2. log the reviews array to the console to check your work
 */
 
+reviews.splice(7,1,{name: "Reyna", rating: 3.5, feedback: "this place is chill with really cool people, great for getting work done on weekdays"})
+
+console.log(reviews)
 
 
+// how do I actually do this with lookups?
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
