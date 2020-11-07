@@ -69,7 +69,7 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
-const burger = {
+export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
@@ -78,10 +78,9 @@ const burger = {
       if ('teacher'){return 13.5};
       if ('student'){return 13.5};
       if ('public'){return 16.20};
-    };
 
+    }
 
-console.log(burger.discount('teacher'))
 
 
 
@@ -98,9 +97,6 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
-
-
-console.log(reviews)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -134,7 +130,7 @@ reviews.splice(7,1,{name: "Reyna", rating: 3.5, feedback: "this place is chill w
 console.log(reviews)
 
 
-// how do I actually do this with lookups?
+// how do I actually do this with lookups? - I ended up having to delete the original feedback and copy it into my insertion.
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -147,9 +143,16 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, index) {
+ 
+ let name = arr[index]['name'];
+ let rating = arr[index]['rating'];
+ let feedback = arr[index]['feedback'];
+
+ return `${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`
 }
+
+console.log(getReviewByIndex(reviews,0))
 
 
   
@@ -165,11 +168,15 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  let name = arr[(arr.length-1)]['name'];
+  let rating = arr[(arr.length-1)]['rating'];
+  let feedback = arr[(arr.length-1)]['feedback'];
+ 
+  return `${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`
 } 
 
-
+console.log(getLastReview(reviews))
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
