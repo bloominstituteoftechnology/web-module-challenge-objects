@@ -118,9 +118,9 @@ Using the reviews array above do the following:
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-function addReview(array, name, rating, feedback){
-  array.push({name,rating,feedback})
-  return array;
+function addReview(reviews, name, rating, feedback){
+  reviews.push({name,rating,feedback})
+  return reviews;
 }
 console.log(addReview(reviews, "Gastion", 1, "Don't eat here, it gave me fire-reah!"));
 
@@ -131,15 +131,15 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-function changeFeedback(array, revName, newFeedback){
-  for(i in array){
-    if(array[i].name.includes(revName)){
-      array[i].feedback = newFeedback;
+function changeFeedback(reviews, revName, newFeedback){
+  for(i in reviews){
+    if(reviews[i].name.includes(revName)){
+      reviews[i].feedback = newFeedback;
     }
   }
-  return array;
+  return reviews;
 }
-let newArr = changeFeedback(reviews, "Reyna", "this place is chill with really cool people, great for getting work done on weekday")
+let newArr = changeFeedback(reviews, "Reyna", "this place is chill with really cool people, great for getting work done on weekday");
 console.log(newArr);
 
 
@@ -152,15 +152,17 @@ Use the getReviewByIndex function below to do the following:
   2. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
+// parameters reviews, name , rating , feedback
 
-
-function getReviewByIndex(/*Your code here*/){
-  /*Your code here*/
+function getReviewByIndex(reviews, name, rating, feedback){
+  return `${reviews[name]} gave the restuarent a ${reviews[rating]} star review, and their feedback was:${reviews[feedback]}`;
 }
 
-
-  
-
+//template
+//function getReviewByIndex(arr, i){
+//  return `${arr[i].name} some text go here ${arr[i].rating} some more text go here:${arr[i].feedback}`;
+//}
+//console.log(getReviewByIndex(reviews, 5));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
 
@@ -171,9 +173,14 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review and, their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-
-function getLastReview(/*Your code here*/){
+// this. - is just a placeholder
+// arguments: return `${arr[i].name} gave the resutuarant a ${arr[i].rating} star review, and their feedback was ${arr[i].feedback}
+// arguments: what are you asking the func to do?
+// arguments: give you what you want the from the func
+function getLastReview(param1, param2){
   /*Your code here*/
+  `${this.name} game the restuarant a ${this.rating} star review and, their feedback was ${this.feedback}`;
+//  + this.name gave the restuarant a + ${this.rating} + star review and, their feedback was + ${this.feedback} 
 } 
 
 
