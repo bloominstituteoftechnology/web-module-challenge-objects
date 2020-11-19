@@ -76,8 +76,18 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
-}
+  discount: function(job) {
+    if(job === "teacher" || job === "student") {
+    console.log(this.price * .75);
+   } 
+   else {
+    console.log(this.price * .9);
+    }
+  }
+};
+burger.discount("teacher");
+burger.discount("public");
+
 
 
 
@@ -90,7 +100,7 @@ const reviews = [
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name: "Reyna", rating: 3.5, feedback: ''},
+    {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -98,7 +108,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-console.log(reviews[5]);
+console.log(reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -117,9 +127,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+reviews[7].feedback =  "this place is chill with really cool people, great for getting work done on weekdays"
 
-
-
+console.log(reviews)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -132,10 +142,19 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
+  function getReviewByIndex(arr, index) {
+    let name = arr[index]['name'];
+    let rating = arr[index]['rating'];
+    let feedback = arr[index]['feedback'];
+   
+    return `${name} gave the restaurant a 
+    ${rating} star review, and their feedback was: 
+    ${feedback}`
+     }
+   
+   console.log(getReviewByIndex(reviews,0))
+   
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
 
 
   
@@ -150,11 +169,14 @@ Use the getLastReview function below to do the following:
   
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
+function getLastReview(lastArr) {
 
+  return `${lastArr[lastArr.length - 1].name} gave the restaurant a 
+  ${lastArr[lastArr.length - 1].rating}, and their feedback was: 
+  ${lastArr[lastArr.length - 1].feedback}`;
+}
 
-function getLastReview(reviews) {
-  reviews.length(-1)
-} 
+console.log(getLastReview(reviews));
 
 
 
