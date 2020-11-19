@@ -16,13 +16,13 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
-  let newMenu = {}
-  newMenu.name = name;
-  newMenu.price = price;
-  newMenu.category = category;
-  return newMenu;
+  let newMenuItem = {}
+  newMenuItem.name = name;
+  newMenuItem.price = price;
+  newMenuItem.category = category;
+  return newMenuItem
 
-    console.log(newMenu)
+    console.log(newMenuItem)
 }
 
 
