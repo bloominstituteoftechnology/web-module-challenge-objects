@@ -12,10 +12,11 @@ The function should:
   1. Receive values for the object that will be created
   2. Create and return an object using the received values  
 */
-function createMenuItem (nameValue, priceValue, categoryValue) {
-
-     return{name: nameValue, price: priceValue, category: categoryValue}
-   }
+function menuItems(name, price, category){
+names = ("Cafe Latte", "Breakfast Burrito");
+price = ( 4, 16);
+category = ("Drinks", "Breakfast");
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -26,6 +27,7 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
 console.log(createMenuItem("Chicken Noodle", 5, "Soup"));
 console.log(createMenuItem("Sandwich", 7, "Entree"));
 console.log(createMenuItem("Calamari", 8, "Starter"));
