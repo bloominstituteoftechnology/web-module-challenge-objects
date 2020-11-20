@@ -50,11 +50,11 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
-const burger = {
+export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  discount: function discount(person) {
+  discount: function (person) {
     if (person === "teacher" || person === "student") {
       return burger.price * .75;
     }
