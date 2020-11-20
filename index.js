@@ -143,8 +143,8 @@ Use the getLastReview function below to do the following:
 
 
  
-function getLastReview(objArray) {
-    let array = objArray[objArray.length - 1]
+function getLastReview(nicolesArray) {
+    let array = nicolesArray[nicolesArray.length - 1]
     console.log(`${array.name} gave the restaurant a ${array.rating} star review, and their feedback was: ${array.feedback}`)
     return (`${array.name} gave the restaurant a ${array.rating} star review, and their feedback was: ${array.feedback}`)
 
@@ -169,7 +169,7 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
+ function getReviewByRating(reviews, rating) {
     /* code here */
   }
 
