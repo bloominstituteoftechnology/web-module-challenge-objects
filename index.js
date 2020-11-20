@@ -125,11 +125,15 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(arrayName, indexNum) {
   /*Your code here*/
+  let name = arrayName[indexNum].name;
+  let rating = arrayName[indexNum].rating;
+  let feedback = arrayName[indexNum].feedback;
+  return `${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`;
 }
 
-
+console.log(getReviewByIndex(reviews, 4));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -144,9 +148,17 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(arrayName) {
   /*Your code here*/
+  let lastName = arrayName[arrayName.length -1].name;
+  let lastRating = arrayName[arrayName.length -1].rating;
+  let lastFeedback = arrayName[arrayName.length -1].feedback;
+
+  return `${lastName} gave the restaurant a ${lastRating} star review, and their feedback was: ${lastFeedback}`;
+
 } 
+
+console.log(getLastReview(reviews));
 
 
 
