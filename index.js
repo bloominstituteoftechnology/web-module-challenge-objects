@@ -56,10 +56,18 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(type) {
+    if (type === "Teacher"){
+      console.log(13.5);
+    } else if (type === "Student"){
+      console.log(13.5);
+    } else {
+      console.log(16.2)
+    }
+  }
 }
 
-
+console.log(burger.discount("Teacher"));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
