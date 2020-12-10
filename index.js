@@ -13,8 +13,13 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(insertName, insertPrice, insertCategory){
+    let menuAddition={
+      name:insertName,
+      price:insertPrice,
+      category:insertCategory
+    }
+    return menuAddition
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
