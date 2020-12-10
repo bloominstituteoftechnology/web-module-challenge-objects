@@ -31,7 +31,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-
+console.log(createMenuItem('Spicy Noodles', 3, 'Dinner'))
+console.log(createMenuItem('Strawberry Smoothie', 3, 'Drinks'))
+console.log(createMenuItem('Baked Ziti', 5, 'Dinner'))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -50,7 +52,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(customerType){
+    if (customerType==="teacher" || customerType==="student"){
+      this.price=this.price-(this.price*.25) ;
+    } else {
+      this.price=this.price-(this.price*.1) ;
+    }
+    return this.price
+  }
 }
 
 
@@ -71,6 +80,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
+console.log(reviews[5].feedback); 
 
 
 
@@ -81,7 +91,16 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+const willObject={name: "Will", rating:2.5, feedback:"Could be better, but I'm hoping for improvement over time."}
+reviews.push(willObject)
+console.log(reviews)
 
+//add a new object to array
+//define keys of object within the object being pushed
+
+/* First attempt lol
+reviews.push('Will', 2.5, "Could be better, but I'm hoping for improvement over time.")
+console.log(reviews) */
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
@@ -89,7 +108,8 @@ Reyna's feedback is missing! Use what you know to do the following:
   2. log the reviews array to the console to check your work
 */
 
-
+reviews[7].feedback="this place is chill with really cool people, great for getting work done on weekdays"
+console.log(reviews)
 
 
 
