@@ -29,7 +29,8 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 console.log(createMenuItem('Fries', 5, 'lunch'));
-
+console.log(createMenuItem("Big Kahuna Burger", 14, "Mains"));
+console.log(createMenuItem("Divine-Intervention", 0, "Side"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -44,16 +45,32 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
+// method:function(param){
+//   if(param || ){
+//     return price*teacher/studentDis;
+//   }else if(param === ){
+//     return price*publicDis;
+//   }
+// }
+
+// create a method of discount: passing in a param , then run a if else statement to corellate the param as a string and return the discount using 'this'
+// tmplate:
+// if(job === 'teacher' || 'student'){
+//   newPrice = this.price - teacherDiscount; 
+// }else{
+//   newPrice = this.price - publicDiscount; 
+// }
+
 export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-// create a method of discount: passing in a param  
+
 discount:function(people){
   if(people === "teacher" || people === "student"){
     return this.price*.75;
   }else if(people === "public"){
-    return this.price*.9;
+    return this.price*.90;
   }
 }
 }
@@ -63,6 +80,7 @@ console.log(burger.discount("public"));
 
 
 ///////////////Reviews (MVP)///////////////////
+
 const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
@@ -78,9 +96,11 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-console.log(reviews[5].feedback);
+console.log(reviews[5][2]);
+
+
 // this is how you reaching inside the object info:
-//console.log(array name[the 6th person].parameter);
+// console.log(array name[the 6th person].parameter/property/value/item/att);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -88,7 +108,12 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+// function addReview(reviews, name, rating, feedback){
+  // const newReviews = reviews;
+  // return newReviews;
+// }
+const addReviews = {name, rating, feedback};
+console.log(addReviews(reviews, "Blade", 1, "No vampires to kill, so thirsty for revenge."));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -97,8 +122,24 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+// no function needed does a for loops work?
+// for(i in reviews){
+//   if(reviews[i].name.includes(name)){
+//     reviews[i].feedback = feedback;
+//     return reviews();
+//   }
+// }
+// console.log(reviews(feedback:"this place is chill with really cool people, great for getting work done on weekdays"));
 
 
+
+
+// changeFeedback(reviews, index, feedback){
+//   reviews[7]["this place is chill with really cool people, great for getting work done on weekdays"] = feedback;
+//   return reviews;
+// }
+// console.log(addreviews, 7, feedback);
+//  "this place is chill with really cool people, great for getting work done on weekdays"
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -112,10 +153,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(para, index) { // do i need to pass in all params to make this work? ,index, name, rating, feedback
+  return `${[para][index.length -1].name} gave the restaurant a ${[para][index.length-1].rating} star review, and their feedback was: ${[para][index.length-1].feedback}`; // returing the prompt of question2
 }
-
+getReviewByIndex(reviews,0);
 
   
 
@@ -129,12 +170,14 @@ Use the getLastReview function below to do the following:
   
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
+//step1 - array of objs as param 'array[]' inside getLastReview
+//step2 - return last index as string = "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
+//step3 - invoke the function review array as arg = console.log
 
-
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  return `${arr.name} gave the restaurant a ${arr.rating} star review, and their feedback was: ${arr.feedback}`
 } 
-
+console.log(getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
