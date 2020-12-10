@@ -19,7 +19,7 @@ function createMenuItem(insertName, insertPrice, insertCategory){
       price:insertPrice,
       category:insertCategory
     }
-    return menuAddition
+    return menuAddition ;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -123,8 +123,16 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(taskSixArray, indexPosition) {
+  for (let i=0;i<taskSixArray.length;i++){
+    if (taskSixArray[i]===taskSixArray[indexPosition]){
+      return `${taskSixArray[i].name} gave the restaurant a ${taskSixArray[i].rating} star review, and their feedback was: ${taskSixArray[i].feedback}`
+    } else continue
+  }
+  
+  //take in an array
+  //loop till desired index position
+  //return string
 }
 
 
