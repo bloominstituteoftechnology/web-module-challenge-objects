@@ -15,9 +15,15 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(newName, newPrice, newCategory){
+  const menuItem = {
+    name: newName,
+    price: newPrice,
+    category: newCategory,
+  }
+  return menuItem;
 }
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,6 +34,10 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+createMenuItem("Pizza", 5, "Lunch");
+createMenuItem("Burger", 8, "Lunch");
+createMenuItem("Chips", 1, "Snack");
 
 
 
@@ -48,7 +58,17 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+    discount: function(string){
+      if (string = 'teacher'){
+       return burger.price = 13.5;
+      }
+        else if(string = 'public'){
+        return burger.price = 16.2;
+      }
+      else {
+        return burger.price= 18;
+      }
+    }
 }
 
 
@@ -70,6 +90,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log(reviews[5]);
+
 
 
 
@@ -78,7 +100,13 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+reviews.push(
+  {name: "Brad",
+   rating: 5,
+   feedback: "Perfect!",
+  }
+)
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
