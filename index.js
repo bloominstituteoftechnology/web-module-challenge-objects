@@ -149,9 +149,18 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(taskSevenArray) {
+  const lastReview=taskSevenArray[taskSevenArray.length-1]
+  return `${lastReview.name} gave the restaurant a 3.5 star review, and their feedback was: ${lastReview.feedback}`
+}
+/*first attempt lol 
+  for (let i=0;i<taskSevenArray;i++){
+    if (taskSevenArray[i]<)
+  }
+  //take in an array
+  //loop till last index position
+  //return string
+} /*
 
 
 
