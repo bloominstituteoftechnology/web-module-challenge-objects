@@ -72,7 +72,7 @@ discount:function(people){
   }else if(people === "public"){
     return this.price*.90;
   }
-}
+},
 }
 console.log(burger.discount("teacher"));
 console.log(burger.discount("student"));
@@ -96,9 +96,10 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-console.log(reviews[5][2]);
+console.log(reviews[5].feedback);
 
 
+// why did .feedback pass but not [2]?
 // this is how you reaching inside the object info:
 // console.log(array name[the 6th person].parameter/property/value/item/att);
 
@@ -108,19 +109,46 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
+const addReviews = {name:"Blade", rating:1, feedback:"No vampires to kill, so thirsty for revenge.",};
+console.log(reviews.push(addReviews));
+
+
+
+
+//reviews.push({name:"Blade", rating:1, feedback:"No vampires to kill, so thirsty for revenge."});
+// console.log(reviews);
+
+// lots of different ideas but not correct!
 // function addReview(reviews, name, rating, feedback){
   // const newReviews = reviews;
   // return newReviews;
 // }
-const addReviews = {name, rating, feedback};
-console.log(addReviews(reviews, "Blade", 1, "No vampires to kill, so thirsty for revenge."));
 
+
+// function addReview(reviews, name, rating, feedback){
+  // reviews.push({name,rating,feedback});
+  // return reviews;
+// }
+// {[0][1][2]} maybe implementing this line? same same?
+// const addReview = ({name, rating, feedback});
+
+// console.log(addReview(reviews, "Blade", 1, "No vampires to kill, so thirsty for revenge."));
+//{name, rating, feedback}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+// you can re-assign object's key values by doing: objectName.Key = new value
+
+
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+// return reviews
+console.log(reviews);
+
+
+
 
 // no function needed does a for loops work?
 // for(i in reviews){
@@ -152,11 +180,12 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
+// do i need to pass in all params to make this work? ,index, name, rating, feedback
 
-function getReviewByIndex(para, index) { // do i need to pass in all params to make this work? ,index, name, rating, feedback
-  return `${[para][index.length -1].name} gave the restaurant a ${[para][index.length-1].rating} star review, and their feedback was: ${[para][index.length-1].feedback}`; // returing the prompt of question2
+function getReviewByIndex(para,i){ 
+  return `${para[i].name} gave the restaurant a ${para[i].rating} star review, and their feedback was: ${para[i].feedback}`; // returing the prompt of question3
 }
-getReviewByIndex(reviews,0);
+console.log(getReviewByIndex(reviews,0));
 
   
 
@@ -170,13 +199,13 @@ Use the getLastReview function below to do the following:
   
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
-//step1 - array of objs as param 'array[]' inside getLastReview
-//step2 - return last index as string = "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
+//step1 - array of objs as param 'array' inside getLastReview
+//step2 - return 'last index' as 'string' = "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
 //step3 - invoke the function review array as arg = console.log
 
 function getLastReview(arr) {
-  return `${arr.name} gave the restaurant a ${arr.rating} star review, and their feedback was: ${arr.feedback}`
-} 
+  return `${arr[arr.length-1].name} gave the restaurant a ${arr[arr.length-1].rating} star review, and their feedback was: ${arr[arr.length-1].feedback}`;
+} //                                 WHY AM I MAKING THE ARRAY LOOK LIKE AN OBJECT!?!?!?! //  remember the syntax: ${item[item.length-1].param} // this
 console.log(getLastReview(reviews));
 
 
