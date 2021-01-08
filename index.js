@@ -13,9 +13,14 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-}
+function createMenuItem(name, price, category){
+  return {
+    name: name,
+    price: price,
+    category: category
+  };
+  
+  }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Test your createMenuItems function by doing the following:
@@ -25,6 +30,14 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+let menuItem1 = createMenuItem('eggs', 5, 'breakfast');
+let menuItem2 = createMenuItem('burger', 6, 'lunch');
+let menuItem3 = createMenuItem('sandwish', 7, 'snack');
+
+console.log(menuItem1)
+console.log(menuItem2)
+console.log(menuItem3)
+
 
 
 
@@ -45,9 +58,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function (school){ 
+    if (school === 'teacher' || school === 'student') {return this.price * 0.75}
+    else {return this.price * 0.9};
+   }
+    
 }
 
+console.log(burger.discount());
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -67,6 +85,10 @@ Using the reviews array above:
   1. log only Julius' feedback to the console
 */
 
+  
+
+console.log(reviews[5].feedback)
+
 
 
 
@@ -76,15 +98,18 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+reviews.push({name: "Barry", rating: 2, feedback: "new feebback."})
 
-
+console.log(reviews);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
-*/
+*/ 
 
+reviews[7].feedback = ("this place is chill with really cool people, great for getting work done on weekdays")
 
+console.log(reviews);
 
 
 
@@ -94,13 +119,14 @@ Write a function to return a review based on the index of the review in the arra
 Use the getReviewByIndex function below to do the following:
   1. Receive two arguements: the array that holds all the reviews and an index position of the review to display
   2. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
-  For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
+  For example:  would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
+ }
+ getLastReview(reviews)
 
 
   
@@ -116,10 +142,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`
 } 
 
+getLastReview(reviews);
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
