@@ -153,7 +153,7 @@ function getLastReview(array) {
   let index = array.length - 1 
  return `${array[index]["name"]} gave the restaurant a ${array[index]["rating"]} star review, and their feedback was: ${array[index]["feedback"]}`
 } 
-// getReviewByIndex(reviews)
+getLastReview(reviews)
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
