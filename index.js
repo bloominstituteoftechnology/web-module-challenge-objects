@@ -56,8 +56,13 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(string){
+      if (string === 'teacher' || 'student '){
+        return this.price - 4.5
+      } else return this.price - 1.8
+  }
 }
+burger.discount('teacher')
 
 
 
@@ -76,7 +81,7 @@ const reviews = [
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
-*/
+*/console.log(reviews[5].feedback)
 
 
 
