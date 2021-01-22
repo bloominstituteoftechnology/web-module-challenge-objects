@@ -104,9 +104,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-reviews[7]
+reviews.splice(7,1, 'Reyna', 3.5, 'this place is chill with really cool people, great for getting work done on weekdays');
 
-//console.log(reviews(this.name: 'Reyna',  ));
+console.log(reviews);
 
 
 
@@ -145,14 +145,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(myArray2) {
+function getLastReview(arr) {
+  let aString = arr[arr.length -1];
 
-
-  //console.log(myArray2[])
- 
-  //return ;
+  return `${aString.name} gave the restaurant a ${aString.rating} star review, and their feedback was: ${aString.feedback}`;
 } 
-
+console.log(getLastReview[reviews]);
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
