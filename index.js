@@ -147,7 +147,7 @@ var result = reviews.filter((obj) => {
 });
 result[0].feedback =
   "this place is chill with really cool people, great for getting work done on weekdays";
-console.log("this is the console you are looking for " + result[0].feedback);
+// console.log("this is the console you are looking for " + result[0].feedback);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -159,10 +159,18 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(inputObjs, index) {
+  let entry = inputObjs[index];
+  let message =
+    entry.name +
+    " gave the restaurant a " +
+    entry.rating +
+    " star review, and their feedback was: " +
+    entry.feedback;
+  return message;
 }
 
+// getReviewByIndex(reviews, 1);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
 
@@ -174,8 +182,15 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(inputArray) {
+  let entry = inputArray[inputArray.length - 1];
+  let message =
+    entry.name +
+    " gave the restaurant a " +
+    entry.rating +
+    " star review, and their feedback was: " +
+    entry.feedback;
+  return message;
 }
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
