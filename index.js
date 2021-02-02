@@ -17,11 +17,16 @@ The function should:
 */
 
 function createMenuItem(name, price, category) {
-    let menuItem = {};
-    menuItem.name = name;
-    menuItem.price = price;
-    menuItem.category = category;
-    return menuItem;
+    //Create constructor function for new menu item object
+    function MenuItem(name, price, category) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+    //call constructor with arguments provided to createMenuItem
+    const newItem = new MenuItem(name, price, category);
+    //return new menu item
+    return newItem;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -54,9 +59,9 @@ export const burger = {
     name: "Burger",
     price: 18,
     category: "Lunch",
-    /*Your code here*/
+    discount: (code) => code === "public" ? burger.price * .9 : burger.price * .75
 }
-
+console.log(burger.discount("teacher"));
 
 
 ///////////////Reviews (MVP)///////////////////
