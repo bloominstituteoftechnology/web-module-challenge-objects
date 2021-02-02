@@ -209,8 +209,21 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-function getReviewByRating(/* code here */) {
-  /* code here */
+function getReviewByRating(inputArray, score) {
+  let outputArray = [];
+  for (let i = 0; i < inputArray.length; i++) {
+    const element = inputArray[i];
+    console.log(
+      "element rating: " +
+        element.rating +
+        "\nthe score you're looking for: " +
+        score
+    );
+    if (element.rating === score) {
+      outputArray.push(element);
+    }
+  }
+  return outputArray;
 }
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
