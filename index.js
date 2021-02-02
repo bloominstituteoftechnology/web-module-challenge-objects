@@ -18,10 +18,12 @@ The function should:
 
 function createMenuItem(name, price, category) {
     //Create constructor function for new menu item object
-    function MenuItem(name, price, category) {
-        this.name = name;
-        this.price = price;
-        this.category = category;
+    class MenuItem {
+        constructor(name, price, category) {
+            this.name = name;
+            this.price = price;
+            this.category = category;
+        }
     }
     //call constructor with arguments provided to createMenuItem
     const newItem = new MenuItem(name, price, category);
@@ -209,10 +211,18 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker( /* code here */ ) {
-    /* code here */
-
+function carMaker(odometer) {
+    class Car {
+        constructor(odometer) {
+            this.odometer = odometer;
+            this.drive = (miles) => this.odometer = this.odometer + miles;
+        }
+    }
+    return new Car(odometer);
 }
+let heartOfGold = carMaker(10);
+heartOfGold.drive(100);
+console.table(heartOfGold)
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
