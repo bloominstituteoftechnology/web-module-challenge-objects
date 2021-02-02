@@ -16,8 +16,12 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem( /*Your code here*/ ) {
-    /*Your code here*/
+function createMenuItem(name, price, category) {
+    let menuItem = {};
+    menuItem.name = name;
+    menuItem.price = price;
+    menuItem.category = category;
+    return menuItem;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
