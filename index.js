@@ -179,9 +179,16 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews( /* code here */ ) {
-    /* code here */
+function getLongReviews(array) {
+    let longReviews = [];
+    array.map((entry, index) => {
+        const wordArray = entry.feedback.split(' ');
+        const wordCount = wordArray.length;
+        if (wordCount >= 15) longReviews.push(array[index])
+    })
+    return longReviews;
 }
+console.table(getLongReviews(reviews));
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
