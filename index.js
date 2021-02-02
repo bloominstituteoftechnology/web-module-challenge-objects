@@ -160,9 +160,10 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-function getReviewByRating( /* code here */ ) {
-    /* code here */
+function getReviewByRating(array, filter) {
+    return array.filter((entry) => entry.rating >= filter && entry.rating < filter + 1);
 }
+console.table(getReviewByRating(reviews, 4))
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
