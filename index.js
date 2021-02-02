@@ -95,12 +95,12 @@ console.table(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
-  1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+  1. Add this feedback to Reyna's rating - 
   2. log the reviews array to the console to check your work
 */
 
-
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.table(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -114,9 +114,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex( /*Your code here*/ ) {
-    /*Your code here*/
+function getReviewByIndex(array, index) {
+    const target = array[index];
+    return `${target.name} gave the restaurant a ${target.rating} star review, and their feedback was "${target.feedback}"`
 }
+console.log(getReviewByIndex(reviews, 0));
 
 
 
@@ -133,9 +135,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview( /*Your code here*/ ) {
-    /*Your code here*/
+function getLastReview(inputArray) {
+    const index = inputArray.length - 1;
+    const target = inputArray[index]
+    return `${target.name} gave the restaurant a ${target.rating} star review, and their feedback was: "${target.feedback}"`
 }
+console.log(getLastReview(reviews))
 
 
 
