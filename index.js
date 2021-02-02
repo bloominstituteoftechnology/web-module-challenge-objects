@@ -251,7 +251,7 @@ function getLongReviews(inputArray) {
   return outputArray;
 }
 let output = getLongReviews(reviews);
-console.log(output);
+// console.log(output);
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -270,9 +270,17 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
-function carMaker(/* code here */) {
-  /* code here */
-}
+// function carMaker(odometerNumber) {
+//   let obj = {
+//     odometer: odometerNumber,
+//     drive: function (addNum) {
+//       this.odometer = this.odometer + addNum;
+//     },
+//   };
+// }
+
+// let car = carMaker(10);
+// console.log(car.odometer);
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo() {
