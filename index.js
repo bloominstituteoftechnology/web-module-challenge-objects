@@ -15,10 +15,14 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name1, price1, category1) {
+  const newObj = {
+    name: name1.toString(),
+    price: price1,
+    category: category1.toString(),
+  };
+  return newObj;
 }
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -28,6 +32,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+const smoothie = createMenuItem("smoothie", 8, "Lunch");
+const wrap = createMenuItem("wrap", 6, "lunch");
+const cake = createMenuItem("cake", 4, "dessert");
 
 
 
@@ -45,30 +52,73 @@ Using the burger object below do the following:
 */
 
 export const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
-}
+  name: "Burger",
+  price: 18,
+  category: "Lunch",
+  discount: function (discount) {
+    if (discount === "teacher") {
+      return this.price - this.price * 0.25;
+    } else if (discount === "student") {
+      return this.price - this.price * 0.25;
+    } else if (discount === "public") {
+      return this.price - this.price * 0.1;
+    } else {
+      return this.price - this.price * 0.1;
+    }
+  },
+};
 
 
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
-    {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
-    {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
-    {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
-    {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
-    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
-    {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name: "Reyna", rating: 3.5, feedback: ""},
-]
+  {
+    name: "Daniela",
+    rating: 5,
+    feedback: "Beautiful atmosphere and wonderful vegan options!",
+  },
+  {
+    name: "Jack",
+    rating: 3,
+    feedback:
+      "A little too hipster for my taste, but the burger was decent, if overpriced",
+  },
+  { name: "Miranda", rating: 4, feedback: "fun trivia and cool vibes" },
+  {
+    name: "Wen",
+    rating: 4.5,
+    feedback:
+      "I don't leave my house often, but when I do, it's for this place. Highly reccomend.",
+  },
+  {
+    name: "Brett",
+    rating: 3,
+    feedback:
+      "great selection of snacks and a nice cafe area to get work done during the day.",
+  },
+  {
+    name: "Julius",
+    rating: 2,
+    feedback:
+      "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it.",
+  },
+  {
+    name: "Lauren",
+    rating: 4,
+    feedback:
+      "Absolutely love that they have karaoke Fridays! Food and drink selection is okay.",
+  },
+  { name: "Reyna", rating: 3.5, feedback: "" },
+];
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+var result = reviews.filter((obj) => {
+  return obj.name === "Julius";
+});
+// console.log(result[0].feedback);
 
 
 
