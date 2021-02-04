@@ -128,7 +128,12 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+let newResult = {
+  name: "fictitious",
+  rating: 2,
+  feedback: "this place was pretty good, but also terrible",
+};
+reviews.push(newResult);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -136,7 +141,12 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+var result = reviews.filter((obj) => {
+  return obj.name === "Reyna";
+});
+result[0].feedback =
+  "this place is chill with really cool people, great for getting work done on weekdays";
+  console.log("this is the console you are looking for " + result[0].feedback);
 
 
 
@@ -152,10 +162,16 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(inputObjs, index) {
+  let entry = inputObjs[index];
+  let message =
+    entry.name +
+    " gave the restaurant a " +
+    entry.rating +
+    " star review, and their feedback was: " +
+    entry.feedback;
+  return message;
 }
-
 
   
 
@@ -171,9 +187,17 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(inputArray) {
+  let entry = inputArray[inputArray.length - 1];
+  let message =
+    entry.name +
+    " gave the restaurant a " +
+    entry.rating +
+    " star review, and their feedback was: " +
+    entry.feedback;
+  return message;
+}
+ 
 
 
 
