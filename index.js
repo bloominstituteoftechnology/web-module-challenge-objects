@@ -79,7 +79,6 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-  console.log(reviews[5][2]);
   console.log(reviews[5].feedback);
 
 
@@ -87,15 +86,22 @@ Using the reviews array above:
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
-  2. log the whole array to the console, make sure the new review is inside of it   
+  2. log the whole array to the console, make sure the new review is inside of it */   
 
-  function addReviews( reviews, name, rating, feedback){
-    review.push([name, rating, feedback]);
-  }
-  const addReview = ({name, rating,feedback});
 
-  console.log(addReview(reviews, "Orange is the new Black", 2, "Series of female inmates living a real life sentence with real life experiences of a female inamte"));
- 
+    reviews.push(
+      (inmates={ 
+        name:"Orange is the new Black",
+        rating: 2,
+        feedback:"Series of female inmates living a real life sentence with real life experiences of a female inamte",
+
+
+
+      })
+    )
+  
+
+  console.log(reviews[8])
 
 
 
@@ -105,7 +111,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-reviews[7].feedback ="This place is awesome";
+reviews[7].feedback ="this place is chill with really cool people, great for getting work done on weekdays";
 //return reviews
 
 console.log(reviews);
