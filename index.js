@@ -49,7 +49,7 @@ Using the burger object below do the following:
 */
 
 
-const burger = {
+export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
@@ -59,12 +59,12 @@ discount: function(specials) {
       return burger.price * 0.75
     } else if (specials === 'public'){
       return burger.price * 0.90
-    }
+    } else {burger.price}
   }
 }
-console.log(burger.parseFloat(discount('teacher')));
-console.log(burger.parseFloat(discount('student')));
-console.log(burger.parseFloat(discount('public')));
+console.log(burger.discount('teacher'));
+console.log(burger.discount('student'));
+console.log(burger.discount('public'));
 
  
 
