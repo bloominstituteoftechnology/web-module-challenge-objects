@@ -54,7 +54,7 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   /*Your code here*/
-  discount: function(specials) {
+discount: function(specials) {
     if(specials === 'teacher' || specials === 'student'){
       return burger.price * 0.75
     } else if (specials === 'public'){
@@ -62,9 +62,9 @@ const burger = {
     }
   }
 }
-console.log(burger.discount('teacher'));
-console.log(burger.discount('student'));
-console.log(burger.discount('public'));
+console.log(burger.parseFloat(discount('teacher')));
+console.log(burger.parseFloat(discount('student')));
+console.log(burger.parseFloat(discount('public')));
 
  
 
@@ -126,9 +126,7 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+
 
 function getReviewByIndex(arrRecieve, arrIndex) {
   return arrRecieve[arrIndex].name + " gave the restaurant a " + arrRecieve[arrIndex].rating + " star review, and their feedback was: " + arrRecieve[arrIndex].feedback
@@ -147,10 +145,7 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+ 
 
 function getLastReview(array) {
   return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`
