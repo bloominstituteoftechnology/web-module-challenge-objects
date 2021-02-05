@@ -15,15 +15,16 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-    const createMenuItem = {
-      name: 'tacos',
-      price: ' 8',
-      category: 'lunch',
-    }
+function createMenuItem(name, price, category){
+    const newItem= {
+      name: name,
+      price: price,
+      category: category,
+ }  
+ return newItem
 }
-    console.log(createMenuItem());
+ // The key is first on the left and the right is your parameter which is what you are putting into your function.//
+    
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -33,6 +34,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+console.log(createMenuItem("coffee", 1.99, "drinks"));
+console.log(createMenuItem("sausgeSandwhich", 2.99, "sandwhiches"));
+console.log(createMenuItem("candy", 1.25, "dessert"));
 
 
 
