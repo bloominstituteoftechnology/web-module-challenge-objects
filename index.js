@@ -90,9 +90,8 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 console.log(reviews.feedback)
-reviews.push (
+reviews.push ()
   {name: "Gail", rating: 5, feedback:"Great food, wonderful staff and beautiful atmosphere! Will definitely return!"},
-)
 console.log(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -101,7 +100,7 @@ Reyna's feedback is missing! Use what you know to do the following:
   2. log the reviews array to the console to check your work
 */
 
-
+console.log(reviews)
 
 
 
