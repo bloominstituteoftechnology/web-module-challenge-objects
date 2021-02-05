@@ -15,9 +15,13 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-}
+
+  function createMenuItem(newName, newPrice, newCategory){
+    return {name : newName, 
+    price : newPrice, 
+    category : newCategory}
+  }
+  console.log(createMenuItem('pizza' ,5 , 'lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -50,7 +54,24 @@ export const burger = {
   category: "Lunch", 
   /*Your code here*/
 }
-
+discount: function (role) {
+  if (role == "teacher" || role == "student") {
+    let number1 = this.price;
+    let number2 = 25 / 100;
+    var total1 = number1 - number1 * number2;
+    return total1;
+  } else if (role == "public"){
+    let number1 = this.price;
+    let number2 = 10 / 100;
+    var total1 = number1 - number1 * number2;
+    return total1;
+  } else {
+    let number1 = this.price;
+    let number2 = 10 / 100;
+    var total1 = number1 - number1 * number2;
+    return total1;
+  }
+}
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -69,7 +90,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5].feedback);
 
 
 
