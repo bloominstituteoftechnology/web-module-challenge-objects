@@ -130,7 +130,10 @@ function getReviewByIndex(/*Your code here*/) {
   /*Your code here*/
 }
 
-
+function getReviewByIndex(arrRecieve, arrIndex) {
+  return arrRecieve[arrIndex].name + " gave the restaurant a " + arrRecieve[arrIndex].rating + " star review, and their feedback was: " + arrRecieve[arrIndex].feedback
+}
+console.log(getReviewByIndex(reviews,0))
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -149,7 +152,11 @@ function getLastReview(/*Your code here*/) {
   /*Your code here*/
 } 
 
+function getLastReview(array) {
+  return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`
+} 
 
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
