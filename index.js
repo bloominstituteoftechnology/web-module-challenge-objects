@@ -90,7 +90,7 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */ 
 
-reviews.push( "name: Serena",   4, " wonderful!");
+reviews.push({name : "Serena",   rating: 4, feedback:"wonderful!"});
 console.log(reviews)
 
 
@@ -118,7 +118,7 @@ Use the getReviewByIndex function below to do the following:
 
 function getReviewByIndex(reviews, index) {
   /*Your code here*/
-  output =  console.log( `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review, and their feedback was: ${reviews[index].feedback}`);
+  let output =   `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review, and their feedback was: ${reviews[index].feedback}`;
   return output;
 }
 
@@ -139,7 +139,7 @@ Use the getLastReview function below to do the following:
 
 function getLastReview(reviews) {
   /*Your code here*/
-  return console.log( `${reviews[reviews.length-1].name} gave the restaurant a ${reviews[reviews.length -1].rating} star review, and their feedback was: ${reviews[reviews.length-1].rating}`)
+  return  `${reviews[reviews.length-1].name} gave the restaurant a ${reviews[reviews.length -1].rating} star review, and their feedback was: ${reviews[reviews.length-1].feedback}`
 } 
 console.log(getLastReview(reviews));
 
@@ -160,10 +160,20 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
+
+ function getReviewByRating(reviews, num) {
     /* code here */
+    let newList=[];
+    for(let i = 0; i< reviews.length; i++){
+      if(reviews[i].rating >= num && reviews[i].rating < num+1){
+        newList.push(reviews[i].rating)
+      }
+    }
+   return newList;
+
   }
 
+console.log(getReviewByRating(reviews, 4))
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -178,10 +188,21 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
+function getLongReviews(reviews) {
     /* code here */
+    var feedback= [];
+    for(let i =0; i< reviews.length; i++){    
+      let sentence = reviews[i].feedback.split(" ");
+      let words = sentence.length;
+      if (words > 15){
+        feedback.push(reviews[i])
+      }
+
+    }
+    return feedback;
   }
   
+console.log(getLongReviews(reviews))
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -200,12 +221,21 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
-
-function carMaker(/* code here */) {
+let car1={};
+car1 = carMaker(100)
+function carMaker(odometer) {
     /* code here */
-    
+    var totalMile =0;
+    car1 = {
+      odometer: odometer,
+      drive: function(distance){
+        totalMile = odometer + distance;
+      }
+    }
+    return car1;
 }
 
+console.log(carMaker(100));
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
