@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    return{name, price, category};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,6 +28,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+console.log(createMenuItem('Taco', 8, 'lunch'));
+console.log(createMenuItem('Cheeseburger', 12, 'lunch'));
+console.log(createMenuItem('Hot Fudge Sundae', 10, 'Dessert'));
 
 
 
@@ -47,11 +50,19 @@ Using the burger object below do the following:
 export const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
+  category: "Lunch",
+  discount: function(patron){
+
+    if(patron === "teacher" || "student"){
+      return this.price - (this.price * 0.25);
+  }
+    else if(patron === "public"){
+      return this.price - (this.price * 0.1);
+  }
+
 }
 
-
+}
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -69,6 +80,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+console.log(reviews[5]);
 
 
 
