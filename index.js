@@ -1,5 +1,7 @@
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
+import { TestScheduler } from "jest";
+
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
 ///////////////Menu Items (MVP)///////////////////
@@ -15,9 +17,17 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(nameValue, priceValue, categoryValue) {
+  let lunchMenuItem = {}
+  lunchMenuItem.name = nameValue;
+  lunchMenuItem.price = priceValue;
+  lunchMenuItem.category = categoryValue;
+
+  return lunchMenuItem 
 }
+console.log ('test')
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,6 +38,14 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+let pizza = createMenuItem("Pizza", 7, "lunch");
+let fries = createMenuItem("French Fries", 3, "lunch");
+let hamCheese = createMenuItem("Ham and Cheese", 6, "lunch");
+console.log(pizza);
+console.log(fries);
+console.log(hamCheese);
+
 
 
 
@@ -48,8 +66,17 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
-}
+  discount: function (discountType){
+    if (discountType === 'teacher' || discountType === 'student') {
+      return this.price * .75;
+    } else {
+      return this.price * .90;
+    }  
+  }
+};
+
+let test = burger.discount('teacher')  //test
+console.log (test)
 
 
 
