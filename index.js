@@ -15,9 +15,17 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
+function createMenuItem(name, price, category){
     /*Your code here*/
+    const item = {
+      name: name,
+      price: price,
+      category: category
+    }
+    return item
 }
+
+console.log(createMenuItem('tacos', 8, 'Lunch'))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -29,7 +37,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-
+createMenuItem('pizza', 3, 'Dinner');
+createMenuItem('sandwich', 6, 'Lunch');
+createMenuItem('pancakes', 4, 'Breakfast');
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -49,7 +59,17 @@ export const burger = {
   price: 18, 
   category: "Lunch", 
   /*Your code here*/
-}
+  discount: function (para) {
+    if ( para === para) {
+      return this.price * .75;
+    }
+    else {
+      return this.price * .90;
+    }
+  } 
+ }
+
+console.log(burger.discount('teacher'));
 
 
 
@@ -70,7 +90,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews[5].feedback)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -79,7 +99,15 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+const newReview = {
+  name: 'Ryan',
+  rating: 4,
+  feedback: 'Lets hope this works!'
+}
 
+reviews.push(newReview);
+
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -87,6 +115,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
+console.log(reviews[7])
 
 
 
@@ -102,10 +133,12 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(arr, numb) {
   /*Your code here*/
+    return `${arr[numb].name} gave the restaurant a ${arr[numb].rating} star review, and their feedback was: ${arr[numb].feedback}`
 }
 
+console.log(reviews[2]);
 
   
 
