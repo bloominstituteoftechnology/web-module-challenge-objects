@@ -96,6 +96,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+console.log(reviews[5].feedback);
+
 
 
 
@@ -106,6 +108,11 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+let newObject = {
+  name: "Buddy", rating: 1, feedback: "Absolutely disgusting!  The staff was rude and unattentive. I had to wait 20 minutes just to get my drink order.  They were smoking out front and they obviously didn't wash their hands before handling food.  Gross!!  Never coming back!!"
+}
+reviews.push(newObject);
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
