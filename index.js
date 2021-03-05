@@ -15,9 +15,13 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+  return {name,
+          price,
+          category
+  }
 }
+console.log(createMenuItem('tacos', 8, 'lunch'))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,9 +32,10 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
-
-
+const omelette = createMenuItem('omelette', 10, 'breakfast');
+const yogurt = createMenuItem('yogurt', 3, 'breakfast'); 
+const oatmeal = createMenuItem('oatmeal', 5, 'breakfast');
+console.log(oatmeal, yogurt, omelette);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
 burger object below that automatically calculates price depending on the a string received as a parameter. 
