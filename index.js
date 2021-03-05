@@ -5,7 +5,12 @@
 ///////////////Menu Items (MVP)///////////////////
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
-
+const latte = { name: 'Cafe Latte', price: 4, category: 'Drinks' };
+const breakfastBurrito = {
+name: 'Breakfast Burrito',
+	price: 16,
+	category: 'Breakfast',
+};
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1a: Make a function that builds objects🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Add to the function createMenuItems below so it will create objects following the same format found above for latte and breakfastBurrito (name, price, category).  
 The function should:
@@ -16,9 +21,17 @@ The function should:
 */
 
 function createMenuItem(/*Your code here*/){
-    /*Your code here*/
-}
+  /*Your code here*/
+function createMenuItem(name, price, category) {
+const newMenuItem = {
+  name: name,
+  price: price,
+  category: category,
+};
 
+return newMenuItem;
+}
+  }
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -29,6 +42,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+createMenuItem('Enchiladas', 9, 'dinner');
+createMenuItem('Pizza', 7, 'lunch');
+createMenuItem('Chowder', 6, 'soup');
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -45,11 +61,20 @@ Using the burger object below do the following:
 */
 
 export const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
-}
+  name: 'Burger',
+	price: 18,
+	category: 'Lunch',
+	discount: function (position) {
+		if (position === 'teacher' || position === 'student') {
+			return burger.price * 0.75;
+		}
+
+		if (position === 'public') {
+			return burger.price * 0.9;
+		}
+	},
+};
+
 
 
 
@@ -64,13 +89,51 @@ const reviews = [
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
+{
+  name: 'Daniela',
+  rating: 5,
+  feedback: 'Beautiful atmosphere and wonderful vegan options!',
+},
+{
+  name: 'Jack',
+  rating: 3,
+  feedback:
+    'A little too hipster for my taste, but the burger was decent, if overpriced',
+},
+{ name: 'Miranda', rating: 4, feedback: 'fun trivia and cool vibes' },
+{
+  name: 'Wen',
+  rating: 4.5,
+  feedback:
+    "I don't leave my house often, but when I do, it's for this place. Highly reccomend.",
+},
+{
+  name: 'Lauren',
+  rating: 4,
+  feedback:
+    'Absolutely love that they have karaoke Fridays! Food and drink selection is okay.',
+},
+{ name: 'Reyna', rating: 3.5, feedback: '' },
+{
+  name: 'Brett',
+  rating: 3,
+  feedback:
+    'great selection of snacks and a nice cafe area to get work done during the day.',
+},
+{
+  name: 'Julius',
+  rating: 2,
+  feedback:
+    'I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it.',
+},
+{
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -78,7 +141,11 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+reviews.push({
+	name: 'Todd',
+	rating: 3.5,
+	review: 'Yummmmm, it was so good!',
+});
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -87,7 +154,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-
+reviews[7].feedback =
+	'this place is chill with really cool people, great for getting work done on weekdays';
+console.log(reviews);
 
 
 
@@ -106,6 +175,14 @@ function getReviewByIndex(/*Your code here*/) {
   /*Your code here*/
 }
 
+function getReviewByIndex(/*Your code here*/) {
+  /*Your code here*/
+function getReviewByIndex(reviews, n) {
+	return `${reviews[n].name} gave the restaurant a ${reviews[n].rating} star review, and their feedback was: ${reviews[n].feedback}`;
+}
+
+
+
 
   
 
@@ -121,10 +198,15 @@ Use the getLastReview function below to do the following:
 */
 
 
+function getLastReview(reviews) {
+	const lastIndex = reviews.length - 1;
+
 function getLastReview(/*Your code here*/) {
   /*Your code here*/
 } 
 
+return `${reviews[lastIndex].name} gave the restaurant a ${reviews[lastIndex].rating} star review, and their feedback was: ${reviews[lastIndex].feedback}`;
+}
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
