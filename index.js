@@ -126,8 +126,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(inputArr, indexNum) {
+  const getReview = inputArr[indexNum];
+  return `${getReview.name} gave the restaurant a ${getReview.rating} star review, and their feedback was: ${getReview.feedback}`;
 }
 
 
@@ -145,8 +146,9 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(inputArr) {
+  const lastObj = inputArr[inputArr.length - 1];
+  return `${lastObj.name} gave the restaurant a ${lastObj.rating} star review, and their feedback was: ${lastObj.feedback}`;
 } 
 
 
@@ -215,15 +217,15 @@ function carMaker(/* code here */) {
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
-/*
+
 function foo(){
   console.log('its working');
   return 'bar';
-}*/
-/*
+}
+
 export default{
   foo,
   createMenuItem,
   getReviewByIndex,
   getLastReview,
-}*/
+}
