@@ -126,11 +126,13 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex() {
-  
+function getReviewByIndex(arr,number) {
+  for(let i =0; i < arr.length; i++){
+    number = arr[i]
+    return `${arr[i].name} gave the restaurant a ${arr[i].rating} star review, and their feedback was: ${arr[i].feedback}`
+  }
 }
-
-
+console.log(reviews,0)
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -145,8 +147,8 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview() {
+  
 } 
 
 
