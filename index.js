@@ -16,11 +16,11 @@ The function should:
 */
 
 function createMenuItem(name,price,category){
-    const item = new Object{
-      name: name,
-      price: price,
-      category: category
-    } 
+    const item = new Object();
+      item.name= name,
+      item.price= price,
+      item.category= category
+    
     return item;
 }
 
@@ -34,7 +34,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-
+console.log(createMenuItem("Pizza", 10, "Dinner"))
+console.log(createMenuItem("Nachos", 3, "Lunch"))
+console.log(createMenuItem("Steak", 100, "Dinner"))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -51,10 +53,21 @@ Using the burger object below do the following:
 
 export const burger = {
   name: "Burger", 
-  price: 18, 
+  price: 24, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(type){
+    if(type === "teacher"){
+      burger.price = burger.price - burger.price * .25;
+    } else if(type === 'student'){
+      burger.price = burger.price - burger.price * .25;
+    } else if(type === 'public'){
+      burger.price = burger.price - burger.price * .10;
+    }
+    return burger.price
+  }
 }
+
+console.log(burger.discount('student'))
 
 
 
