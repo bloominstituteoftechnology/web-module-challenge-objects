@@ -81,16 +81,16 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-console.log(reviews.push(name:"Norm", rating: 1, feeedback:"This was probably the worst place that ive been to in a while"));
-
+reviews.push({name:"Norm", rating: 1, feedback:"This was probably the worst place that ive been to in a while"})
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-reviews[7].push.feedback("this place is chill with really cool people, great for getting work done on weekdays");
-console.log(reviews)
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews[7]);
 
 
 
