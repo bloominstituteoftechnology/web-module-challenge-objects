@@ -49,7 +49,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(string){
+    if(string === 'teacher' || 'student'){
+      burger.this = 13.5;
+    }else{
+      burger.this = 16.2;
+    }
+    return burger.this;
+  }
 }
 
 
