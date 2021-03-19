@@ -187,10 +187,17 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(array) {
+  let newArray = [];
+    for(let i = 0; i < array.length; i++){
+      if(array[i].feedback.split(" ").length > 15){
+        newArray.push(array[i]);
+      }
+    }
+     return newArray
   }
   
+  console.log(getLongReviews(reviews));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -210,8 +217,8 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
+function carMaker(odom) {
+    
     
 }
 
