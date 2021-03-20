@@ -46,6 +46,8 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
+
+
 export const burger = {
   name: "Burger", 
   price: 18, 
@@ -121,9 +123,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewByIndex(array, number) {
+  let indexedReview = array[number];
+  return `${indexedReview.name} gave the restaurant a ${indexedReview.rating} star review, and their feedback was: ${indexedReview.feedback}`
+};
+getLastReview(reviews, 1);
 
 
   
@@ -140,9 +144,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(list) {
+  return getReviewByIndex(list, list.length - 1);
+}
+
+console.log(getLastReview(reviews));
 
 
 
