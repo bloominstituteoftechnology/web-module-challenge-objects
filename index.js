@@ -57,7 +57,7 @@ export const burger = {
   }
 }
 
-console.log(burger.discount("teacher"));
+// console.log(burger.discount("teacher"));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -76,8 +76,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 for(let i = 0; i < reviews.length-1; i++){
-  if(reviews[i].name=="Julius")
-   console.log("result ",reviews[i].feedback)
+  // if(reviews[i].name=="Julius")
+  //  console.log("result ",reviews[i].feedback)
 }
 
 
@@ -86,9 +86,9 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-const fictitious = { name: "Amlak", rating: 5, feedback: "one love by Bob Marley"}
+const fictitious = { name: "Amlak", rating: 5, feedback: "one"}
   reviews.push(fictitious)
-  console.log(reviews)
+  // console.log(reviews)
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
@@ -151,10 +151,14 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(arr,numb) {
+   
+  let result =  arr.filter(x=> numb <= x.rating && x.rating < numb+1)
+     
+   return result;
   }
-
+ 
+  console.log("result ",getReviewByRating(reviews,4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -169,10 +173,12 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(arr) {
+    let result = arr.filter(x=> x.feedback.length >=15)
+    return result;
   }
-  
+  console.log(getLongReviews(reviews))
+  getLongReviews(reviews)
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
