@@ -95,8 +95,11 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
-
+function addReview(array, name, rating, feedback){
+    array.push({name, rating, feedback});
+    return array;
+}
+console.log(addReview(reviews, 'Christopher', 2, 'Needs more cowbell'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
