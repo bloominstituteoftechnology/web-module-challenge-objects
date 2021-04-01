@@ -107,9 +107,12 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+function addMissingFeedback(array, index, key, string){
+  array[index][key] = string;                         //DOT NOTATION DOES NOT WORK!!!//
+  return array;
+}
 
-
-
+console.log(addMissingFeedback(reviews, 7, 'feedback', 'this place is chill with really cool people, great for getting work done on weekdays' ));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
