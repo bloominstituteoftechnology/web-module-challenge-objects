@@ -59,9 +59,15 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(string) {      //the new key w/ method is a function separating student/teacher and public
+    if (string === 'teacher' || string === 'student'){
+      return 13.5;
+    } else if (string === 'public') {
+      return 16.2;
+    }
+  }
 }
-
+console.log(burger.discount('teacher'));
 
 
 ///////////////Reviews (MVP)///////////////////
