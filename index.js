@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem (name, price, category){
+  return {name: name, price: price, category: category}
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,6 +28,7 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+createMenuItem('pizza',5,'lunch');
 
 
 
@@ -48,7 +49,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(disc) {
+    if (disc === "teacher" || disc === "student") {
+      return this.price * .75;
+    }
+    else {
+      return this.price * .9;
+    }
+  }
 }
 
 
@@ -68,8 +76,7 @@ const reviews = [
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
-*/
-
+*/ console.log(reviews [5].feedback);
 
 
 
@@ -78,7 +85,8 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+reviews.push ({name: "Mal", rating: 5, feedback: "I love hamburgers, if heaven was real, it would have this place"});
+  console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -86,9 +94,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
-
-
+reviews[reviews.length-2].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -102,8 +109,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, indexNumber) {
+  return 
 }
 
 
