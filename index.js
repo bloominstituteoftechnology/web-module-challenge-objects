@@ -203,10 +203,18 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odo) {
+    let car1 = {
+      odometer: 10,
+      drive: function() {
+        this.odometer += odo;
+      },
+    };
+    console.log(car1.drive(odo));
+    return car1.drive(odo);
 }
+
+carMaker(100);
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
