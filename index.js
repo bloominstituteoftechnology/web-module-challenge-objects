@@ -207,14 +207,14 @@ function carMaker(odo) {
     let car1 = {
       odometer: 10,
       drive: function() {
-        this.odometer += odo;
+        return this.odometer += odo;
       },
     };
     console.log(car1.drive(odo));
     return car1.drive(odo);
 }
 
-carMaker(100);
+carMaker(150);
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
