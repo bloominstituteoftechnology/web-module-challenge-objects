@@ -29,12 +29,18 @@ describe('burger.discount', ()=>{
     it('burger.discount returns a number', ()=>{
         expect(burger.discount('teacher')).toBe(13.5);
     })
+    it('burger.discount returns a number', ()=>{
+        expect(burger.discount('public')).toBe(16.2);
+    })
 });
 
 
 describe('getReviewByIndex', ()=>{
     it('getReviewByIndex returns a string', ()=>{
         expect(functions.getReviewByIndex(reviews, 0)).toBe("Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!");
+    })
+    it('getReviewByIndex returns a string', ()=>{
+        expect(functions.getReviewByIndex(reviews, 2)).toBe("Miranda gave the restaurant a 4 star review, and their feedback was: fun trivia and cool vibes");
     })
 });
 
