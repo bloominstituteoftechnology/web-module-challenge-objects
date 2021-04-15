@@ -50,8 +50,18 @@ export const burger = {
   name: "Burger",
   price: 18,
   category: "Lunch",
+  discount: function (customer) {
+    if (customer === "teacher" || customer === "student") {
+      return (
+        this.price * 0.75
+      ); /* alternative math could be **this.price - (this.price*.25)** */
+    } else {
+      return this.price * 0.9;
+    }
+  },
   /*Your code here*/
 };
+console.log(burger.discount());
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -98,6 +108,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+
+console.log(reviews[5]);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
