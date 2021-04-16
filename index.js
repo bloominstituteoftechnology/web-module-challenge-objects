@@ -166,13 +166,15 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(array,rating) {
-    for(i = 0; i < array.length-1;i++){
-      if (array[i].rating){
-        
-      }
+function getReviewByRating(array,rating) {
+  let newArray =[];
+  for(i = 0; i < array.length; i++){
+    if (Math.floor(array[i].rating) === Math.floor(rating) ){
+      newArray.push(array[i]);
     }
   }
+  return newArray;
+}
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
