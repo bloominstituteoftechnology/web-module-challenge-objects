@@ -166,8 +166,12 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array,rating) {
+    for(i = 0; i < array.length-1;i++){
+      if (array[i].rating){
+        
+      }
+    }
   }
 
   
