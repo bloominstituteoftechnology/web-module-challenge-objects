@@ -113,7 +113,7 @@ Use the getReviewByIndex function below to do the following:
   2. Receive a number which is the desired index in the array
   3. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
-*/ddd
+*/
 const reviews = [
   {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
   {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
@@ -128,7 +128,7 @@ const reviews = [
 
 function getReviewByIndex(/*Your code here*/) {
   /*Your code here*/
-}c
+}
 
 function getReviewByIndex(arr , index){
   return` ${arr.name[index]} gave the restaurant a ${arr.rating[index]} star review, and their feedback was: ${arr.feedback[index]}`
