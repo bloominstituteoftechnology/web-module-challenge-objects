@@ -100,7 +100,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-cccxc
+
 this.feedback = "this place is chill with really cool people, great for getting work done on weekdays";
 console.log(reviews);
 
@@ -113,7 +113,7 @@ Use the getReviewByIndex function below to do the following:
   2. Receive a number which is the desired index in the array
   3. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
-*/
+*/ddd
 const reviews = [
   {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
   {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
