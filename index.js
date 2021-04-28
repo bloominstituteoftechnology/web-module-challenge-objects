@@ -93,7 +93,7 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 reviews.push({
-  name: "Andrew", rating: 1, feedback: "The meal was cold and tasteless"
+  name: "Andrew", rating: 1, feedback: "The meal was cold and tasteless."
 });
 
 
@@ -120,7 +120,7 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(array, number) {
-  return `{array[number].name} gave the restaurant a {array[number].rating} star review, and their feedback was: {array[number].feedback}`;
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
 }
 
 
@@ -139,7 +139,7 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(array) {
-  return `{array[array.length - 1].name} gave the restaurant a {array[array.length - 1].rating} star review, and their feedback was: {array[array.length - 1].feedback}`;
+  return `${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`;
 }
 
 
