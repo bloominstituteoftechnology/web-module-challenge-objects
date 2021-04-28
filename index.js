@@ -15,8 +15,9 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(name, price, category){
-  return name, price, category
+function createMenuItem(name, price, category) {
+  return { name, price, category
+  }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,17 +29,11 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-function createMenuItem(sandwhich, 8, lunch){
-  return "sandwich", 8, dinner
-}
-  
-  function createMenuItem(fries, 2, side){
-  return "fries", 5, side
-}
-    
-function createMenuItem(salad, 6, dinner){
-  return "salad", 6, dinner
-}
+console.log(createMenuItem("sandwhich", 8, "lunch"));
+
+console.log(createMenuItem("fries", 2, "side"));
+
+console.log(createMenuItem("salad", 6, "dinner"));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -58,15 +53,18 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch",
-    discount: function (customer type) {
-    if (customer type === "teacher" && customer === "student" && customer === "public") {
-      return discount(cost.price * 0.25);
-    } else{
-      return discount(cost.price * 0.1);
+    discount: function (customer) {
+    if (customer = "teacher" && customer = "student") {
+      return 18 * 0.25;
+    } 
+    else if(customer = "public") {
+      return (cost.price * 0.1);
+  } 
+  else {
+      return 18;
     }
   }
 }
-
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -94,9 +92,9 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-reviews.push(){
-  name: "Andrew", rating: 1, feedback: "The meal was cold and tasteless";
-}
+reviews.push({
+  name: "Andrew", rating: 1, feedback: "The meal was cold and tasteless"
+});
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
