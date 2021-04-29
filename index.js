@@ -50,18 +50,15 @@ Using the burger object below do the following:
 */
 
 export const burger = {
-  name: "Burger", 
-  price: 18, 
+  name: "Burger",
+  price: 18,
   category: "Lunch",
-    discount: function (customer) {
-    if (customer = "teacher" && customer = "student") {
-      return 18 * 0.25;
-    } 
-    else if(customer = "public") {
-      return (cost.price * 0.1);
-  } 
-  else {
-      return 18;
+  discount: function (customer) {
+    if (customer === "teacher" || customer === "student") {
+      return this.price * 0.75;
+    }
+    else { 
+      return this.price * 0.90;
     }
   }
 }
