@@ -20,8 +20,11 @@ The function should:
 */
 
 function createMenuItem(name, price, category) {
+  //Assigning createMenu as a object to the passing parameters
   var createMenu = { name, price, category };
+  //Console logging createMenu to output the results
   console.log(createMenu);
+  //Returning the object createMenu
   return createMenu;
 }
 
@@ -35,7 +38,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+//Invoking the function createMenuItems and passing in "bitcoin"(string) for name, 6000(int) for price, "money"(string) for category
 createMenuItem("bitcoin", 60000, "money");
+//Console logging the return of createMenuItem
 console.log(createMenuItem);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -55,12 +60,16 @@ export const burger = {
   name: "Burger",
   price: 18,
   category: "Lunch",
+  //Adding a new property defined as discount and passing in a function that pass in currentCustomer("teacher","student","public") and checking to see if they can use the discount.
   discount: function checkForDiscoun(currentCustomer) {
+    //Checking to see if anyting was passed into the function
     if (currentCustomer != "") {
-      if (currentCustomer === "teacher") {
+      //If "teacher" or "student" was passed in then do this
+      if (currentCustomer === "teacher" || currentCustomer === "student") {
         let x = this.price * 0.25;
         return this.price - x;
-      } else if (currentCustomer === "public") {
+        //If wasn't teacher or student then must be public
+      } else {
         let x = this.price * 0.1;
         return this.price - x;
       }
@@ -68,6 +77,8 @@ export const burger = {
   },
 };
 burger.discount("teacher");
+burger.discount("student");
+burger.discount("public");
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
