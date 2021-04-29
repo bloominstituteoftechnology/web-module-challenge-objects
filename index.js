@@ -14,13 +14,18 @@ The function should:
   
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
+const menuItems = [];
 
-function createMenuItem(name, price, category){
+function createMenuItem(arr, name, price, category){
 
-    this.name = name,
-    this.price = price,
-    this.category = category
-  }
+    let obj = {
+    name,
+    price,
+    category
+  };
+
+  arr.push(obj);
+};
 
 
 
@@ -34,8 +39,10 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-var taco = new createMenuItem('tacos', 8,'Mexican');
-console.log(taco);
+createMenuItem(menuItems, 'tacos', 8,'Mexican');
+createMenuItem(menuItems, 'pizza', 8,'American');
+createMenuItem(menuItems, 'burger', 8,'American');
+console.log(menuItems);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -58,6 +65,18 @@ const burger = {
   /*Your code here*/
 }
 
+function teacherDiscount(obj) {
+  return (obj.price)*(.75);
+}
+
+function publicDiscount(obj) {
+  return (obj.price)*(.9);
+}
+
+console.log(teacherDiscount(burger));
+console.log(publicDiscount(burger));
+// console.log(burger)
+
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -77,6 +96,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log(reviews[5].feedback);
+
 
 
 
@@ -86,13 +107,26 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+function newReview (arr, name, rating, feedback) {
+  let obj = {
+    name,
+    rating,
+    feedback
+  };
+  
+  arr.push(obj);
+}
 
+newReview(reviews, 'Jacob', 3.75, 'This movie was incredible, had such a great feel good ending. I personally very much appreciated the attention to detail on the realism of the cultures.')
+console.log(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+
+reviews[7].feedback = 'This movie was incredible, had such a great feel good ending. I personally very much appreciated the attention to detail on the realism of the cultures.'
 
 
 
@@ -109,10 +143,16 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, i, name, rating, feedback) {
+
+this.name = name;
+this.rating = rating;
+this.feedback = feedback;
+
+  console.log(`${name} gave the restaurant a ${rating} star review, and their feedback was: ${this.feedback}`)
 }
 
+getReviewByIndex(reviews, 4)
 
   
 
@@ -128,7 +168,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(arr, i) {
   /*Your code here*/
 } 
 
