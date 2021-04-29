@@ -36,6 +36,7 @@ Test your createMenuItems function by doing the following:
 */
 
 createMenuItem("bitcoin", 60000, "money");
+console.log(createMenuItem);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -57,11 +58,11 @@ export const burger = {
   discount: function checkForDiscoun(currentCustomer) {
     if (currentCustomer != "") {
       if (currentCustomer === "teacher") {
-        let x = this.price * 0.25
-        return this.price - x 
+        let x = this.price * 0.25;
+        return this.price - x;
       } else if (currentCustomer === "public") {
-        let x = this.price * 0.10
-        return this.price - x
+        let x = this.price * 0.1;
+        return this.price - x;
       }
     }
   },
