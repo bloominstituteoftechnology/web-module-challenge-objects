@@ -15,9 +15,11 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
+function createMenuItem(name, price, category){
     /*Your code here*/
+    return {name, price, category};
 }
+console.log(createMenuItem('tacos', 8, 'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -29,7 +31,11 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-
+console.log(createMenuItem('pizza', 12, 'Lunch'));
+console.log(createMenuItem('burger', 8, 'Lunch'));
+console.log(createMenuItem('chicken parm', 16, 'Dinner'));
+console.log(createMenuItem('sparkling water', 3, 'Drinks'));
+console.log(createMenuItem('coffee', 2, 'Drinks'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -49,7 +55,20 @@ export const burger = {
   price: 18, 
   category: "Lunch", 
   /*Your code here*/
+  // adding discount method function with 'string' as parameter
+  discount: function(string){
+    // if string is teacher or student multiply burger.price by 75%
+    if(string === 'teacher' || string === 'student'){
+      return burger.price * 0.75;
+      // otherwise multiply burger.price by 90%
+    } else if (string === 'public') {
+      return burger.price * 0.90;
+    }
+  }
 }
+console.log(burger.discount('teacher'));
+console.log(burger.discount('student'));
+console.log(burger.discount('public'));
 
 
 
