@@ -26,6 +26,7 @@ function createMenuItem(name, price, category){
 
 console.log(createMenuItem);
 
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -74,25 +75,17 @@ export const burger = {
    if (Discount = 'teacher' || 'student') {
    return this.price * .75;
   }
-   else if (Discount = 'public') {
-     return this.price * .90;
-   }
+  /* else if (Discount = 'public') {
+     return this.price - 1.8;
+   }*/
    else {
      return price; 
    }
    }
 }
 
+console.log(burger.discount('public'));
 console.log(burger.discount('teacher'));
-
-
-
-
-
-
-
-
-
 
 
 
@@ -116,6 +109,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log(reviews[5].feedback);
 
 
 
