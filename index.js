@@ -136,7 +136,12 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+const reynaReview = [
+  {name: 'Reyna', rating: 3.5, feedback: 'this place is chill with really cool people, great for getting work done on weekdays'}
+]
 
+reviews.splice(7, 3, reynaReview);
+console.log(reviews);
 
 
 
