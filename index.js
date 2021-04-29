@@ -57,13 +57,16 @@ export const burger = {
   discount: function checkForDiscoun(currentCustomer) {
     if (currentCustomer != "") {
       if (currentCustomer === "teacher") {
-        return 13.5;
+        let x = this.price * 0.25
+        return this.price - x 
       } else if (currentCustomer === "public") {
-        return 16.2;
+        let x = this.price * 0.10
+        return this.price - x
       }
     }
   },
 };
+burger.discount("teacher");
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
