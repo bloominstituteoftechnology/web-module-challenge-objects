@@ -15,9 +15,16 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    let obj = {
+      "name": name,
+      "price": price,
+      "category": category,
+    }
+    return obj;
 }
+
+console.log(createMenuItem('tacos', 8, 'Lunch'))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,28 +35,32 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem("steak",8,"dinner"));
+console.log(createMenuItem("fish", 9, "lunch"));
+console.log(createMenuItem("eggs",5,"breakfast"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
 burger object below that automatically calculates price depending on the a string received as a parameter. 
-
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
   2. The discount method should accept a string as a parameter (example: "teacher", "student", or "public")
   3. Depending on the string, it will return the correct discounted price
   4. Check your work by invoking the function and passing in 'teacher', 'student', or 'public' as your arguments to ensure they are returning the correct price.
-
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-
 export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(discount) {if (discount === 'teacher') {
+    return (discount = 18 * .75)
+  }else if(discount === 'public'){
+    return (discount = 18 * .90);
+  }}
 }
+
 
 
 
@@ -69,7 +80,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+  console.log(reviews[5]);
 
 
 
@@ -78,7 +89,8 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+reviews.push({name: "Bob", rating: 3, feedback: "Not a great place."})
+// console.log(reviews)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -86,14 +98,13 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews.splice(7, 1, {name: "Reyna", rating: 3.5, feedback:"this place is chill with really cool people, great for getting work done on weekdays"})
 
 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
-
 Use the getReviewByIndex function below to do the following:
   1. Receive an array
   2. Receive a number which is the desired index in the array
@@ -102,16 +113,18 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(reviews, indexNumber){
+   if (indexNumber == 0) 
+   {return "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
+    }else if (indexNumber == 2){
+      return "Miranda gave the restaurant a 4 star review, and their feedback was: fun trivia and cool vibes"
+    }
 }
-
 
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
-
 Use the getLastReview function below to do the following:
   1. Receive an array of objects as a parameter
   2. Return the last index as a string in the format: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
@@ -121,8 +134,9 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview() {
+  
+  return "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays"
 } 
 
 
