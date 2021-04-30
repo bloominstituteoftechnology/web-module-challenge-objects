@@ -153,11 +153,12 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
-
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, index) {
+  let something = arr[index];
+  console.log(`${something.name} gave the restaurant a ${something.rating} star review, and their feedback was: ${something.feedback}`)
 }
 
+getReviewByIndex(reviews,0)
 
   
 
@@ -172,10 +173,13 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  let thing = arr.length -1;
+  let something = arr[thing];
+  console.log(`${something.name} gave the restaurant a ${something.rating} star review, and their feedback was: ${something.feedback}`)
 } 
+
+getLastReview(reviews)
 
 
 
