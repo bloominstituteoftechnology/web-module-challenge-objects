@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+  return name, price, category
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -29,6 +29,17 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+function createMenuItem(sandwhich, 8, lunch){
+  return "sandwich", 8, dinner
+}
+
+  function createMenuItem(fries, 2, side){
+  return "fries", 5, side
+}
+
+function createMenuItem(salad, 6, dinner){
+  return "salad", 6, dinner
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -48,9 +59,14 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function (customer type) {
+    if (customer type === "teacher" && customer === "student" && customer === "public") {
+      return discount(cost.price * 0.25);
+    } else{
+      return discount(cost.price * 0.1);
+    }
+  }
 }
-
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -70,7 +86,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -79,7 +95,9 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
-
+reviews.push(){
+  name: "Alexander", Raiting: 5, feedback: "More Chicky Nuggies";
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -88,7 +106,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 
-
+eviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -102,10 +121,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, number) {
+  return `{array[number].name} gave the restaurant a {array[number].rating} star review, and their feedback was: {array[number].feedback}`;
 }
-
 
   
 
