@@ -86,7 +86,7 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
-reviews.push({name: "Diego", rating: 5, feedback:"Yo, this place is sooo dope"})
+reviews.pop({name: "Diego", rating: 5, feedback:"Yo, this place is sooo dope"})
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -128,8 +128,9 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  let i = arr.length - 1
+  return arr[i].name + " gave the restaurant a " + arr[i].rating + " star review, and their feedback was: " + arr[i].feedback;
 } 
 
 
