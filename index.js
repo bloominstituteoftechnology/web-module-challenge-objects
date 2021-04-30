@@ -94,7 +94,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-console.log(reviews[5])
+console.log(reviews[5].feedback)
 
 
 
@@ -104,6 +104,31 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+// WITHOUT FUNCTION---------
+
+let bob = {
+  name: "bob",
+  rating: 3,
+  feedback: "It was not the greatest and it was not the worst thing. Consider though, that I have no idea what we are talking about"
+};
+
+reviews.push(bob);
+console.log(reviews)
+
+// OR WITH FUNCTION-------
+
+function createReview(arr, name, rating, feedback){
+  let obj = {
+    name,
+    rating,
+    feedback
+  };
+  arr.push(obj);
+ console.log(arr);
+}
+
+createReview(reviews, "Bob", 3, "It was not the greatest and it was not the worst thing. Consider though, that I have no idea what we are talking about")
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -112,7 +137,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
 
+console.log(reviews)
 
 
 
