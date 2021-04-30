@@ -95,6 +95,11 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+for (let i = 0; i < reviews.length; i++) {
+  if (reviews === 'Julius') {
+    console.log(reviews[i].feedback);
+  }
+}
 
 
 
@@ -104,7 +109,8 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+reviews.push( {name: 'Debra', rating: 10, feedback: 'SUPER COOL'});
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -113,7 +119,12 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-
+for (let i = 0; i < reviews.length; i++) {
+  if (reviews[i] === 'Reyna') {
+    reviews[i].feednback = "this place is chill with really cool people, great for getting work done on weekdays"
+  }
+}
+console.log(reviews);
 
 
 
