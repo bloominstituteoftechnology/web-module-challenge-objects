@@ -89,7 +89,14 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+    const juliusFeedback = [];
+    for(let i = 0; i < reviews.length; i++){
+      if(reviews[i].name === "Julius"){
+        juliusFeedback.push(reviews[i].feedback);
+      
+      }
+    }
+    console.log(juliusFeedback);
 
 
 
@@ -100,14 +107,23 @@ Using the reviews array above do the following: (no function needed)
 */
 
 
+   let newFeedback = reviews.push(
+      {name: "Alex", rating: 4.8, feedback: "Quick service and really good food for the price!"}
+      );
+  
+console.log(reviews);
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+      
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
 
-
+console.log(reviews);
 
 
 
@@ -122,8 +138,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  for 
 }
 
 
