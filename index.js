@@ -139,9 +139,9 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(array, index) {
-  for 
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`;
 }
-
+console.log(reviews, 0)
 
   
 
@@ -157,8 +157,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+
+function getLastReview(array, index) {
+  for(let i = 0; i < array.length; i++){
+      if ([i] === -1);
+      return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`;
+  }
 } 
 
 
