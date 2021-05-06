@@ -20,7 +20,9 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
-const getReviewByRating = (ar, rate) => ar.filter(obj => obj.rating >= rate)
-  
+// const getReviewByRating = (ar, rate) => ar.filter(obj => obj.rating >= rate)
+const getLongReviews = ar => ar.filter(obj => obj.feedback.split(' ').length > 15)
+//   reviews.forEach(obj => console.log(obj.feedback.split(' ').length))
 
-  console.log(getReviewByRating(reviews, 4));
+// console.log(getReviewByRating(reviews, 4));
+console.log(getLongReviews(reviews));
