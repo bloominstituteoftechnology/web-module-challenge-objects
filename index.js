@@ -15,9 +15,21 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(one, two, three) {
+  let obj = {}
+  obj.name = one;
+  obj.price = two;
+  obj.category = three;
+  return obj
 }
+// function CreateMenuItem(one, two, three) {
+//   this.name = one;
+//   this.price = two;
+//   this.category = three;
+// }
+// Burger = new createMenuItem('burger', 5, 'dinner');
+// Pizza = new createMenuItem('pizza', 6, 'dinner');
+// Pancake = new createMenuItem('pancakes', 4, 'breakfast');
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,6 +40,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+// console.log(createMenuItem('burger', 5, 'dinner'))
+// console.log(createMenuItem('pizza', 10, 'dinner'))
+// console.log(createMenuItem('pancakes', 4, 'breakfast'))
 
 
 
@@ -44,11 +59,15 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
+
 export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(str) {
+    if (str === 'student'|| str === 'teacher') return this.price - this.price * 0.25;
+    return this.price - 0.1 * this.price
+  }
 }
 
 
