@@ -144,9 +144,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+const getLastReview = ar => `${ar[ar.length-1].name} gave the restaurant a ${ar[ar.length-1].rating} star review, and their feedback was: ${ar[ar.length-1].feedback}`
 
 
 
