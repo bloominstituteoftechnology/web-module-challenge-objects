@@ -21,8 +21,16 @@ const reviews = [
 ]
 
 // const getReviewByRating = (ar, rate) => ar.filter(obj => obj.rating >= rate)
-const getLongReviews = ar => ar.filter(obj => obj.feedback.split(' ').length > 15)
+// const getLongReviews = ar => ar.filter(obj => obj.feedback.split(' ').length > 15)
 //   reviews.forEach(obj => console.log(obj.feedback.split(' ').length))
 
 // console.log(getReviewByRating(reviews, 4));
-console.log(getLongReviews(reviews));
+// console.log(getLongReviews(reviews));
+
+function carMaker(odo) {
+    this.odo = odo;
+    this.drive = function(odo2){
+      this.odo += odo2;
+      return this.odo;
+    }
+  }

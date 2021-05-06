@@ -202,9 +202,13 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+// let make = ['Toyota', 'BMW', 'Mercedes', 'Dodge', 'Huyndai']
+function carMaker(odo) {
+  this.odo = odo;
+  this.drive = function(odo2){
+    this.odo += odo2;
+    return this.odo;
+  }
 }
 
 
