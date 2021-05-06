@@ -15,9 +15,21 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(one, two, three) {
+  let obj = {}
+  obj.name = one;
+  obj.price = two;
+  obj.category = three;
+  return obj
 }
+// function CreateMenuItem(one, two, three) {
+//   this.name = one;
+//   this.price = two;
+//   this.category = three;
+// }
+// Burger = new createMenuItem('burger', 5, 'dinner');
+// Pizza = new createMenuItem('pizza', 6, 'dinner');
+// Pancake = new createMenuItem('pancakes', 4, 'breakfast');
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,6 +40,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+// console.log(createMenuItem('burger', 5, 'dinner'))
+// console.log(createMenuItem('pizza', 10, 'dinner'))
+// console.log(createMenuItem('pancakes', 4, 'breakfast'))
 
 
 
@@ -44,11 +59,15 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
+
 export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(str) {
+    if (str === 'student'|| str === 'teacher') return this.price - this.price * 0.25;
+    return this.price - 0.1 * this.price
+  }
 }
 
 
@@ -69,7 +88,12 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+// console.log(reviews[5].feedback);
+// function review(ar) {
+//   for (let i = 0; i < ar.length; i++) {
+//           if (ar[i].name === 'Julius') return ar[i].feedback
+//   }
+// }
 
 
 
@@ -78,16 +102,17 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+reviews.push({name: 'me', rating: 4, feedback: "It was good"})
+// console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
-*/
-
-
+  */
+ reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
+// console.log(reviews[7]);
 
 
 
@@ -102,9 +127,7 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+const getReviewByIndex = (ar,idx) => `${ar[idx].name} gave the restaurant a ${ar[idx].rating} star review, and their feedback was: ${ar[idx].feedback}`
 
 
   
@@ -121,9 +144,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+const getLastReview = ar => `${ar[ar.length-1].name} gave the restaurant a ${ar[ar.length-1].rating} star review, and their feedback was: ${ar[ar.length-1].feedback}`
 
 
 
@@ -143,9 +164,8 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+const getReviewByRating = (ar, rate) => ar.filter(obj => obj.rating >= rate)
+
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -161,9 +181,7 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
+const getLongReviews = ar => ar.filter(obj => obj.feedback.split(' ').length > 15)
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -184,9 +202,13 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+// let make = ['Toyota', 'BMW', 'Mercedes', 'Dodge', 'Huyndai']
+function carMaker(odo) {
+  this.odo = odo;
+  this.drive = function(odo2){
+    this.odo += odo2;
+    return this.odo;
+  }
 }
 
 
