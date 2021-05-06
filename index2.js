@@ -1,31 +1,23 @@
+const reviews = [
+    {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
+    {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
+    {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
+    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+    {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
+    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
+    {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
+    {name: "Reyna", rating: 3.5, feedback: ""},
+]
 
-// function createMenuItem(one, two, three) {
-//     let obj = {}
-//     obj.name = one;
-//     obj.price = two;
-//     obj.category = three;
-//     return obj
-//   }
-function createMenuItem(one, two, three) {
-    this.name = one;
-    this.price = two;
-    this.category = three;
-  }
-  Burger = new createMenuItem('burger', 5, 'dinner');
-  Pizza = new createMenuItem('pizza', 6, 'dinner');
-  Pancake = new createMenuItem('pancakes', 4, 'breakfast');
-  /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-  Invoke your function!
-  Test your createMenuItems function by doing the following:
-    1. Pass values to createMenuItems in order to create the objects (menu items)
-    2. Create at least 3 menu items (objects) of your choosing making sure they have name, price, and category keys
-    3. Log each returned object to the console  
-    
-    For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
-  */
-//   console.log(createMenuItem('burger', 5, 'dinner'))
-//   console.log(createMenuItem('pizza', 10, 'dinner'))
-//   console.log(createMenuItem('pancakes', 4, 'breakfast'))
-console.log(Burger);
-console.log(Pizza);
-console.log(Pancake);
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+Using the reviews array above:
+  1. log only Julius' feedback to the console - no function needed 
+*/
+// console.log(reviews[5].feedback);
+
+function review(ar) {
+    for (let i = 0; i < ar.length; i++) {
+            if (ar[i].name === 'Julius') return ar[i].feedback
+    }
+}
+console.log(review(reviews));
