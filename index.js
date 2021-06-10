@@ -84,6 +84,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+console.log(reviews[5]['feedback'])
 
 
 
@@ -93,7 +94,13 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-
+const garrett = {
+  name: "Garrett",
+  rating: 5,
+  feedback: "This is now my favorite restaurant ever!"
+};
+reviews.push(garrett);
+console.log(reviews)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -101,7 +108,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews[7]['feedback'] = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews[7])
 
 
 
@@ -117,9 +125,13 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewByIndex(array, indexpos){
+  const revindname = array[indexpos]['name'];
+  const revindrate = array[indexpos]['rating'];
+  const revindfeed = array[indexpos]['feedback'];
+  return `${revindname} gave the restaurant a ${revindrate} star review, and their feedback was: ${revindfeed}`;
+} 
+console.log(getReviewByIndex(reviews, 1));
 
 
   
@@ -136,10 +148,14 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  const revindname2 = array[array.length - 1]['name'];
+  const revindrate2 = array[array.length - 1]['rating'];
+  const revindfeed2 = array[array.length - 1]['feedback'];
+  return `${revindname2} gave the restaurant a ${revindrate2} star review, and their feedback was: ${revindfeed2}`;
 } 
 
+console.log(getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
