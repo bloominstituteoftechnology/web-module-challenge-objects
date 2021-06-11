@@ -158,8 +158,14 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+function getReviewByRating(array, rating) {
+  let newArr =[];  
+  for(let i=0; i < array.length; i++){
+      if(Math.floor(array[i].rating) == Math.floor(rating)){
+        newArr.push(array[i]);
+      }
+    }
+  return newArr;
   }
 
   
@@ -176,8 +182,14 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(array) {
+  let longReview =[];
+    for(let i=0; i< array.length; i++){
+       if(array[i].feedback.split(" ").length > 14){
+         longReview.push(array[i])
+       }
+    }
+    return longReview;
   }
   
 
@@ -197,12 +209,17 @@ Use the carMaker function below to do the following:
   Then we called car1.drive(100)
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
+// let car = {
+//   drive: function(distance){
+//     return this.odometer + distance;
+// },
+// }
 
+// function carMaker(carName, odometer) {
+//   let carName = Object.create(car)
 
-function carMaker(/* code here */) {
-    /* code here */
     
-}
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
