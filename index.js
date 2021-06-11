@@ -94,9 +94,9 @@ Using the reviews array above do the following: (no function needed)
 */
 
 reviews.push({
-  name: "Isaac",
+  name: "kurt",
   rating: 5, 
-  feedback: "Raw dishes were amazing!" 
+  feedback: "It was delicious!" 
 })
 
 console.log(reviews);
