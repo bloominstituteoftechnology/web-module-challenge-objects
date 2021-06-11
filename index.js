@@ -38,7 +38,7 @@ const chic = createMenuItem("chicken", 6, "dinner");
 console.log(chic);
 const ham = createMenuItem("hamburger", 4, "lunch");
 console.log(ham);
-const pie = createMenuItem("pie", 10, "desert");
+const pie = createMenuItem("pie", 10, "dessert");
 console.log(pie);
 
 
