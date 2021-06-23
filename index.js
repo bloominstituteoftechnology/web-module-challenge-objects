@@ -43,12 +43,11 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-
-export const burger = {
+const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  
 }
 
 
@@ -73,23 +72,29 @@ Using the reviews array above:
 
 
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-Using the reviews array above do the following: (no function needed) 
-  1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
-  2. log the whole array to the console, make sure the new review is inside of it   
-*/
-
-
-
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
+console.log(reviews);
 
 
 
 
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array
+ the addReview function below to do the following:
+  1. Receive an array
+  2. Receive the following object keys name, rating, feedback
+  3. The function should push the following object to the array: {name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }
+  4. should return the resulting array
+*/
+
+function addReview(/*Your Code Here */){
+  /*Your Code Here */
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -195,10 +200,11 @@ function foo(){
   console.log('its working');
   return 'bar';
 }
-
-export default{
+module.exports = {
   foo,
   createMenuItem,
+  burger,
+  addReview,
   getReviewByIndex,
   getLastReview,
 }
