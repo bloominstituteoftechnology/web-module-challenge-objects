@@ -1,4 +1,4 @@
-/*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTO-GRADER WILL NOT WORK*/
 
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
@@ -16,10 +16,16 @@ The function should:
 */
 
 // using the function below to return an object with the keys name, price, category
-
-function createMenuItem(/*Your code here*/)
+/**
+ * @param  {string} name Name of the menu item
+ * @param  {number} price Price of menu item
+ * @param  {string} category Category of menu item
+ * @return {object} Returns menu item
+ */
+function createMenuItem(name, price, category)
 {
-    /*Your code here*/
+  const menuItem = {name: name, price: price, category: category};
+  return menuItem;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -31,6 +37,15 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
+const menuItem1 = createMenuItem("Peppermint Mocha", 6.75, "Drinks");
+console.log("task 1 menuItem1", menuItem1);
+
+const menuItem2 = createMenuItem("Caramel Latte", 5.5, "Drinks");
+console.log("task 1 menuItem2", menuItem2);
+
+const menuItem3 = createMenuItem("Strawberry White Mocha", 7.5, "Drinks");
+console.log("task 1 menuItem3", menuItem3);
 
 // invoking the function - this is not tested
 
@@ -143,7 +158,7 @@ function getLastReview(array)
   return `${array[array.length-1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length -1].feedback}`;
 } 
 
-
+console.log('task 7', getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
