@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(name, price, category){
-    return `{name: ${name}, price: ${price}, category: ${category}`
+function createMenuItem(user, priced, meal){
+    return {name: user, price: priced, category: meal};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -46,14 +46,14 @@ Using the burger object below do the following:
 const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch",
-  disount: function(status){
-    if( status === 'teacher' || status === 'student'){
-      return 13.5;
-    }else{
-      return 16.2;
-    }
+  category: "Lunch", 
+  discount: function(str){
+  if (str === 'teacher' || str === 'student'){
+    return this.price * .75
+  } else if (str === 'public'){
+    return this.price * .9
   }
+}
 }
 
 ///////////////Reviews (MVP)///////////////////
