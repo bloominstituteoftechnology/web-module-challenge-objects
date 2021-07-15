@@ -65,12 +65,25 @@ const burger =
 {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  // creating a method called discount - and it takes a parameter of customer and it gives a discount based on the argument passed in
-  // student or teacher the discount should be 25% off the price - hint you will need to reference this.price
-  // public gets 10% discount
+  category: "Lunch",
+  /**
+   * @param  {string} title Person's title (teacher, student, or public)
+   */
+  discount: function(title)
+  {
+    if (title == "teacher" || title == "student")
+    { 
+      this.price -= this.price * 0.25;
+    }
+    else if (title == "public")
+    {
+      this.price -= this.price * 0.1;
+    }
+  }
 }
 
+burger.discount("public");
+console.log('task 2', burger);
 
 
 ///////////////Reviews (MVP)///////////////////
