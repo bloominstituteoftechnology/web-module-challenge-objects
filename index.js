@@ -47,23 +47,28 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-const burger = {
+const burger = 
+{
   name: "Burger", 
   price: 18, 
   category: "Lunch",  
-  discount: function(buyerCategory){
-  if (buyerCategory === "teacher" || buyerCategory === "student"){
-    burger.price -= burger.price * 0.25;
-  }
-  else if (buyerCategory === "public"){
-    burger.price -= burger.price * 0.1;
+  discount: function(buyerCategory)
+  {
+    if (buyerCategory === "teacher" || buyerCategory === "student")
+    {
+      burger.price -= burger.price * 0.25;
     }
+    else if (buyerCategory === "public")
+    {
+      burger.price -= burger.price * 0.1;
+    }
+    return burger.price;
   }
 }
 
 const category = "student";
-burger.discount(category);
-console.log(burger);
+const price = burger.discount(category);
+console.log(price);
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -114,6 +119,7 @@ function addReview(array, name, rating, feedback){
 }
 const review1 = addReview(reviews, "Daniela", 5, "Beautiful atmosphere and wonderful vegan options!");  
 console.log(review1);
+reviews.pop();
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -126,12 +132,12 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(reviwes, ) {
-  const reviewIndex = reviews[i];
+function getReviewByIndex(array, index) {
+  const reviewIndex = array[index];
   return `${reviewIndex.name} gave the restaurant a ${reviewIndex.rating} star review, and their feedback was: ${reviewIndex.feedback}`;
 }
 
-const review5 = getReviewByIndex(reviews[0]);
+const review5 = getReviewByIndex(reviews, 0);
 console.log(review5);  
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
