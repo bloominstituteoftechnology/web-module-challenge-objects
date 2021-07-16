@@ -79,11 +79,14 @@ const burger =
     {
       this.price -= this.price * 0.1;
     }
+    return this.price;
   }
 }
 
-burger.discount("public");
-console.log('task 2', burger);
+const newPrice = burger.discount('teacher');
+console.log("task 2", newPrice);
+
+// console.log(burger.discount('student'));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -106,16 +109,15 @@ Using the reviews array above:
 // this is not being tested/ graded
 //reference .feedback ?
 
+console.log("task 3", reviews[5].feedback);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-console.log(reviews);
-
-// not being tested
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log("task 4", reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -144,14 +146,12 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) 
+function getReviewByIndex(array, i)
 {
-  // 2 parameters  = array, number
-  // return the array [number].feedback
-  /*Your code here*/
+  return `${array[i].name} gave the restaurant a ${array[i].rating} star review, and their feedback was: ${array[i].feedback}`;
 }
 
-
+console.log(getReviewByIndex(reviews,0));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
