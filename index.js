@@ -52,11 +52,12 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   discount: function(role) {
-    if (role == 'teacher' || role == 'student') {
-      return this.price * 0.75;
-    } else {
-      return this.price * 0.9;
-    }
+    return (role == 'teacher' || role == 'student') ? this.price * 0.75 : this.price * 0.9;
+    // if (role == 'teacher' || role == 'student') {
+    //   return this.price * 0.75;
+    // } else {
+    //   return this.price * 0.9;
+    // }
   }
 }
 
@@ -79,19 +80,28 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+// creating an empty array to push our results to
+const newArr = [];
 
+// looping through the entire array and checking the region at each index
+for(let i = 0; i < reviews.length; i++){
+  // if the region at this index matches the string of Europe then push the city to the europe array
+  if(reviews[i].name === 'Julius'){
+    newArr.push(reviews[i].feedback);
+  }
+}
 
+console.log(newArr);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
+
 console.log(reviews);
-
-
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array
@@ -102,9 +112,17 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
+function addReview(arr, name, rating, review){
   /*Your Code Here */
+  arr.push({name, rating, review})
+  return arr;
 }
+
+let arr = [];
+
+console.log(addReview(arr, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
+console.log(addReview(arr, 'Miranda', 4, 'fun trivia and cool vibes'));
+console.log(addReview(arr, 'Reyna', 3.5, 'this place is chill with really cool people, great for getting work done on weekdays'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -117,12 +135,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(arr, index) {
   /*Your code here*/
+  return `${arr[index].name} gave the restaurant a ${arr[index].rating} star review, and their feedback was: ${arr[index].feedback}`;
 }
-
-
-  
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
@@ -135,12 +151,10 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-
-function getLastReview(/*Your code here*/) {
+function getLastReview(arr) {
   /*Your code here*/
+  return `${arr[arr.length-1].name} gave the restaurant a ${arr[arr.length-1].rating} star review, and their feedback was: ${arr[arr.length-1].feedback}`;
 } 
-
-
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
