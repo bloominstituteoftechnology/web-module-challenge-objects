@@ -16,10 +16,14 @@ The function should:
 */
 
 function createMenuItem(name, price, category) {
-  return { name, price, category};
-}
+   return {name, price, category};
+    }
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+    console.log(createMenuItem("Breakfast Burrito", 16, "Breakfast"  ));
+    console.log(createMenuItem("Cafe Latte", "4", "Drinks"));
+    console.log (createMenuItem("Blueberry Muffin", 2, "Baked Goods"));
+
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀"
 Invoke your function!
 Test your createMenuItems function by doing the following:
   1. Pass values to createMenuItems in order to create the objects (menu items)
@@ -28,6 +32,7 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+
 
 
 
