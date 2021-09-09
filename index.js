@@ -1,5 +1,7 @@
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
+const { tsMethodSignature } = require("@babel/types");
+
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
 ///////////////Menu Items (MVP)///////////////////
@@ -51,13 +53,25 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
+
 const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  
-}
+  category: "Lunch",
 
+  discount: function (customer) {
+   
+    if (customer === "teacher" || customer === "student") {
+        return this.price * 0.75;
+
+     } else {
+       return this.price * .9;
+     }
+  }
+}     
+    
+  console.log(burger.discount());
+  
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -76,6 +90,9 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+
+
+//console.log(Julius)
 
 
 
@@ -100,8 +117,10 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback) {
+  array.push({ name, rating, feedback})
+  return array
+  
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
