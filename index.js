@@ -1,6 +1,6 @@
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
-const { tsMethodSignature } = require("@babel/types");
+const { tsMethodSignature, variableDeclaration } = require("@babel/types");
 
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
@@ -91,8 +91,12 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+reviews[5].name
+console.log(feedback);
 
-//console.log(Julius)
+
+
+
 
 
 
@@ -154,8 +158,11 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+console.log(array.length);
+
+}
+
+getLastReview(reviews);
 
 
 
