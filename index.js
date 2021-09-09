@@ -84,7 +84,9 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+// function getReviewByIndex(array, index) {
+//   return `${array[5].name} gave the restaurant a ${array[5].rating} star review, and their feedback was: ${array[5].feedback}`
+// }
 
 
 
@@ -108,8 +110,9 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback});
+  return array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -123,8 +126,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
 }
 
 
@@ -142,10 +145,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  let lastIndex = arr.length - 1;
+  let lastReview = `${arr[lastIndex].name} gave the restaurant a ${arr[lastIndex].rating} star review, and their feedback was: ${arr[lastIndex].feedback}`
+  return lastReview
 } 
-
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
