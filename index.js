@@ -154,7 +154,7 @@ function getLastReview(array) {
   return getReviewByIndex(array,index)
 } 
 
-
+console.log(getLastReview(reviews))
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
