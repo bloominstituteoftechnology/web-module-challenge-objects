@@ -154,8 +154,6 @@ function getLastReview(array) {
   return getReviewByIndex(array,index)
 } 
 
-console.log(getLastReview(reviews))
-
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
 /** 💪💪💪💪💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪💪💪💪💪 
@@ -172,8 +170,9 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(decoy) {
+    let myTest = 2;
+    return myTest
   }
 
   
