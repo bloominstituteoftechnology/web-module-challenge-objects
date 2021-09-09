@@ -21,7 +21,7 @@ function createMenuItem(name, price, category) {
 
     console.log(createMenuItem("Breakfast Burrito", 16, "Breakfast"  ));
     console.log(createMenuItem("Cafe Latte", "4", "Drinks"));
-    console.log (createMenuItem("Blueberry Muffin", 2, "Baked Goods"));
+    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀"
 Invoke your function!
@@ -32,6 +32,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+console.log (createMenuItem("Blueberry Muffin", 2, "Baked Goods"));
+console.log(createMenuItem("Sandwich", 10, "Lunch"));
+console.log(createMenuItem("Red or White wine", 12, "Spirits"));
 
 
 
