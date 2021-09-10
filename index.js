@@ -130,13 +130,15 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(arr, name, rating, feedback) {
-  getReviewByIndex(reviews,0)
-    }
-     
+function getReviewByIndex() {
+  
+  return "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}";
+    
+}
+console.log(getReviewByIndex);
 
-return "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"; 
-console.log(getReviewByIndex(name, rating, feedback));
+
+
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
