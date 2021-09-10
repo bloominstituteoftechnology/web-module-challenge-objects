@@ -18,10 +18,10 @@ The function should:
 */
 
 function createMenuItem(name, price, category) {
-   return {name, price, category};
+   return name, price, category;
     }
 
-    console.log(createMenuItem("Breakfast Burrito", 16, "Breakfast"  ));
+    console.log(createMenuItem("Breakfast Burrito", 16, "Breakfast"));
     console.log(createMenuItem("Cafe Latte", "4", "Drinks"));
     
 
@@ -91,14 +91,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 reviews[5][2] = [];
-  
-
-
-
-
-
-
-
+ console.log(reviews); 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -120,9 +113,9 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(array, name, rating, feedback) {
-  array.push({ name, rating, feedback})
-  return array
+function addReview(arr, name, rating, feedback) {
+  arr.push({ name, rating, feedback})
+  return arr
   
 }
 
@@ -137,11 +130,13 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewByIndex(arr, name, rating, feedback) {
+  getReviewByIndex(reviews,0)
+    }
+     
 
-
+return "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"; 
+console.log(getReviewByIndex(name, rating, feedback));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
