@@ -30,13 +30,15 @@ Invoke your function!
 Test your createMenuItems function by doing the following:
   1. Pass values to createMenuItems in order to create the objects (menu items)
   2. Create at least 3 menu items (objects) of your choosing making sure they have name, price, and category keys
-  3. Log each returned object to the console  
+  3. Log each returned object to the console*/
   
-  For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
-*/
+  
+const blueMuffin = {name: "Blueberry Muffin", price: 2, category: "Baked Goods" };
+const food = { name: "taco", price: 18, category: "Lunch"};
+
 console.log (createMenuItem("Blueberry Muffin", 2, "Baked Goods"));
-console.log(createMenuItem("Sandwich", 10, "Lunch"));
-console.log(createMenuItem("Red or White wine", 12, "Spirits"));
+console.log(createMenuItem("taco", 10, "Lunch"));
+
 
 
 
@@ -130,9 +132,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex() {
+function getReviewByIndex(name, rating, feedback) {
   
-  return "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}";
+  return "name gave the restaurant a rating star review, and their feedback was: feedback";
     
 }
 console.log(getReviewByIndex);
