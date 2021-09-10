@@ -90,9 +90,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
-reviews[5].name
-console.log(feedback);
+reviews[5][2] = [];
+  
 
 
 
@@ -139,7 +138,7 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/array[i].name
+  /*Your code here*/
 }
 
 
@@ -158,7 +157,7 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(/*Your code here*/) {
-console.log(array.length);
+
 
 }
 
