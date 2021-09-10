@@ -55,11 +55,11 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   
-  discount: function(string){
-    if(string.toLowerCase()==="teacher" || string.toLowerCase()==="student"){
+  discount: function(customer){
+    if(customer === "teacher" || customer === "student"){
       return 18 - (18* .25);
-    }
-    else{
+
+    } else {
       return 18 - (18* .10);
     }
 
@@ -84,9 +84,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-// function getReviewByIndex(array, index) {
-//   return `${array[5].name} gave the restaurant a ${array[5].rating} star review, and their feedback was: ${array[5].feedback}`
-// }
+
+console.log(reviews[5].feedback);
 
 
 
@@ -145,10 +144,10 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(arr) {
-  let lastIndex = arr.length - 1;
-  let lastReview = `${arr[lastIndex].name} gave the restaurant a ${arr[lastIndex].rating} star review, and their feedback was: ${arr[lastIndex].feedback}`
-  return lastReview
+function getLastReview(array) {
+  let lastIndex = array.length - 1;
+  let lastReview = `${array[lastIndex].name} gave the restaurant a ${array[lastIndex].rating} star review, and their feedback was: ${array[lastIndex].feedback}`
+  return lastReview;
 } 
 
 
