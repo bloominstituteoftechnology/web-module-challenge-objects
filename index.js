@@ -33,8 +33,13 @@ const pizza = createMenuItem('pizza', 2, 'Lunch');
 const bagel = createMenuItem('bagel', 1.5, 'Breakfast');
 const smoothie = createMenuItem('smoothie', 3, 'Drink');
 
-
+console.log(smoothie);
+console.log(bagel);
+console.log(pizza);
 // invoke function 3 times
+
+
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -55,14 +60,19 @@ const burger = {
   category: "Lunch", 
 
   //method goes here
-  discount: function(){
+  discount: function(string){
+    if(string === 'teacher'){
+      return this.price * .75;
+    } else {
+      return this.price * .9;
+    }
 
   }
 
 //  
 }
 
-
+console.log(burger.discount("teacher"));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -89,7 +99,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews[7].feedback);
 //object.the new key (value)
 
 
@@ -104,10 +115,10 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 function addReview(array, name, rating, feedback){
-  /*Your Code Here */
-  //array.push({})
+ array.push(name, {rating}, feedback);
+return array;  //array.push({})
 }
-
+console.log(addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
