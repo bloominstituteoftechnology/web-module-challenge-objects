@@ -1,4 +1,4 @@
-/*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/*❗❗ MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK ❗❗*/
 
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
@@ -15,11 +15,14 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
+
 function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+  /*Your code here*/
 }
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+
+
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
   1. Pass values to createMenuItems in order to create the objects (menu items)
@@ -32,17 +35,18 @@ Test your createMenuItems function by doing the following:
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
-burger object below that automatically calculates price depending on the a string received as a parameter. 
+You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the burger object below that automatically calculates price depending on the string received as a parameter. 
 
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
-  2. The discount method should accept a string as a parameter (example: "teacher", "student", or "public")
+  2. The discount method should accept a string as a parameter and take "teacher", "student", or "public" as an argument.
   3. Depending on the string, it will return the correct discounted price
   4. Check your work by invoking the function and passing in 'teacher', 'student', or 'public' as your arguments to ensure they are returning the correct price.
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
+
+
 const burger = {
   name: "Burger", 
   price: 18, 
@@ -64,15 +68,14 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
 
 
-
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
@@ -80,27 +83,28 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 
 
 
-
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array
  the addReview function below to do the following:
-  1. Receive an array
-  2. Receive the following object keys name, rating, feedback
+  1. Receive an array in the first parameter that will take reviews array as an argument
+  2. Receive the following object keys name, rating, and feedback in the second, third, and last parameters (repsectively) that will take the necessary values as arguments
   3. The function should push the following object to the array: {name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }
   4. should return the resulting array
 */
+
 
 function addReview(/*Your Code Here */){
   /*Your Code Here */
 }
 
+
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
 Use the getReviewByIndex function below to do the following:
-  1. Receive an array
-  2. Receive a number which is the desired index in the array
+  1. Receive an array as an argument from the first parameter
+  2. Receive a number which is the desired index in the array as an argument from the second parameter
   3. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
@@ -110,18 +114,18 @@ function getReviewByIndex(/*Your code here*/) {
   /*Your code here*/
 }
 
-
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
 
 Use the getLastReview function below to do the following:
-  1. Receive an array of objects as a parameter
+  1. Receive an array as the only parameter that will take the reviews array as an argument
   2. Return the last index as a string in the format: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   3. Invoke the function with the reviews array as the argument
   
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
+  NOTE: her feedback should not be blank if task 4 was done correctly
 */
 
 
