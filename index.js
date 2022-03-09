@@ -21,7 +21,7 @@ function createMenuItem(name, price, category){
 
 console.log(createMenuItem("personal pizza", "8", "lunch"))
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
   1. Pass values to createMenuItems in order to create the objects (menu items)
@@ -49,7 +49,7 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   discount: function(customerType) {
-    if (customerType === 'teacher') {
+    if (customerType === 'teacher' || customerType === 'student') {
       return this.price - (this.price * .25);
     } else {
       return this.price - (this.price * .10);
@@ -71,11 +71,10 @@ const reviews = [
     {name: "Reyna", rating: 3.5, feedback: ""},
 ]
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
 
 
 
@@ -98,25 +97,27 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(arr, name, rating, feedback){
+  arr.push({name, rating, feedback})
+  return arr
 }
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
 Use the getReviewByIndex function below to do the following:
-  1. Receive an array
-  2. Receive a number which is the desired index in the array
+  1. Receive an array as an argument from the first parameter
+  2. Receive a number which is the desired index in the array as an argument from the second parameter
   3. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, index) {
+  return `${arr[index].name} gave the restaurant a ${arr[index].rating} star review, and their feedback was: ${arr[index].feedback}`
 }
-
+console.log(getReviewByIndex(reviews, 0))
 
   
 
