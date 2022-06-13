@@ -16,10 +16,8 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
-}
 
+const tacos = {name: "Tacos", price: 8, category: "Lunch"};
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -32,6 +30,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+const pizza = {name: "Pizza", price: 5, category: 'Lunch'};
+const soda = {name: "Fountain Soda", price: 1.50, category: "Drinks"};
+const salad = {name: "Cobb Salad", price: 8, category: "Lunch"};
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,12 +48,18 @@ Using the burger object below do the following:
 */
 
 
-const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
+const burger = {name: "Burger", price: 18,  category: "Lunch", }; 
+discount: function(string){
+  if(string === 'teacher' || string === 'student'){
+    this.price = this.price - this.price * 0.25;
+  }
+  else{ 
+    this.price = this.price * 0.1;
+  
+  }
   
 }
+console.log(burger.discount('public'));
 
 
 
@@ -65,14 +72,15 @@ const reviews = [
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name: "Reyna", rating: 3.5, feedback: ""},
+    {name: "Reyna", rating: 3.5, feedback: "this place is chill with really cool people, great for getting work done on weekdays"},
 ]
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+reviews.splice(5,1);
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -82,6 +90,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 
+/*added reynas feedback above*/
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array. 
@@ -95,9 +105,7 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
-}
+reviews.push({name: 'Daniela', rating: 5,feedback: 'beautiful atmosphere, and wonderful vegan options!'});
 
 
 
@@ -112,9 +120,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewsByIndex (reviews, 0);
+
+
 
   
 
@@ -131,10 +139,7 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
-
+function getLastReview(reviews);
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -153,9 +158,7 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+ function getReviewByRating(reviews, 4);
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -171,10 +174,7 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
-  
+function getLongReviews(reviews);
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -193,11 +193,22 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
-
-function carMaker(/* code here */) {
-    /* code here */
-    
+class Car {
+  constructor (make, model, year, color) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+      this.color = color;
+      this.mileage = 0;
+    } 
+    drive(distance) {
+      this.mileage += distance;
+      console.log(`The ${this.model} has just been driven for
+      ${distance} miles.`);
+     
+    }
 }
+  Mazda.drive(23);
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
