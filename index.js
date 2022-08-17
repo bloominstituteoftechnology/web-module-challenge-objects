@@ -87,11 +87,11 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array. 
 
 Use the addReview function below to do the following:
-  1. Receive an array in the FIRST parameter that will take reviews array as an argument
-  2. Receive the following object keys, name, rating, and feedback, in the SECOND, THIRD, and FOURTH parameters (repsectively) that will take the necessary values as arguments
-  3. The function should push a new object object to the array using the necessary parameters
+  1. Receive an array in the FIRST parameter (invoke with the reviews array above)
+  2. Receive the following parameters: name, rating, and feedback; use them in the SECOND, THIRD, and FOURTH parameters (respectively)
+  3. The function should construct and push a new object to the array parameter.
   🌟 EXAMPLE: addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!') should add the following to the end of the array: {name: 'Daniela', rating: 5, feedback: 'Beautiful atmosphere and wonderful vegan options!'}
-  4. Return the resulting array
+  4. Return the updated array
 */
 
 
@@ -122,7 +122,7 @@ function getReviewByIndex(/*Your code here*/) {
 Write a function to get information about the most recent (last) review called `getLastReview`
 
 Use the getLastReview function below to do the following:
-  1. Receive an array as the only parameter that will take the reviews array as an argument
+  1. Receive an array as a parameter; invoke with the reviews array as an argument
   2. Return the last index as a string in the format: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   3. Invoke the function with the reviews array as the argument
   
