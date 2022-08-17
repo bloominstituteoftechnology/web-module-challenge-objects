@@ -90,7 +90,7 @@ Use the addReview function below to do the following:
   1. Receive an array in the FIRST parameter (invoke with the reviews array above)
   2. Receive the following parameters: name, rating, and feedback; use them in the SECOND, THIRD, and FOURTH parameters (respectively)
   3. The function should construct and push a new object to the array parameter.
-  🌟 EXAMPLE: addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!') should add the following to the end of the array: {name: 'Daniela', rating: 5, feedback: 'Beautiful atmosphere and wonderful vegan options!'}
+  🌟 EXAMPLE: addReview(reviews, 'Billy', 2, 'Lame food!') should add the following to the end of the array: {name: 'Billy', rating: 2, feedback: 'Lame food!'}
   4. Return the updated array
 */
 
