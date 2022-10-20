@@ -111,7 +111,7 @@ reviews.push({name:name, rating: rating, feedback: feedback})
 return reviews;
 
   }
-console.log(addReview(reviews,'billy', 2, 'lame food'));
+console.log(addReview(reviews,'Jared', 2, 'lame food'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
