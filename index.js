@@ -15,10 +15,12 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(obj, nameValue, priceValue, categoryValue ){
-  return `const ${obj} = {name: ${nameValue}, price: ${priceValue}, category: ${categoryValue}}` 
+function createMenuItem(name, price, category){
+  const lunchTacos = {name , price, category};
+  return lunchTacos;
 }
-console.log(createMenuItem('lunchTacos', 'tacos', 8, 'Lunch'))
+console.log(createMenuItem('tacos', 8, 'Lunch'))
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -100,11 +102,12 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback})
+  return array;  
 }
-
-
+addReview(reviews, 'Billy', 2, 'Lame food!')
+console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -117,10 +120,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, num) {
+  return `${arr[num].name} gave the restaurant a ${arr[num].rating} star review, and their feedback was: ${arr[num].feedback}`
 }
-
+console.log(getReviewByIndex(reviews, 0))
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -136,10 +139,10 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  return String(`${arr[arr.length-1].name} gave the restaurant a ${arr[arr.length-1].rating} star review, and their feedback was: ${arr[arr.length-1].feedback}`)
 } 
-
+console.log(getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -157,11 +160,24 @@ Use the getReviewsByRating function below to do the following:
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
 */
+// When I can't return all matching criteria with for loop?
+//  function getReviewByRating(arr, num) {
+//     for (let i = 0; i < arr.length; i++ ) {
+//       if (arr[i].rating >= num && arr[i].rating < num + 1) {
+//           return arr[i];
+//       } 
+//     }
+//   }
+// console.log("Stretch 1:", getReviewByRating(reviews, 4));
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
-
+//or use filter
+function getReviewByRating(arr, num) {
+  const reviewRating = arr.filter((item) => {
+    return item.rating >= num && item.rating < num + 1; 
+  }) 
+  return reviewRating;
+}
+console.log("Stretch 1:", getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -176,10 +192,24 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
-  
+function getLongReviews(arr) {
+  const longReviews = arr.filter((item) => {
+    return item.feedback.length >= 15;
+  })
+  return longReviews;
+}
+console.log("Stretch 2:", getLongReviews(reviews));
+
+
+// // unable to return list????
+// let longReviews = [];
+// function getLongReviews(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     longReviews.push(arr[i].feedback.length >= 15)
+//   }
+//   return longReviews;
+// }
+// console.log("Stretch 2:", getLongReviews(reviews));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -198,6 +228,7 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
+// ****Help*****
 
 function carMaker(/* code here */) {
     /* code here */
