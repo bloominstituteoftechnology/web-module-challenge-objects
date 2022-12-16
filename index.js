@@ -15,11 +15,11 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(name, price, category){
+  const lunchTacos = {name , price, category};
+  return lunchTacos;
 }
-
+// console.log("Task 1a:", createMenuItem('tacos', 8, 'Lunch'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -31,8 +31,7 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
-
+// console.log("Task 1b:", createMenuItem('lunchPizza', "pizza",5,"lunch"))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the burger object below that automatically calculates price depending on the string received as a parameter. 
@@ -51,9 +50,16 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function (string) { 
+    if (string === 'teacher' || string === 'student') {
+      return this.price - (this.price * 0.25);
+    } else {
+      return this.price - (this.price * 0.10)
+    } 
+  }
 }
-
+// console.log("Task 2:", burger.discount("teacher"));
+// console.log("Task 2:", burger.discount("public"));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -72,7 +78,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+// console.log("Task 3:", reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,7 +87,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-
+reviews[reviews.length - 1]['feedback'] = "this place is chill with really cool people, great for getting work done on weekdays"; 
+// console.log("Task 4:", reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array. 
@@ -95,11 +102,12 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback})
+  return array;  
 }
-
-
+// console.log("Task 5:", addReview(reviews, 'Billy', 2, 'Lame food!'))
+// console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -112,10 +120,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, num) {
+  return `${arr[num].name} gave the restaurant a ${arr[num].rating} star review, and their feedback was: ${arr[num].feedback}`
 }
-
+// console.log("Task 6:", getReviewByIndex(reviews, 0))
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -131,10 +139,10 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arr) {
+  return String(`${arr[arr.length-1].name} gave the restaurant a ${arr[arr.length-1].rating} star review, and their feedback was: ${arr[arr.length-1].feedback}`)
 } 
-
+// console.log("Task 7:", getLastReview(reviews));
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -152,11 +160,25 @@ Use the getReviewsByRating function below to do the following:
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
 */
-
- function getReviewByRating(/* code here */) {
-    /* code here */
+const reviewRating = []; 
+function getReviewByRating(arr, num) {
+    for (let i = 0; i < arr.length; i++ ) {
+      if (arr[i].rating >= num && arr[i].rating < num + 1) {
+          reviewRating.push(arr[i]);
+      } 
+    }
+    return reviewRating; 
   }
+// console.log("Stretch 1:", getReviewByRating(reviews, 4));
 
+//or useing filter
+// function getReviewByRating(arr, num) {
+//   const reviewRating = arr.filter((item) => {
+//     return item.rating >= num && item.rating < num + 1; 
+//   }) 
+//   return reviewRating;
+// }
+// console.log("Stretch 1:", getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -171,10 +193,25 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+// function getLongReviews(arr) {
+//   const longReviews = arr.filter((item) => {
+//     return item.feedback.length >= 15;
+//   })
+//   return longReviews;
+// }
+// console.log("Stretch 2:", getLongReviews(reviews));
+
+//using for loop
+let longReviews = [];
+function getLongReviews(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].feedback.length >= 15) {
+      longReviews.push({name: arr[i].name, rating: arr[i].rating, feedback: arr[i].feedback})
+    }
   }
-  
+  return longReviews;
+}
+// console.log("Stretch 2:", getLongReviews(reviews));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -193,6 +230,7 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
+// ****Help*****
 
 function carMaker(/* code here */) {
     /* code here */
