@@ -210,8 +210,14 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-  /* code here */
+function getLongReviews(array) {
+  let reviews = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].feedback.split(" ").length > 15) {
+      reviews.push(array[i]);
+    }
+  }
+  return reviews;
 }
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -231,8 +237,15 @@ Use the carMaker function below to do the following:
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
 
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(odometer) {
+  let car = {
+    odometer: odometer,
+    drive: function (distance) {
+      this.odometer += distance;
+      return this.odometer;
+    },
+  };
+  return car;
 }
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
