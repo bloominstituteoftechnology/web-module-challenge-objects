@@ -55,11 +55,7 @@ const burger = {
   price: 18,
   category: "Lunch",
   discount: function (discountType) {
-    if (
-      discountType === "teacher" ||
-      discountType === "student" ||
-      discountType === "public"
-    ) {
+    if (discountType === "teacher" || discountType === "student") {
       return this.price * 0.75;
     } else {
       return this.price * 0.9;
@@ -133,8 +129,14 @@ Use the addReview function below to do the following:
   4. Return the updated array
 */
 
-function addReview(/*Your Code Here */) {
-  /*Your Code Here */
+function addReview(array, name, rating, feedback) {
+  let review = {
+    name: name,
+    rating: rating,
+    feedback: feedback,
+  };
+  array.push(review);
+  return array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -147,8 +149,9 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  let review = array[index];
+  return `${review.name} gave the restaurant a ${review.rating} star review, and their feedback was: ${review.feedback}`;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -163,8 +166,9 @@ Use the getLastReview function below to do the following:
   NOTE: her feedback should not be blank if task 4 was done correctly
 */
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array, index) {
+  let review = array[array.length - 1];
+  return `${review.name} gave the restaurant a ${review.rating} star review, and their feedback was: ${review.feedback}`;
 }
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
@@ -183,8 +187,14 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-function getReviewByRating(/* code here */) {
-  /* code here */
+function getReviewByRating(array, rating) {
+  let reviews = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].rating >= rating && array[i].rating < rating + 1) {
+      reviews.push(array[i]);
+    }
+  }
+  return reviews;
 }
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
